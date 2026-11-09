@@ -33,7 +33,10 @@ npm run build      # 本番ビルド（dist/）
 ## 辞書
 
 `public/dictionaries/` に辞書ファイル（JSON）を置き、`index.json` の `dictionaries` にファイル名を足すと使えるようになる。
-形式は仕様書 5.1 と DECISIONS D-16 を参照。同梱の `sample.ja.json` は動作確認用。
+形式は仕様書 5.1 と DECISIONS D-16 を参照。同梱している本番辞書（5ファイル・40カテゴリ・1,286語）の収録方針は DECISIONS D-30。
+
+辞書を足したり直したりしたら `npm test` を実行する。`src/game/dictionaryData.test.ts` が、形式の誤り、
+辞書をまたいだ単語の重複、読みの書式、カテゴリごとの語数（5語以上）、有名人の辞書の収録年を確かめる。
 
 ## PWA
 

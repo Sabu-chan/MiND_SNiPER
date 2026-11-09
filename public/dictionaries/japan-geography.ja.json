@@ -1,0 +1,1820 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "name": "日本の地理",
+  "categories": [
+    {
+      "id": "prefecture",
+      "label": "都道府県"
+    },
+    {
+      "id": "prefectural-capital",
+      "label": "県庁所在地"
+    },
+    {
+      "id": "japan-place",
+      "label": "日本の有名な地名"
+    },
+    {
+      "id": "japan-landmark",
+      "label": "日本の名所・建物"
+    },
+    {
+      "id": "japan-mountain",
+      "label": "日本の山"
+    },
+    {
+      "id": "japan-river",
+      "label": "日本の川"
+    },
+    {
+      "id": "japan-lake",
+      "label": "日本の湖"
+    },
+    {
+      "id": "sea",
+      "label": "海・湾・海峡"
+    }
+  ],
+  "entries": [
+    {
+      "id": "prefecture-001",
+      "word": "北海道",
+      "reading": "ほっかいどう",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-002",
+      "word": "青森県",
+      "reading": "あおもりけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-003",
+      "word": "岩手県",
+      "reading": "いわてけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-004",
+      "word": "宮城県",
+      "reading": "みやぎけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-005",
+      "word": "秋田県",
+      "reading": "あきたけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-006",
+      "word": "山形県",
+      "reading": "やまがたけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-007",
+      "word": "福島県",
+      "reading": "ふくしまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-008",
+      "word": "茨城県",
+      "reading": "いばらきけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-009",
+      "word": "栃木県",
+      "reading": "とちぎけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-010",
+      "word": "群馬県",
+      "reading": "ぐんまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-011",
+      "word": "埼玉県",
+      "reading": "さいたまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-012",
+      "word": "千葉県",
+      "reading": "ちばけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-013",
+      "word": "東京都",
+      "reading": "とうきょうと",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-014",
+      "word": "神奈川県",
+      "reading": "かながわけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-015",
+      "word": "新潟県",
+      "reading": "にいがたけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-016",
+      "word": "富山県",
+      "reading": "とやまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-017",
+      "word": "石川県",
+      "reading": "いしかわけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-018",
+      "word": "福井県",
+      "reading": "ふくいけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-019",
+      "word": "山梨県",
+      "reading": "やまなしけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-020",
+      "word": "長野県",
+      "reading": "ながのけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-021",
+      "word": "岐阜県",
+      "reading": "ぎふけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-022",
+      "word": "静岡県",
+      "reading": "しずおかけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-023",
+      "word": "愛知県",
+      "reading": "あいちけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-024",
+      "word": "三重県",
+      "reading": "みえけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-025",
+      "word": "滋賀県",
+      "reading": "しがけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-026",
+      "word": "京都府",
+      "reading": "きょうとふ",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-027",
+      "word": "大阪府",
+      "reading": "おおさかふ",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-028",
+      "word": "兵庫県",
+      "reading": "ひょうごけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-029",
+      "word": "奈良県",
+      "reading": "ならけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-030",
+      "word": "和歌山県",
+      "reading": "わかやまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-031",
+      "word": "鳥取県",
+      "reading": "とっとりけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-032",
+      "word": "島根県",
+      "reading": "しまねけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-033",
+      "word": "岡山県",
+      "reading": "おかやまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-034",
+      "word": "広島県",
+      "reading": "ひろしまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-035",
+      "word": "山口県",
+      "reading": "やまぐちけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-036",
+      "word": "徳島県",
+      "reading": "とくしまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-037",
+      "word": "香川県",
+      "reading": "かがわけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-038",
+      "word": "愛媛県",
+      "reading": "えひめけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-039",
+      "word": "高知県",
+      "reading": "こうちけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-040",
+      "word": "福岡県",
+      "reading": "ふくおかけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-041",
+      "word": "佐賀県",
+      "reading": "さがけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-042",
+      "word": "長崎県",
+      "reading": "ながさきけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-043",
+      "word": "熊本県",
+      "reading": "くまもとけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-044",
+      "word": "大分県",
+      "reading": "おおいたけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-045",
+      "word": "宮崎県",
+      "reading": "みやざきけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-046",
+      "word": "鹿児島県",
+      "reading": "かごしまけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefecture-047",
+      "word": "沖縄県",
+      "reading": "おきなわけん",
+      "category": "prefecture"
+    },
+    {
+      "id": "prefectural-capital-001",
+      "word": "札幌市",
+      "reading": "さっぽろし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-002",
+      "word": "青森市",
+      "reading": "あおもりし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-003",
+      "word": "盛岡市",
+      "reading": "もりおかし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-004",
+      "word": "仙台市",
+      "reading": "せんだいし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-005",
+      "word": "秋田市",
+      "reading": "あきたし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-006",
+      "word": "山形市",
+      "reading": "やまがたし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-007",
+      "word": "福島市",
+      "reading": "ふくしまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-008",
+      "word": "水戸市",
+      "reading": "みとし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-009",
+      "word": "宇都宮市",
+      "reading": "うつのみやし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-010",
+      "word": "前橋市",
+      "reading": "まえばしし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-011",
+      "word": "さいたま市",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-012",
+      "word": "千葉市",
+      "reading": "ちばし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-013",
+      "word": "横浜市",
+      "reading": "よこはまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-014",
+      "word": "新潟市",
+      "reading": "にいがたし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-015",
+      "word": "富山市",
+      "reading": "とやまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-016",
+      "word": "金沢市",
+      "reading": "かなざわし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-017",
+      "word": "福井市",
+      "reading": "ふくいし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-018",
+      "word": "甲府市",
+      "reading": "こうふし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-019",
+      "word": "長野市",
+      "reading": "ながのし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-020",
+      "word": "岐阜市",
+      "reading": "ぎふし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-021",
+      "word": "静岡市",
+      "reading": "しずおかし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-022",
+      "word": "名古屋市",
+      "reading": "なごやし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-023",
+      "word": "津市",
+      "reading": "つし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-024",
+      "word": "大津市",
+      "reading": "おおつし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-025",
+      "word": "京都市",
+      "reading": "きょうとし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-026",
+      "word": "大阪市",
+      "reading": "おおさかし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-027",
+      "word": "神戸市",
+      "reading": "こうべし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-028",
+      "word": "奈良市",
+      "reading": "ならし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-029",
+      "word": "和歌山市",
+      "reading": "わかやまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-030",
+      "word": "鳥取市",
+      "reading": "とっとりし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-031",
+      "word": "松江市",
+      "reading": "まつえし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-032",
+      "word": "岡山市",
+      "reading": "おかやまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-033",
+      "word": "広島市",
+      "reading": "ひろしまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-034",
+      "word": "山口市",
+      "reading": "やまぐちし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-035",
+      "word": "徳島市",
+      "reading": "とくしまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-036",
+      "word": "高松市",
+      "reading": "たかまつし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-037",
+      "word": "松山市",
+      "reading": "まつやまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-038",
+      "word": "高知市",
+      "reading": "こうちし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-039",
+      "word": "福岡市",
+      "reading": "ふくおかし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-040",
+      "word": "佐賀市",
+      "reading": "さがし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-041",
+      "word": "長崎市",
+      "reading": "ながさきし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-042",
+      "word": "熊本市",
+      "reading": "くまもとし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-043",
+      "word": "大分市",
+      "reading": "おおいたし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-044",
+      "word": "宮崎市",
+      "reading": "みやざきし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-045",
+      "word": "鹿児島市",
+      "reading": "かごしまし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "prefectural-capital-046",
+      "word": "那覇市",
+      "reading": "なはし",
+      "category": "prefectural-capital"
+    },
+    {
+      "id": "japan-place-001",
+      "word": "浅草",
+      "reading": "あさくさ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-002",
+      "word": "銀座",
+      "reading": "ぎんざ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-003",
+      "word": "渋谷",
+      "reading": "しぶや",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-004",
+      "word": "新宿",
+      "reading": "しんじゅく",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-005",
+      "word": "原宿",
+      "reading": "はらじゅく",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-006",
+      "word": "秋葉原",
+      "reading": "あきはばら",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-007",
+      "word": "六本木",
+      "reading": "ろっぽんぎ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-008",
+      "word": "お台場",
+      "reading": "おだいば",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-009",
+      "word": "横浜中華街",
+      "reading": "よこはまちゅうかがい",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-010",
+      "word": "鎌倉",
+      "reading": "かまくら",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-011",
+      "word": "箱根",
+      "reading": "はこね",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-012",
+      "word": "熱海",
+      "reading": "あたみ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-013",
+      "word": "軽井沢",
+      "reading": "かるいざわ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-014",
+      "word": "日光",
+      "reading": "にっこう",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-015",
+      "word": "草津温泉",
+      "reading": "くさつおんせん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-016",
+      "word": "別府温泉",
+      "reading": "べっぷおんせん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-017",
+      "word": "由布院",
+      "reading": "ゆふいん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-018",
+      "word": "道後温泉",
+      "reading": "どうごおんせん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-019",
+      "word": "有馬温泉",
+      "reading": "ありまおんせん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-020",
+      "word": "登別温泉",
+      "reading": "のぼりべつおんせん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-021",
+      "word": "白川郷",
+      "reading": "しらかわごう",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-022",
+      "word": "嵐山",
+      "reading": "あらしやま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-023",
+      "word": "祇園",
+      "reading": "ぎおん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-024",
+      "word": "道頓堀",
+      "reading": "どうとんぼり",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-025",
+      "word": "天橋立",
+      "reading": "あまのはしだて",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-026",
+      "word": "松島",
+      "reading": "まつしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-027",
+      "word": "宮島",
+      "reading": "みやじま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-028",
+      "word": "鳥取砂丘",
+      "reading": "とっとりさきゅう",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-029",
+      "word": "屋久島",
+      "reading": "やくしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-030",
+      "word": "石垣島",
+      "reading": "いしがきじま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-031",
+      "word": "宮古島",
+      "reading": "みやこじま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-032",
+      "word": "小笠原諸島",
+      "reading": "おがさわらしょとう",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-033",
+      "word": "知床",
+      "reading": "しれとこ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-034",
+      "word": "富良野",
+      "reading": "ふらの",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-035",
+      "word": "小樽",
+      "reading": "おたる",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-036",
+      "word": "函館",
+      "reading": "はこだて",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-037",
+      "word": "尾瀬",
+      "reading": "おぜ",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-038",
+      "word": "上高地",
+      "reading": "かみこうち",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-039",
+      "word": "佐渡島",
+      "reading": "さどがしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-040",
+      "word": "淡路島",
+      "reading": "あわじしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-041",
+      "word": "小豆島",
+      "reading": "しょうどしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-042",
+      "word": "対馬",
+      "reading": "つしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-043",
+      "word": "種子島",
+      "reading": "たねがしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-044",
+      "word": "奄美大島",
+      "reading": "あまみおおしま",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-place-045",
+      "word": "奈良公園",
+      "reading": "ならこうえん",
+      "category": "japan-place"
+    },
+    {
+      "id": "japan-landmark-001",
+      "word": "東京タワー",
+      "reading": "とうきょうタワー",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-002",
+      "word": "東京スカイツリー",
+      "reading": "とうきょうスカイツリー",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-003",
+      "word": "国会議事堂",
+      "reading": "こっかいぎじどう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-004",
+      "word": "東京駅",
+      "reading": "とうきょうえき",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-005",
+      "word": "皇居",
+      "reading": "こうきょ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-006",
+      "word": "雷門",
+      "reading": "かみなりもん",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-007",
+      "word": "明治神宮",
+      "reading": "めいじじんぐう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-008",
+      "word": "レインボーブリッジ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-009",
+      "word": "東京ドーム",
+      "reading": "とうきょうドーム",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-010",
+      "word": "鶴岡八幡宮",
+      "reading": "つるがおかはちまんぐう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-011",
+      "word": "鎌倉大仏",
+      "reading": "かまくらだいぶつ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-012",
+      "word": "日光東照宮",
+      "reading": "にっこうとうしょうぐう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-013",
+      "word": "富岡製糸場",
+      "reading": "とみおかせいしじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-014",
+      "word": "金閣寺",
+      "reading": "きんかくじ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-015",
+      "word": "銀閣寺",
+      "reading": "ぎんかくじ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-016",
+      "word": "清水寺",
+      "reading": "きよみずでら",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-017",
+      "word": "伏見稲荷大社",
+      "reading": "ふしみいなりたいしゃ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-018",
+      "word": "平等院",
+      "reading": "びょうどういん",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-019",
+      "word": "東大寺",
+      "reading": "とうだいじ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-020",
+      "word": "奈良の大仏",
+      "reading": "ならのだいぶつ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-021",
+      "word": "法隆寺",
+      "reading": "ほうりゅうじ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-022",
+      "word": "伊勢神宮",
+      "reading": "いせじんぐう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-023",
+      "word": "出雲大社",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-024",
+      "word": "厳島神社",
+      "reading": "いつくしまじんじゃ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-025",
+      "word": "原爆ドーム",
+      "reading": "げんばくドーム",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-026",
+      "word": "姫路城",
+      "reading": "ひめじじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-027",
+      "word": "大阪城",
+      "reading": "おおさかじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-028",
+      "word": "名古屋城",
+      "reading": "なごやじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-029",
+      "word": "松本城",
+      "reading": "まつもとじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-030",
+      "word": "熊本城",
+      "reading": "くまもとじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-031",
+      "word": "首里城",
+      "reading": "しゅりじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-032",
+      "word": "五稜郭",
+      "reading": "ごりょうかく",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-033",
+      "word": "中尊寺",
+      "reading": "ちゅうそんじ",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-034",
+      "word": "兼六園",
+      "reading": "けんろくえん",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-035",
+      "word": "偕楽園",
+      "reading": "かいらくえん",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-036",
+      "word": "太陽の塔",
+      "reading": "たいようのとう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-037",
+      "word": "通天閣",
+      "reading": "つうてんかく",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-038",
+      "word": "甲子園球場",
+      "reading": "こうしえんきゅうじょう",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-039",
+      "word": "明石海峡大橋",
+      "reading": "あかしかいきょうおおはし",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-040",
+      "word": "瀬戸大橋",
+      "reading": "せとおおはし",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-landmark-041",
+      "word": "黒部ダム",
+      "reading": "くろべダム",
+      "category": "japan-landmark"
+    },
+    {
+      "id": "japan-mountain-001",
+      "word": "富士山",
+      "reading": "ふじさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-002",
+      "word": "北岳",
+      "reading": "きただけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-003",
+      "word": "奥穂高岳",
+      "reading": "おくほたかだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-004",
+      "word": "間ノ岳",
+      "reading": "あいのだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-005",
+      "word": "槍ヶ岳",
+      "reading": "やりがたけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-006",
+      "word": "赤石岳",
+      "reading": "あかいしだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-007",
+      "word": "御嶽山",
+      "reading": "おんたけさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-008",
+      "word": "乗鞍岳",
+      "reading": "のりくらだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-009",
+      "word": "立山",
+      "reading": "たてやま",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-010",
+      "word": "白馬岳",
+      "reading": "しろうまだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-011",
+      "word": "剱岳",
+      "reading": "つるぎだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-012",
+      "word": "八ヶ岳",
+      "reading": "やつがたけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-013",
+      "word": "浅間山",
+      "reading": "あさまやま",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-014",
+      "word": "白山",
+      "reading": "はくさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-015",
+      "word": "伊吹山",
+      "reading": "いぶきやま",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-016",
+      "word": "阿蘇山",
+      "reading": "あそさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-017",
+      "word": "桜島",
+      "reading": "さくらじま",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-018",
+      "word": "雲仙岳",
+      "reading": "うんぜんだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-019",
+      "word": "霧島山",
+      "reading": "きりしまやま",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-020",
+      "word": "開聞岳",
+      "reading": "かいもんだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-021",
+      "word": "宮之浦岳",
+      "reading": "みやのうらだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-022",
+      "word": "大山",
+      "reading": "だいせん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-023",
+      "word": "石鎚山",
+      "reading": "いしづちさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-024",
+      "word": "六甲山",
+      "reading": "ろっこうさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-025",
+      "word": "比叡山",
+      "reading": "ひえいざん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-026",
+      "word": "高野山",
+      "reading": "こうやさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-027",
+      "word": "高尾山",
+      "reading": "たかおさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-028",
+      "word": "筑波山",
+      "reading": "つくばさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-029",
+      "word": "谷川岳",
+      "reading": "たにがわだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-030",
+      "word": "那須岳",
+      "reading": "なすだけ",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-031",
+      "word": "磐梯山",
+      "reading": "ばんだいさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-032",
+      "word": "蔵王山",
+      "reading": "ざおうさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-033",
+      "word": "月山",
+      "reading": "がっさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-034",
+      "word": "鳥海山",
+      "reading": "ちょうかいさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-035",
+      "word": "岩木山",
+      "reading": "いわきさん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-036",
+      "word": "八甲田山",
+      "reading": "はっこうださん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-037",
+      "word": "羊蹄山",
+      "reading": "ようていざん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-038",
+      "word": "大雪山",
+      "reading": "だいせつざん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-039",
+      "word": "有珠山",
+      "reading": "うすざん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-040",
+      "word": "昭和新山",
+      "reading": "しょうわしんざん",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-mountain-041",
+      "word": "三原山",
+      "reading": "みはらやま",
+      "category": "japan-mountain"
+    },
+    {
+      "id": "japan-river-001",
+      "word": "信濃川",
+      "reading": "しなのがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-002",
+      "word": "利根川",
+      "reading": "とねがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-003",
+      "word": "石狩川",
+      "reading": "いしかりがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-004",
+      "word": "天塩川",
+      "reading": "てしおがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-005",
+      "word": "北上川",
+      "reading": "きたかみがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-006",
+      "word": "阿武隈川",
+      "reading": "あぶくまがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-007",
+      "word": "木曽川",
+      "reading": "きそがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-008",
+      "word": "最上川",
+      "reading": "もがみがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-009",
+      "word": "天竜川",
+      "reading": "てんりゅうがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-010",
+      "word": "阿賀野川",
+      "reading": "あがのがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-011",
+      "word": "十勝川",
+      "reading": "とかちがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-012",
+      "word": "淀川",
+      "reading": "よどがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-013",
+      "word": "四万十川",
+      "reading": "しまんとがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-014",
+      "word": "長良川",
+      "reading": "ながらがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-015",
+      "word": "筑後川",
+      "reading": "ちくごがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-016",
+      "word": "吉野川",
+      "reading": "よしのがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-017",
+      "word": "富士川",
+      "reading": "ふじかわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-018",
+      "word": "球磨川",
+      "reading": "くまがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-019",
+      "word": "多摩川",
+      "reading": "たまがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-020",
+      "word": "隅田川",
+      "reading": "すみだがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-021",
+      "word": "荒川",
+      "reading": "あらかわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-022",
+      "word": "江戸川",
+      "reading": "えどがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-023",
+      "word": "鴨川",
+      "reading": "かもがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-024",
+      "word": "黒部川",
+      "reading": "くろべがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-river-025",
+      "word": "釧路川",
+      "reading": "くしろがわ",
+      "category": "japan-river"
+    },
+    {
+      "id": "japan-lake-001",
+      "word": "琵琶湖",
+      "reading": "びわこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-002",
+      "word": "霞ヶ浦",
+      "reading": "かすみがうら",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-003",
+      "word": "サロマ湖",
+      "reading": "サロマこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-004",
+      "word": "猪苗代湖",
+      "reading": "いなわしろこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-005",
+      "word": "中禅寺湖",
+      "reading": "ちゅうぜんじこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-006",
+      "word": "十和田湖",
+      "reading": "とわだこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-007",
+      "word": "田沢湖",
+      "reading": "たざわこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-008",
+      "word": "摩周湖",
+      "reading": "ましゅうこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-009",
+      "word": "洞爺湖",
+      "reading": "とうやこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-010",
+      "word": "支笏湖",
+      "reading": "しこつこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-011",
+      "word": "屈斜路湖",
+      "reading": "くっしゃろこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-012",
+      "word": "諏訪湖",
+      "reading": "すわこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-013",
+      "word": "浜名湖",
+      "reading": "はまなこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-014",
+      "word": "河口湖",
+      "reading": "かわぐちこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-015",
+      "word": "山中湖",
+      "reading": "やまなかこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "japan-lake-016",
+      "word": "宍道湖",
+      "reading": "しんじこ",
+      "category": "japan-lake"
+    },
+    {
+      "id": "sea-001",
+      "word": "太平洋",
+      "reading": "たいへいよう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-002",
+      "word": "大西洋",
+      "reading": "たいせいよう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-003",
+      "word": "インド洋",
+      "reading": "インドよう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-004",
+      "word": "北極海",
+      "reading": "ほっきょくかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-005",
+      "word": "南極海",
+      "reading": "なんきょくかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-006",
+      "word": "日本海",
+      "reading": "にほんかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-007",
+      "word": "オホーツク海",
+      "reading": "オホーツクかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-008",
+      "word": "東シナ海",
+      "reading": "ひがしシナかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-009",
+      "word": "南シナ海",
+      "reading": "みなみシナかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-010",
+      "word": "瀬戸内海",
+      "reading": "せとないかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-011",
+      "word": "有明海",
+      "reading": "ありあけかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-012",
+      "word": "地中海",
+      "reading": "ちちゅうかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-013",
+      "word": "カリブ海",
+      "reading": "カリブかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-014",
+      "word": "紅海",
+      "reading": "こうかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-015",
+      "word": "黒海",
+      "reading": "こっかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-016",
+      "word": "黄海",
+      "reading": "こうかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-017",
+      "word": "北海",
+      "reading": "ほっかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-018",
+      "word": "バルト海",
+      "reading": "バルトかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-019",
+      "word": "ベーリング海",
+      "reading": "ベーリングかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-020",
+      "word": "エーゲ海",
+      "reading": "エーゲかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-021",
+      "word": "アラビア海",
+      "reading": "アラビアかい",
+      "category": "sea"
+    },
+    {
+      "id": "sea-022",
+      "word": "東京湾",
+      "reading": "とうきょうわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-023",
+      "word": "伊勢湾",
+      "reading": "いせわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-024",
+      "word": "駿河湾",
+      "reading": "するがわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-025",
+      "word": "陸奥湾",
+      "reading": "むつわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-026",
+      "word": "富山湾",
+      "reading": "とやまわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-027",
+      "word": "鹿児島湾",
+      "reading": "かごしまわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-028",
+      "word": "メキシコ湾",
+      "reading": "メキシコわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-029",
+      "word": "ペルシャ湾",
+      "reading": "ペルシャわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-030",
+      "word": "ベンガル湾",
+      "reading": "ベンガルわん",
+      "category": "sea"
+    },
+    {
+      "id": "sea-031",
+      "word": "津軽海峡",
+      "reading": "つがるかいきょう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-032",
+      "word": "関門海峡",
+      "reading": "かんもんかいきょう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-033",
+      "word": "ドーバー海峡",
+      "reading": "ドーバーかいきょう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-034",
+      "word": "ジブラルタル海峡",
+      "reading": "ジブラルタルかいきょう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-035",
+      "word": "マゼラン海峡",
+      "reading": "マゼランかいきょう",
+      "category": "sea"
+    },
+    {
+      "id": "sea-036",
+      "word": "ベーリング海峡",
+      "reading": "ベーリングかいきょう",
+      "category": "sea"
+    }
+  ]
+}

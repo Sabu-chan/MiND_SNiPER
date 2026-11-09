@@ -1,0 +1,3244 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "name": "身近なもの",
+  "categories": [
+    {
+      "id": "animal",
+      "label": "動物"
+    },
+    {
+      "id": "bird",
+      "label": "鳥"
+    },
+    {
+      "id": "insect",
+      "label": "虫"
+    },
+    {
+      "id": "water-creature",
+      "label": "海や川の生き物"
+    },
+    {
+      "id": "plant",
+      "label": "花・植物"
+    },
+    {
+      "id": "fruit",
+      "label": "果物"
+    },
+    {
+      "id": "vegetable",
+      "label": "野菜"
+    },
+    {
+      "id": "dish",
+      "label": "料理"
+    },
+    {
+      "id": "sweets",
+      "label": "お菓子・デザート"
+    },
+    {
+      "id": "drink",
+      "label": "飲み物"
+    },
+    {
+      "id": "vehicle",
+      "label": "乗り物"
+    },
+    {
+      "id": "stationery",
+      "label": "文房具・学用品"
+    },
+    {
+      "id": "household",
+      "label": "日用品・家具"
+    },
+    {
+      "id": "appliance",
+      "label": "家電"
+    },
+    {
+      "id": "instrument",
+      "label": "楽器"
+    },
+    {
+      "id": "clothing",
+      "label": "服・身につけるもの"
+    },
+    {
+      "id": "building",
+      "label": "建物・施設"
+    },
+    {
+      "id": "toy",
+      "label": "遊具・おもちゃ"
+    },
+    {
+      "id": "sports-gear",
+      "label": "スポーツの道具"
+    },
+    {
+      "id": "nature",
+      "label": "天体・自然"
+    },
+    {
+      "id": "tradition",
+      "label": "伝統・行事のもの"
+    }
+  ],
+  "entries": [
+    {
+      "id": "animal-001",
+      "word": "イヌ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-002",
+      "word": "ネコ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-003",
+      "word": "ウサギ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-004",
+      "word": "ハムスター",
+      "category": "animal"
+    },
+    {
+      "id": "animal-005",
+      "word": "ハリネズミ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-006",
+      "word": "リス",
+      "category": "animal"
+    },
+    {
+      "id": "animal-007",
+      "word": "ネズミ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-008",
+      "word": "モグラ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-009",
+      "word": "コウモリ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-010",
+      "word": "ウマ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-011",
+      "word": "ウシ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-012",
+      "word": "ブタ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-013",
+      "word": "ヒツジ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-014",
+      "word": "ヤギ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-015",
+      "word": "アルパカ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-016",
+      "word": "ラクダ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-017",
+      "word": "サル",
+      "category": "animal"
+    },
+    {
+      "id": "animal-018",
+      "word": "ゴリラ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-019",
+      "word": "チンパンジー",
+      "category": "animal"
+    },
+    {
+      "id": "animal-020",
+      "word": "ライオン",
+      "category": "animal"
+    },
+    {
+      "id": "animal-021",
+      "word": "トラ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-022",
+      "word": "ヒョウ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-023",
+      "word": "チーター",
+      "category": "animal"
+    },
+    {
+      "id": "animal-024",
+      "word": "ゾウ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-025",
+      "word": "キリン",
+      "category": "animal"
+    },
+    {
+      "id": "animal-026",
+      "word": "カバ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-027",
+      "word": "サイ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-028",
+      "word": "シマウマ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-029",
+      "word": "クマ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-030",
+      "word": "パンダ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-031",
+      "word": "コアラ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-032",
+      "word": "カンガルー",
+      "category": "animal"
+    },
+    {
+      "id": "animal-033",
+      "word": "ナマケモノ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-034",
+      "word": "アリクイ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-035",
+      "word": "カピバラ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-036",
+      "word": "キツネ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-037",
+      "word": "タヌキ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-038",
+      "word": "オオカミ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-039",
+      "word": "シカ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-040",
+      "word": "イノシシ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-041",
+      "word": "ワニ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-042",
+      "word": "ヘビ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-043",
+      "word": "トカゲ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-044",
+      "word": "カメ",
+      "category": "animal"
+    },
+    {
+      "id": "animal-045",
+      "word": "カエル",
+      "category": "animal"
+    },
+    {
+      "id": "bird-001",
+      "word": "ニワトリ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-002",
+      "word": "ハト",
+      "category": "bird"
+    },
+    {
+      "id": "bird-003",
+      "word": "カラス",
+      "category": "bird"
+    },
+    {
+      "id": "bird-004",
+      "word": "スズメ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-005",
+      "word": "ツバメ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-006",
+      "word": "ウグイス",
+      "category": "bird"
+    },
+    {
+      "id": "bird-007",
+      "word": "カモ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-008",
+      "word": "カモメ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-009",
+      "word": "ハクチョウ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-010",
+      "word": "ツル",
+      "category": "bird"
+    },
+    {
+      "id": "bird-011",
+      "word": "トキ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-012",
+      "word": "フクロウ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-013",
+      "word": "ワシ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-014",
+      "word": "タカ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-015",
+      "word": "キツツキ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-016",
+      "word": "カワセミ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-017",
+      "word": "インコ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-018",
+      "word": "オウム",
+      "category": "bird"
+    },
+    {
+      "id": "bird-019",
+      "word": "クジャク",
+      "category": "bird"
+    },
+    {
+      "id": "bird-020",
+      "word": "フラミンゴ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-021",
+      "word": "ペリカン",
+      "category": "bird"
+    },
+    {
+      "id": "bird-022",
+      "word": "ダチョウ",
+      "category": "bird"
+    },
+    {
+      "id": "bird-023",
+      "word": "ペンギン",
+      "category": "bird"
+    },
+    {
+      "id": "insect-001",
+      "word": "カブトムシ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-002",
+      "word": "クワガタ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-003",
+      "word": "セミ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-004",
+      "word": "トンボ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-005",
+      "word": "チョウ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-006",
+      "word": "ホタル",
+      "category": "insect"
+    },
+    {
+      "id": "insect-007",
+      "word": "テントウムシ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-008",
+      "word": "バッタ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-009",
+      "word": "コオロギ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-010",
+      "word": "スズムシ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-011",
+      "word": "カマキリ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-012",
+      "word": "アリ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-013",
+      "word": "ハチ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-014",
+      "word": "カ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-015",
+      "word": "ハエ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-016",
+      "word": "ゴキブリ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-017",
+      "word": "アメンボ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-018",
+      "word": "クモ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-019",
+      "word": "ダンゴムシ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-020",
+      "word": "ムカデ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-021",
+      "word": "ミミズ",
+      "category": "insect"
+    },
+    {
+      "id": "insect-022",
+      "word": "カタツムリ",
+      "category": "insect"
+    },
+    {
+      "id": "water-creature-001",
+      "word": "イルカ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-002",
+      "word": "クジラ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-003",
+      "word": "シャチ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-004",
+      "word": "サメ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-005",
+      "word": "ジンベエザメ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-006",
+      "word": "マンボウ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-007",
+      "word": "マグロ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-008",
+      "word": "サケ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-009",
+      "word": "サンマ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-010",
+      "word": "イワシ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-011",
+      "word": "鯛",
+      "reading": "たい",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-012",
+      "word": "ヒラメ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-013",
+      "word": "フグ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-014",
+      "word": "ウナギ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-015",
+      "word": "タコ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-016",
+      "word": "イカ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-017",
+      "word": "カニ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-018",
+      "word": "エビ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-019",
+      "word": "ヒトデ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-020",
+      "word": "クラゲ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-021",
+      "word": "ウニ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-022",
+      "word": "ホタテ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-023",
+      "word": "アサリ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-024",
+      "word": "カキ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-025",
+      "word": "タツノオトシゴ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-026",
+      "word": "チンアナゴ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-027",
+      "word": "ラッコ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-028",
+      "word": "アザラシ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-029",
+      "word": "アシカ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-030",
+      "word": "セイウチ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-031",
+      "word": "金魚",
+      "reading": "きんぎょ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-032",
+      "word": "メダカ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-033",
+      "word": "コイ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-034",
+      "word": "ナマズ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-035",
+      "word": "アユ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-036",
+      "word": "ザリガニ",
+      "category": "water-creature"
+    },
+    {
+      "id": "water-creature-037",
+      "word": "オタマジャクシ",
+      "category": "water-creature"
+    },
+    {
+      "id": "plant-001",
+      "word": "サクラ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-002",
+      "word": "ウメ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-003",
+      "word": "ヒマワリ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-004",
+      "word": "チューリップ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-005",
+      "word": "アサガオ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-006",
+      "word": "バラ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-007",
+      "word": "タンポポ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-008",
+      "word": "コスモス",
+      "category": "plant"
+    },
+    {
+      "id": "plant-009",
+      "word": "アジサイ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-010",
+      "word": "ユリ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-011",
+      "word": "キク",
+      "category": "plant"
+    },
+    {
+      "id": "plant-012",
+      "word": "パンジー",
+      "category": "plant"
+    },
+    {
+      "id": "plant-013",
+      "word": "スイセン",
+      "category": "plant"
+    },
+    {
+      "id": "plant-014",
+      "word": "カーネーション",
+      "category": "plant"
+    },
+    {
+      "id": "plant-015",
+      "word": "ラベンダー",
+      "category": "plant"
+    },
+    {
+      "id": "plant-016",
+      "word": "スズラン",
+      "category": "plant"
+    },
+    {
+      "id": "plant-017",
+      "word": "ハス",
+      "category": "plant"
+    },
+    {
+      "id": "plant-018",
+      "word": "サボテン",
+      "category": "plant"
+    },
+    {
+      "id": "plant-019",
+      "word": "イチョウ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-020",
+      "word": "モミジ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-021",
+      "word": "マツ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-022",
+      "word": "スギ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-023",
+      "word": "タケ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-024",
+      "word": "ススキ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-025",
+      "word": "クローバー",
+      "category": "plant"
+    },
+    {
+      "id": "plant-026",
+      "word": "ツクシ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-027",
+      "word": "ドングリ",
+      "category": "plant"
+    },
+    {
+      "id": "plant-028",
+      "word": "マツボックリ",
+      "category": "plant"
+    },
+    {
+      "id": "fruit-001",
+      "word": "リンゴ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-002",
+      "word": "ミカン",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-003",
+      "word": "オレンジ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-004",
+      "word": "ユズ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-005",
+      "word": "レモン",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-006",
+      "word": "グレープフルーツ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-007",
+      "word": "バナナ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-008",
+      "word": "ブドウ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-009",
+      "word": "イチゴ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-010",
+      "word": "モモ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-011",
+      "word": "ナシ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-012",
+      "word": "柿",
+      "reading": "かき",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-013",
+      "word": "スイカ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-014",
+      "word": "メロン",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-015",
+      "word": "パイナップル",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-016",
+      "word": "キウイ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-017",
+      "word": "サクランボ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-018",
+      "word": "マンゴー",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-019",
+      "word": "ビワ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-020",
+      "word": "ザクロ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-021",
+      "word": "イチジク",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-022",
+      "word": "ブルーベリー",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-023",
+      "word": "ライチ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-024",
+      "word": "ドリアン",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-025",
+      "word": "ココナッツ",
+      "category": "fruit"
+    },
+    {
+      "id": "fruit-026",
+      "word": "アボカド",
+      "category": "fruit"
+    },
+    {
+      "id": "vegetable-001",
+      "word": "トマト",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-002",
+      "word": "キュウリ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-003",
+      "word": "ナス",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-004",
+      "word": "ピーマン",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-005",
+      "word": "パプリカ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-006",
+      "word": "ニンジン",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-007",
+      "word": "ダイコン",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-008",
+      "word": "キャベツ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-009",
+      "word": "レタス",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-010",
+      "word": "ハクサイ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-011",
+      "word": "ホウレンソウ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-012",
+      "word": "ブロッコリー",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-013",
+      "word": "タマネギ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-014",
+      "word": "ネギ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-015",
+      "word": "ジャガイモ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-016",
+      "word": "サツマイモ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-017",
+      "word": "カボチャ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-018",
+      "word": "トウモロコシ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-019",
+      "word": "ゴボウ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-020",
+      "word": "レンコン",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-021",
+      "word": "オクラ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-022",
+      "word": "セロリ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-023",
+      "word": "アスパラガス",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-024",
+      "word": "エダマメ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-025",
+      "word": "タケノコ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-026",
+      "word": "シイタケ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-027",
+      "word": "ショウガ",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-028",
+      "word": "ニンニク",
+      "category": "vegetable"
+    },
+    {
+      "id": "vegetable-029",
+      "word": "ゴーヤ",
+      "category": "vegetable"
+    },
+    {
+      "id": "dish-001",
+      "word": "カレーライス",
+      "category": "dish"
+    },
+    {
+      "id": "dish-002",
+      "word": "ラーメン",
+      "category": "dish"
+    },
+    {
+      "id": "dish-003",
+      "word": "うどん",
+      "category": "dish"
+    },
+    {
+      "id": "dish-004",
+      "word": "そば",
+      "category": "dish"
+    },
+    {
+      "id": "dish-005",
+      "word": "寿司",
+      "reading": "すし",
+      "category": "dish"
+    },
+    {
+      "id": "dish-006",
+      "word": "天ぷら",
+      "reading": "てんぷら",
+      "category": "dish"
+    },
+    {
+      "id": "dish-007",
+      "word": "すき焼き",
+      "reading": "すきやき",
+      "category": "dish"
+    },
+    {
+      "id": "dish-008",
+      "word": "おでん",
+      "category": "dish"
+    },
+    {
+      "id": "dish-009",
+      "word": "焼きそば",
+      "reading": "やきそば",
+      "category": "dish"
+    },
+    {
+      "id": "dish-010",
+      "word": "たこ焼き",
+      "reading": "たこやき",
+      "category": "dish"
+    },
+    {
+      "id": "dish-011",
+      "word": "お好み焼き",
+      "reading": "おこのみやき",
+      "category": "dish"
+    },
+    {
+      "id": "dish-012",
+      "word": "ハンバーグ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-013",
+      "word": "オムライス",
+      "category": "dish"
+    },
+    {
+      "id": "dish-014",
+      "word": "ギョーザ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-015",
+      "word": "からあげ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-016",
+      "word": "とんかつ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-017",
+      "word": "親子丼",
+      "reading": "おやこどん",
+      "category": "dish"
+    },
+    {
+      "id": "dish-018",
+      "word": "牛丼",
+      "reading": "ぎゅうどん",
+      "category": "dish"
+    },
+    {
+      "id": "dish-019",
+      "word": "カツ丼",
+      "reading": "カツどん",
+      "category": "dish"
+    },
+    {
+      "id": "dish-020",
+      "word": "味噌汁",
+      "reading": "みそしる",
+      "category": "dish"
+    },
+    {
+      "id": "dish-021",
+      "word": "おにぎり",
+      "category": "dish"
+    },
+    {
+      "id": "dish-022",
+      "word": "納豆",
+      "reading": "なっとう",
+      "category": "dish"
+    },
+    {
+      "id": "dish-023",
+      "word": "卵焼き",
+      "reading": "たまごやき",
+      "category": "dish"
+    },
+    {
+      "id": "dish-024",
+      "word": "刺身",
+      "reading": "さしみ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-025",
+      "word": "茶わん蒸し",
+      "reading": "ちゃわんむし",
+      "category": "dish"
+    },
+    {
+      "id": "dish-026",
+      "word": "肉じゃが",
+      "reading": "にくじゃが",
+      "category": "dish"
+    },
+    {
+      "id": "dish-027",
+      "word": "焼き鳥",
+      "reading": "やきとり",
+      "category": "dish"
+    },
+    {
+      "id": "dish-028",
+      "word": "冷やし中華",
+      "reading": "ひやしちゅうか",
+      "category": "dish"
+    },
+    {
+      "id": "dish-029",
+      "word": "チャーハン",
+      "category": "dish"
+    },
+    {
+      "id": "dish-030",
+      "word": "雑煮",
+      "reading": "ぞうに",
+      "category": "dish"
+    },
+    {
+      "id": "dish-031",
+      "word": "おせち料理",
+      "reading": "おせちりょうり",
+      "category": "dish"
+    },
+    {
+      "id": "dish-032",
+      "word": "ピザ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-033",
+      "word": "スパゲッティ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-034",
+      "word": "グラタン",
+      "category": "dish"
+    },
+    {
+      "id": "dish-035",
+      "word": "シチュー",
+      "category": "dish"
+    },
+    {
+      "id": "dish-036",
+      "word": "サンドイッチ",
+      "category": "dish"
+    },
+    {
+      "id": "dish-037",
+      "word": "ハンバーガー",
+      "category": "dish"
+    },
+    {
+      "id": "dish-038",
+      "word": "ステーキ",
+      "category": "dish"
+    },
+    {
+      "id": "sweets-001",
+      "word": "ケーキ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-002",
+      "word": "シュークリーム",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-003",
+      "word": "プリン",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-004",
+      "word": "ドーナツ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-005",
+      "word": "クッキー",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-006",
+      "word": "チョコレート",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-007",
+      "word": "アイスクリーム",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-008",
+      "word": "かき氷",
+      "reading": "かきごおり",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-009",
+      "word": "パンケーキ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-010",
+      "word": "ワッフル",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-011",
+      "word": "マカロン",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-012",
+      "word": "カステラ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-013",
+      "word": "ゼリー",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-014",
+      "word": "グミ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-015",
+      "word": "キャラメル",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-016",
+      "word": "マシュマロ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-017",
+      "word": "ガム",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-018",
+      "word": "ポテトチップス",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-019",
+      "word": "ポップコーン",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-020",
+      "word": "わたあめ",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-021",
+      "word": "せんべい",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-022",
+      "word": "だんご",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-023",
+      "word": "大福",
+      "reading": "だいふく",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-024",
+      "word": "まんじゅう",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-025",
+      "word": "ようかん",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-026",
+      "word": "どら焼き",
+      "reading": "どらやき",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-027",
+      "word": "たい焼き",
+      "reading": "たいやき",
+      "category": "sweets"
+    },
+    {
+      "id": "sweets-028",
+      "word": "金平糖",
+      "reading": "こんぺいとう",
+      "category": "sweets"
+    },
+    {
+      "id": "drink-001",
+      "word": "牛乳",
+      "reading": "ぎゅうにゅう",
+      "category": "drink"
+    },
+    {
+      "id": "drink-002",
+      "word": "豆乳",
+      "reading": "とうにゅう",
+      "category": "drink"
+    },
+    {
+      "id": "drink-003",
+      "word": "緑茶",
+      "reading": "りょくちゃ",
+      "category": "drink"
+    },
+    {
+      "id": "drink-004",
+      "word": "麦茶",
+      "reading": "むぎちゃ",
+      "category": "drink"
+    },
+    {
+      "id": "drink-005",
+      "word": "紅茶",
+      "reading": "こうちゃ",
+      "category": "drink"
+    },
+    {
+      "id": "drink-006",
+      "word": "コーヒー",
+      "category": "drink"
+    },
+    {
+      "id": "drink-007",
+      "word": "ココア",
+      "category": "drink"
+    },
+    {
+      "id": "drink-008",
+      "word": "オレンジジュース",
+      "category": "drink"
+    },
+    {
+      "id": "drink-009",
+      "word": "コーラ",
+      "category": "drink"
+    },
+    {
+      "id": "drink-010",
+      "word": "サイダー",
+      "category": "drink"
+    },
+    {
+      "id": "drink-011",
+      "word": "ラムネ",
+      "category": "drink"
+    },
+    {
+      "id": "drink-012",
+      "word": "レモネード",
+      "category": "drink"
+    },
+    {
+      "id": "drink-013",
+      "word": "甘酒",
+      "reading": "あまざけ",
+      "category": "drink"
+    },
+    {
+      "id": "vehicle-001",
+      "word": "自動車",
+      "reading": "じどうしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-002",
+      "word": "自転車",
+      "reading": "じてんしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-003",
+      "word": "一輪車",
+      "reading": "いちりんしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-004",
+      "word": "バイク",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-005",
+      "word": "バス",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-006",
+      "word": "タクシー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-007",
+      "word": "トラック",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-008",
+      "word": "パトカー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-009",
+      "word": "救急車",
+      "reading": "きゅうきゅうしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-010",
+      "word": "消防車",
+      "reading": "しょうぼうしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-011",
+      "word": "ショベルカー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-012",
+      "word": "ブルドーザー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-013",
+      "word": "電車",
+      "reading": "でんしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-014",
+      "word": "新幹線",
+      "reading": "しんかんせん",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-015",
+      "word": "地下鉄",
+      "reading": "ちかてつ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-016",
+      "word": "路面電車",
+      "reading": "ろめんでんしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-017",
+      "word": "モノレール",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-018",
+      "word": "ケーブルカー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-019",
+      "word": "ロープウェイ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-020",
+      "word": "飛行機",
+      "reading": "ひこうき",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-021",
+      "word": "ヘリコプター",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-022",
+      "word": "気球",
+      "reading": "ききゅう",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-023",
+      "word": "ロケット",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-024",
+      "word": "船",
+      "reading": "ふね",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-025",
+      "word": "フェリー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-026",
+      "word": "ヨット",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-027",
+      "word": "カヌー",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-028",
+      "word": "潜水艦",
+      "reading": "せんすいかん",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-029",
+      "word": "人力車",
+      "reading": "じんりきしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-030",
+      "word": "馬車",
+      "reading": "ばしゃ",
+      "category": "vehicle"
+    },
+    {
+      "id": "vehicle-031",
+      "word": "スケートボード",
+      "category": "vehicle"
+    },
+    {
+      "id": "stationery-001",
+      "word": "鉛筆",
+      "reading": "えんぴつ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-002",
+      "word": "消しゴム",
+      "reading": "けしゴム",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-003",
+      "word": "ボールペン",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-004",
+      "word": "マーカー",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-005",
+      "word": "定規",
+      "reading": "じょうぎ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-006",
+      "word": "三角定規",
+      "reading": "さんかくじょうぎ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-007",
+      "word": "分度器",
+      "reading": "ぶんどき",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-008",
+      "word": "コンパス",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-009",
+      "word": "ノート",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-010",
+      "word": "ハサミ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-011",
+      "word": "のり",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-012",
+      "word": "ホッチキス",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-013",
+      "word": "セロハンテープ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-014",
+      "word": "筆箱",
+      "reading": "ふでばこ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-015",
+      "word": "クレヨン",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-016",
+      "word": "絵の具",
+      "reading": "えのぐ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-017",
+      "word": "画用紙",
+      "reading": "がようし",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-018",
+      "word": "筆",
+      "reading": "ふで",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-019",
+      "word": "そろばん",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-020",
+      "word": "ランドセル",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-021",
+      "word": "黒板",
+      "reading": "こくばん",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-022",
+      "word": "チョーク",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-023",
+      "word": "地球儀",
+      "reading": "ちきゅうぎ",
+      "category": "stationery"
+    },
+    {
+      "id": "stationery-024",
+      "word": "上履き",
+      "reading": "うわばき",
+      "category": "stationery"
+    },
+    {
+      "id": "household-001",
+      "word": "歯ブラシ",
+      "reading": "はブラシ",
+      "category": "household"
+    },
+    {
+      "id": "household-002",
+      "word": "タオル",
+      "category": "household"
+    },
+    {
+      "id": "household-003",
+      "word": "石けん",
+      "reading": "せっけん",
+      "category": "household"
+    },
+    {
+      "id": "household-004",
+      "word": "傘",
+      "reading": "かさ",
+      "category": "household"
+    },
+    {
+      "id": "household-005",
+      "word": "時計",
+      "reading": "とけい",
+      "category": "household"
+    },
+    {
+      "id": "household-006",
+      "word": "鏡",
+      "reading": "かがみ",
+      "category": "household"
+    },
+    {
+      "id": "household-007",
+      "word": "くし",
+      "category": "household"
+    },
+    {
+      "id": "household-008",
+      "word": "メガネ",
+      "category": "household"
+    },
+    {
+      "id": "household-009",
+      "word": "財布",
+      "reading": "さいふ",
+      "category": "household"
+    },
+    {
+      "id": "household-010",
+      "word": "かばん",
+      "category": "household"
+    },
+    {
+      "id": "household-011",
+      "word": "鍵",
+      "reading": "かぎ",
+      "category": "household"
+    },
+    {
+      "id": "household-012",
+      "word": "枕",
+      "reading": "まくら",
+      "category": "household"
+    },
+    {
+      "id": "household-013",
+      "word": "布団",
+      "reading": "ふとん",
+      "category": "household"
+    },
+    {
+      "id": "household-014",
+      "word": "ベッド",
+      "category": "household"
+    },
+    {
+      "id": "household-015",
+      "word": "机",
+      "reading": "つくえ",
+      "category": "household"
+    },
+    {
+      "id": "household-016",
+      "word": "椅子",
+      "reading": "いす",
+      "category": "household"
+    },
+    {
+      "id": "household-017",
+      "word": "ソファ",
+      "category": "household"
+    },
+    {
+      "id": "household-018",
+      "word": "カーテン",
+      "category": "household"
+    },
+    {
+      "id": "household-019",
+      "word": "ほうき",
+      "category": "household"
+    },
+    {
+      "id": "household-020",
+      "word": "ちりとり",
+      "category": "household"
+    },
+    {
+      "id": "household-021",
+      "word": "バケツ",
+      "category": "household"
+    },
+    {
+      "id": "household-022",
+      "word": "ハンガー",
+      "category": "household"
+    },
+    {
+      "id": "household-023",
+      "word": "洗濯ばさみ",
+      "reading": "せんたくばさみ",
+      "category": "household"
+    },
+    {
+      "id": "household-024",
+      "word": "ろうそく",
+      "category": "household"
+    },
+    {
+      "id": "household-025",
+      "word": "マッチ",
+      "category": "household"
+    },
+    {
+      "id": "household-026",
+      "word": "懐中電灯",
+      "reading": "かいちゅうでんとう",
+      "category": "household"
+    },
+    {
+      "id": "household-027",
+      "word": "うちわ",
+      "category": "household"
+    },
+    {
+      "id": "household-028",
+      "word": "扇子",
+      "reading": "せんす",
+      "category": "household"
+    },
+    {
+      "id": "household-029",
+      "word": "箸",
+      "reading": "はし",
+      "category": "household"
+    },
+    {
+      "id": "household-030",
+      "word": "スプーン",
+      "category": "household"
+    },
+    {
+      "id": "household-031",
+      "word": "フォーク",
+      "category": "household"
+    },
+    {
+      "id": "household-032",
+      "word": "茶わん",
+      "reading": "ちゃわん",
+      "category": "household"
+    },
+    {
+      "id": "household-033",
+      "word": "コップ",
+      "category": "household"
+    },
+    {
+      "id": "household-034",
+      "word": "やかん",
+      "category": "household"
+    },
+    {
+      "id": "household-035",
+      "word": "鍋",
+      "reading": "なべ",
+      "category": "household"
+    },
+    {
+      "id": "household-036",
+      "word": "フライパン",
+      "category": "household"
+    },
+    {
+      "id": "household-037",
+      "word": "包丁",
+      "reading": "ほうちょう",
+      "category": "household"
+    },
+    {
+      "id": "household-038",
+      "word": "まな板",
+      "reading": "まないた",
+      "category": "household"
+    },
+    {
+      "id": "household-039",
+      "word": "弁当箱",
+      "reading": "べんとうばこ",
+      "category": "household"
+    },
+    {
+      "id": "household-040",
+      "word": "水筒",
+      "reading": "すいとう",
+      "category": "household"
+    },
+    {
+      "id": "household-041",
+      "word": "ティッシュ",
+      "category": "household"
+    },
+    {
+      "id": "household-042",
+      "word": "ゴミ箱",
+      "reading": "ゴミばこ",
+      "category": "household"
+    },
+    {
+      "id": "household-043",
+      "word": "植木鉢",
+      "reading": "うえきばち",
+      "category": "household"
+    },
+    {
+      "id": "household-044",
+      "word": "じょうろ",
+      "category": "household"
+    },
+    {
+      "id": "household-045",
+      "word": "虫かご",
+      "reading": "むしかご",
+      "category": "household"
+    },
+    {
+      "id": "household-046",
+      "word": "虫めがね",
+      "reading": "むしめがね",
+      "category": "household"
+    },
+    {
+      "id": "appliance-001",
+      "word": "テレビ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-002",
+      "word": "冷蔵庫",
+      "reading": "れいぞうこ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-003",
+      "word": "洗濯機",
+      "reading": "せんたくき",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-004",
+      "word": "掃除機",
+      "reading": "そうじき",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-005",
+      "word": "電子レンジ",
+      "reading": "でんしレンジ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-006",
+      "word": "炊飯器",
+      "reading": "すいはんき",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-007",
+      "word": "トースター",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-008",
+      "word": "エアコン",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-009",
+      "word": "扇風機",
+      "reading": "せんぷうき",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-010",
+      "word": "こたつ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-011",
+      "word": "ドライヤー",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-012",
+      "word": "アイロン",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-013",
+      "word": "パソコン",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-014",
+      "word": "スマートフォン",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-015",
+      "word": "電話",
+      "reading": "でんわ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-016",
+      "word": "カメラ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-017",
+      "word": "ラジオ",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-018",
+      "word": "ゲーム機",
+      "reading": "ゲームき",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-019",
+      "word": "プリンター",
+      "category": "appliance"
+    },
+    {
+      "id": "appliance-020",
+      "word": "電卓",
+      "reading": "でんたく",
+      "category": "appliance"
+    },
+    {
+      "id": "instrument-001",
+      "word": "ピアノ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-002",
+      "word": "オルガン",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-003",
+      "word": "ギター",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-004",
+      "word": "ウクレレ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-005",
+      "word": "バイオリン",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-006",
+      "word": "チェロ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-007",
+      "word": "ハープ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-008",
+      "word": "トランペット",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-009",
+      "word": "トロンボーン",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-010",
+      "word": "ホルン",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-011",
+      "word": "サックス",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-012",
+      "word": "フルート",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-013",
+      "word": "クラリネット",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-014",
+      "word": "リコーダー",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-015",
+      "word": "ハーモニカ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-016",
+      "word": "鍵盤ハーモニカ",
+      "reading": "けんばんハーモニカ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-017",
+      "word": "アコーディオン",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-018",
+      "word": "木琴",
+      "reading": "もっきん",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-019",
+      "word": "鉄琴",
+      "reading": "てっきん",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-020",
+      "word": "太鼓",
+      "reading": "たいこ",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-021",
+      "word": "ドラム",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-022",
+      "word": "シンバル",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-023",
+      "word": "タンバリン",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-024",
+      "word": "カスタネット",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-025",
+      "word": "トライアングル",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-026",
+      "word": "三味線",
+      "reading": "しゃみせん",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-027",
+      "word": "琴",
+      "reading": "こと",
+      "category": "instrument"
+    },
+    {
+      "id": "instrument-028",
+      "word": "尺八",
+      "reading": "しゃくはち",
+      "category": "instrument"
+    },
+    {
+      "id": "clothing-001",
+      "word": "Tシャツ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-002",
+      "word": "セーター",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-003",
+      "word": "コート",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-004",
+      "word": "ジーンズ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-005",
+      "word": "スカート",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-006",
+      "word": "ワンピース",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-007",
+      "word": "パジャマ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-008",
+      "word": "水着",
+      "reading": "みずぎ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-009",
+      "word": "制服",
+      "reading": "せいふく",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-010",
+      "word": "エプロン",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-011",
+      "word": "着物",
+      "reading": "きもの",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-012",
+      "word": "浴衣",
+      "reading": "ゆかた",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-013",
+      "word": "帽子",
+      "reading": "ぼうし",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-014",
+      "word": "手袋",
+      "reading": "てぶくろ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-015",
+      "word": "マフラー",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-016",
+      "word": "靴下",
+      "reading": "くつした",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-017",
+      "word": "スニーカー",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-018",
+      "word": "長靴",
+      "reading": "ながぐつ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-019",
+      "word": "下駄",
+      "reading": "げた",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-020",
+      "word": "ネクタイ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-021",
+      "word": "ベルト",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-022",
+      "word": "腕時計",
+      "reading": "うでどけい",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-023",
+      "word": "指輪",
+      "reading": "ゆびわ",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-024",
+      "word": "ネックレス",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-025",
+      "word": "マスク",
+      "category": "clothing"
+    },
+    {
+      "id": "clothing-026",
+      "word": "ハチマキ",
+      "category": "clothing"
+    },
+    {
+      "id": "building-001",
+      "word": "学校",
+      "reading": "がっこう",
+      "category": "building"
+    },
+    {
+      "id": "building-002",
+      "word": "病院",
+      "reading": "びょういん",
+      "category": "building"
+    },
+    {
+      "id": "building-003",
+      "word": "駅",
+      "reading": "えき",
+      "category": "building"
+    },
+    {
+      "id": "building-004",
+      "word": "空港",
+      "reading": "くうこう",
+      "category": "building"
+    },
+    {
+      "id": "building-005",
+      "word": "港",
+      "reading": "みなと",
+      "category": "building"
+    },
+    {
+      "id": "building-006",
+      "word": "図書館",
+      "reading": "としょかん",
+      "category": "building"
+    },
+    {
+      "id": "building-007",
+      "word": "博物館",
+      "reading": "はくぶつかん",
+      "category": "building"
+    },
+    {
+      "id": "building-008",
+      "word": "美術館",
+      "reading": "びじゅつかん",
+      "category": "building"
+    },
+    {
+      "id": "building-009",
+      "word": "動物園",
+      "reading": "どうぶつえん",
+      "category": "building"
+    },
+    {
+      "id": "building-010",
+      "word": "水族館",
+      "reading": "すいぞくかん",
+      "category": "building"
+    },
+    {
+      "id": "building-011",
+      "word": "遊園地",
+      "reading": "ゆうえんち",
+      "category": "building"
+    },
+    {
+      "id": "building-012",
+      "word": "公園",
+      "reading": "こうえん",
+      "category": "building"
+    },
+    {
+      "id": "building-013",
+      "word": "神社",
+      "reading": "じんじゃ",
+      "category": "building"
+    },
+    {
+      "id": "building-014",
+      "word": "寺",
+      "reading": "てら",
+      "category": "building"
+    },
+    {
+      "id": "building-015",
+      "word": "城",
+      "reading": "しろ",
+      "category": "building"
+    },
+    {
+      "id": "building-016",
+      "word": "教会",
+      "reading": "きょうかい",
+      "category": "building"
+    },
+    {
+      "id": "building-017",
+      "word": "郵便局",
+      "reading": "ゆうびんきょく",
+      "category": "building"
+    },
+    {
+      "id": "building-018",
+      "word": "警察署",
+      "reading": "けいさつしょ",
+      "category": "building"
+    },
+    {
+      "id": "building-019",
+      "word": "交番",
+      "reading": "こうばん",
+      "category": "building"
+    },
+    {
+      "id": "building-020",
+      "word": "消防署",
+      "reading": "しょうぼうしょ",
+      "category": "building"
+    },
+    {
+      "id": "building-021",
+      "word": "銀行",
+      "reading": "ぎんこう",
+      "category": "building"
+    },
+    {
+      "id": "building-022",
+      "word": "映画館",
+      "reading": "えいがかん",
+      "category": "building"
+    },
+    {
+      "id": "building-023",
+      "word": "体育館",
+      "reading": "たいいくかん",
+      "category": "building"
+    },
+    {
+      "id": "building-024",
+      "word": "プール",
+      "category": "building"
+    },
+    {
+      "id": "building-025",
+      "word": "コンビニ",
+      "category": "building"
+    },
+    {
+      "id": "building-026",
+      "word": "スーパー",
+      "category": "building"
+    },
+    {
+      "id": "building-027",
+      "word": "デパート",
+      "category": "building"
+    },
+    {
+      "id": "building-028",
+      "word": "銭湯",
+      "reading": "せんとう",
+      "category": "building"
+    },
+    {
+      "id": "building-029",
+      "word": "工場",
+      "reading": "こうじょう",
+      "category": "building"
+    },
+    {
+      "id": "building-030",
+      "word": "牧場",
+      "reading": "ぼくじょう",
+      "category": "building"
+    },
+    {
+      "id": "building-031",
+      "word": "発電所",
+      "reading": "はつでんしょ",
+      "category": "building"
+    },
+    {
+      "id": "building-032",
+      "word": "灯台",
+      "reading": "とうだい",
+      "category": "building"
+    },
+    {
+      "id": "building-033",
+      "word": "橋",
+      "reading": "はし",
+      "category": "building"
+    },
+    {
+      "id": "building-034",
+      "word": "トンネル",
+      "category": "building"
+    },
+    {
+      "id": "building-035",
+      "word": "ダム",
+      "category": "building"
+    },
+    {
+      "id": "building-036",
+      "word": "風車",
+      "reading": "ふうしゃ",
+      "category": "building"
+    },
+    {
+      "id": "building-037",
+      "word": "観覧車",
+      "reading": "かんらんしゃ",
+      "category": "building"
+    },
+    {
+      "id": "building-038",
+      "word": "噴水",
+      "reading": "ふんすい",
+      "category": "building"
+    },
+    {
+      "id": "building-039",
+      "word": "信号機",
+      "reading": "しんごうき",
+      "category": "building"
+    },
+    {
+      "id": "building-040",
+      "word": "郵便ポスト",
+      "reading": "ゆうびんポスト",
+      "category": "building"
+    },
+    {
+      "id": "building-041",
+      "word": "自動販売機",
+      "reading": "じどうはんばいき",
+      "category": "building"
+    },
+    {
+      "id": "building-042",
+      "word": "エレベーター",
+      "category": "building"
+    },
+    {
+      "id": "building-043",
+      "word": "エスカレーター",
+      "category": "building"
+    },
+    {
+      "id": "toy-001",
+      "word": "ブランコ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-002",
+      "word": "すべり台",
+      "reading": "すべりだい",
+      "category": "toy"
+    },
+    {
+      "id": "toy-003",
+      "word": "鉄棒",
+      "reading": "てつぼう",
+      "category": "toy"
+    },
+    {
+      "id": "toy-004",
+      "word": "ジャングルジム",
+      "category": "toy"
+    },
+    {
+      "id": "toy-005",
+      "word": "シーソー",
+      "category": "toy"
+    },
+    {
+      "id": "toy-006",
+      "word": "砂場",
+      "reading": "すなば",
+      "category": "toy"
+    },
+    {
+      "id": "toy-007",
+      "word": "けん玉",
+      "reading": "けんだま",
+      "category": "toy"
+    },
+    {
+      "id": "toy-008",
+      "word": "こま",
+      "category": "toy"
+    },
+    {
+      "id": "toy-009",
+      "word": "竹とんぼ",
+      "reading": "たけとんぼ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-010",
+      "word": "凧",
+      "reading": "たこ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-011",
+      "word": "おはじき",
+      "category": "toy"
+    },
+    {
+      "id": "toy-012",
+      "word": "ビー玉",
+      "reading": "ビーだま",
+      "category": "toy"
+    },
+    {
+      "id": "toy-013",
+      "word": "めんこ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-014",
+      "word": "縄跳び",
+      "reading": "なわとび",
+      "category": "toy"
+    },
+    {
+      "id": "toy-015",
+      "word": "風船",
+      "reading": "ふうせん",
+      "category": "toy"
+    },
+    {
+      "id": "toy-016",
+      "word": "シャボン玉",
+      "reading": "シャボンだま",
+      "category": "toy"
+    },
+    {
+      "id": "toy-017",
+      "word": "積み木",
+      "reading": "つみき",
+      "category": "toy"
+    },
+    {
+      "id": "toy-018",
+      "word": "ルービックキューブ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-019",
+      "word": "トランプ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-020",
+      "word": "サイコロ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-021",
+      "word": "ぬいぐるみ",
+      "category": "toy"
+    },
+    {
+      "id": "toy-022",
+      "word": "人形",
+      "reading": "にんぎょう",
+      "category": "toy"
+    },
+    {
+      "id": "toy-023",
+      "word": "ヨーヨー",
+      "category": "toy"
+    },
+    {
+      "id": "toy-024",
+      "word": "紙飛行機",
+      "reading": "かみひこうき",
+      "category": "toy"
+    },
+    {
+      "id": "toy-025",
+      "word": "折り紙",
+      "reading": "おりがみ",
+      "category": "toy"
+    },
+    {
+      "id": "sports-gear-001",
+      "word": "グローブ",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-002",
+      "word": "バット",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-003",
+      "word": "ラケット",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-004",
+      "word": "サッカーボール",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-005",
+      "word": "シャトルコック",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-006",
+      "word": "ゴルフクラブ",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-007",
+      "word": "スキー板",
+      "reading": "スキーいた",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-008",
+      "word": "スケート靴",
+      "reading": "スケートぐつ",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-009",
+      "word": "竹刀",
+      "reading": "しない",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-010",
+      "word": "柔道着",
+      "reading": "じゅうどうぎ",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-011",
+      "word": "跳び箱",
+      "reading": "とびばこ",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-012",
+      "word": "平均台",
+      "reading": "へいきんだい",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-013",
+      "word": "ハードル",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-014",
+      "word": "ホイッスル",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-015",
+      "word": "ストップウォッチ",
+      "category": "sports-gear"
+    },
+    {
+      "id": "sports-gear-016",
+      "word": "ヘルメット",
+      "category": "sports-gear"
+    },
+    {
+      "id": "nature-001",
+      "word": "太陽",
+      "reading": "たいよう",
+      "category": "nature"
+    },
+    {
+      "id": "nature-002",
+      "word": "月",
+      "reading": "つき",
+      "category": "nature"
+    },
+    {
+      "id": "nature-003",
+      "word": "地球",
+      "reading": "ちきゅう",
+      "category": "nature"
+    },
+    {
+      "id": "nature-004",
+      "word": "水星",
+      "reading": "すいせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-005",
+      "word": "金星",
+      "reading": "きんせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-006",
+      "word": "火星",
+      "reading": "かせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-007",
+      "word": "木星",
+      "reading": "もくせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-008",
+      "word": "土星",
+      "reading": "どせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-009",
+      "word": "天王星",
+      "reading": "てんのうせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-010",
+      "word": "海王星",
+      "reading": "かいおうせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-011",
+      "word": "北極星",
+      "reading": "ほっきょくせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-012",
+      "word": "流れ星",
+      "reading": "ながれぼし",
+      "category": "nature"
+    },
+    {
+      "id": "nature-013",
+      "word": "彗星",
+      "reading": "すいせい",
+      "category": "nature"
+    },
+    {
+      "id": "nature-014",
+      "word": "天の川",
+      "reading": "あまのがわ",
+      "category": "nature"
+    },
+    {
+      "id": "nature-015",
+      "word": "オーロラ",
+      "category": "nature"
+    },
+    {
+      "id": "nature-016",
+      "word": "虹",
+      "reading": "にじ",
+      "category": "nature"
+    },
+    {
+      "id": "nature-017",
+      "word": "雷",
+      "reading": "かみなり",
+      "category": "nature"
+    },
+    {
+      "id": "nature-018",
+      "word": "雲",
+      "reading": "くも",
+      "category": "nature"
+    },
+    {
+      "id": "nature-019",
+      "word": "台風",
+      "reading": "たいふう",
+      "category": "nature"
+    },
+    {
+      "id": "nature-020",
+      "word": "竜巻",
+      "reading": "たつまき",
+      "category": "nature"
+    },
+    {
+      "id": "nature-021",
+      "word": "氷山",
+      "reading": "ひょうざん",
+      "category": "nature"
+    },
+    {
+      "id": "nature-022",
+      "word": "つらら",
+      "category": "nature"
+    },
+    {
+      "id": "nature-023",
+      "word": "雪だるま",
+      "reading": "ゆきだるま",
+      "category": "nature"
+    },
+    {
+      "id": "tradition-001",
+      "word": "門松",
+      "reading": "かどまつ",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-002",
+      "word": "しめ飾り",
+      "reading": "しめかざり",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-003",
+      "word": "鏡餅",
+      "reading": "かがみもち",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-004",
+      "word": "年賀状",
+      "reading": "ねんがじょう",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-005",
+      "word": "お年玉",
+      "reading": "おとしだま",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-006",
+      "word": "獅子舞",
+      "reading": "ししまい",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-007",
+      "word": "ひな人形",
+      "reading": "ひなにんぎょう",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-008",
+      "word": "こいのぼり",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-009",
+      "word": "短冊",
+      "reading": "たんざく",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-010",
+      "word": "風鈴",
+      "reading": "ふうりん",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-011",
+      "word": "花火",
+      "reading": "はなび",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-012",
+      "word": "ちょうちん",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-013",
+      "word": "千歳飴",
+      "reading": "ちとせあめ",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-014",
+      "word": "クリスマスツリー",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-015",
+      "word": "サンタクロース",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-016",
+      "word": "招き猫",
+      "reading": "まねきねこ",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-017",
+      "word": "だるま",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-018",
+      "word": "こけし",
+      "category": "tradition"
+    },
+    {
+      "id": "tradition-019",
+      "word": "鬼",
+      "reading": "おに",
+      "category": "tradition"
+    }
+  ]
+}

@@ -1,4 +1,10 @@
 {
   "version": 1,
-  "dictionaries": ["sample.ja.json"]
+  "dictionaries": [
+    "japan-geography.ja.json",
+    "world.ja.json",
+    "history.ja.json",
+    "people.ja.json",
+    "things.ja.json"
+  ]
 }

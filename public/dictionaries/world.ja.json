@@ -1,0 +1,1072 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "name": "世界の地理",
+  "categories": [
+    {
+      "id": "country",
+      "label": "国名"
+    },
+    {
+      "id": "world-capital",
+      "label": "世界の首都"
+    },
+    {
+      "id": "world-landmark",
+      "label": "世界の名所"
+    },
+    {
+      "id": "world-mountain",
+      "label": "世界の山"
+    },
+    {
+      "id": "world-river",
+      "label": "世界の川"
+    },
+    {
+      "id": "world-lake",
+      "label": "世界の湖"
+    }
+  ],
+  "entries": [
+    {
+      "id": "country-001",
+      "word": "アメリカ",
+      "category": "country"
+    },
+    {
+      "id": "country-002",
+      "word": "カナダ",
+      "category": "country"
+    },
+    {
+      "id": "country-003",
+      "word": "メキシコ",
+      "category": "country"
+    },
+    {
+      "id": "country-004",
+      "word": "キューバ",
+      "category": "country"
+    },
+    {
+      "id": "country-005",
+      "word": "ジャマイカ",
+      "category": "country"
+    },
+    {
+      "id": "country-006",
+      "word": "ブラジル",
+      "category": "country"
+    },
+    {
+      "id": "country-007",
+      "word": "アルゼンチン",
+      "category": "country"
+    },
+    {
+      "id": "country-008",
+      "word": "チリ",
+      "category": "country"
+    },
+    {
+      "id": "country-009",
+      "word": "ペルー",
+      "category": "country"
+    },
+    {
+      "id": "country-010",
+      "word": "コロンビア",
+      "category": "country"
+    },
+    {
+      "id": "country-011",
+      "word": "イギリス",
+      "category": "country"
+    },
+    {
+      "id": "country-012",
+      "word": "アイルランド",
+      "category": "country"
+    },
+    {
+      "id": "country-013",
+      "word": "フランス",
+      "category": "country"
+    },
+    {
+      "id": "country-014",
+      "word": "ドイツ",
+      "category": "country"
+    },
+    {
+      "id": "country-015",
+      "word": "イタリア",
+      "category": "country"
+    },
+    {
+      "id": "country-016",
+      "word": "スペイン",
+      "category": "country"
+    },
+    {
+      "id": "country-017",
+      "word": "ポルトガル",
+      "category": "country"
+    },
+    {
+      "id": "country-018",
+      "word": "オランダ",
+      "category": "country"
+    },
+    {
+      "id": "country-019",
+      "word": "ベルギー",
+      "category": "country"
+    },
+    {
+      "id": "country-020",
+      "word": "ルクセンブルク",
+      "category": "country"
+    },
+    {
+      "id": "country-021",
+      "word": "スイス",
+      "category": "country"
+    },
+    {
+      "id": "country-022",
+      "word": "オーストリア",
+      "category": "country"
+    },
+    {
+      "id": "country-023",
+      "word": "スウェーデン",
+      "category": "country"
+    },
+    {
+      "id": "country-024",
+      "word": "ノルウェー",
+      "category": "country"
+    },
+    {
+      "id": "country-025",
+      "word": "フィンランド",
+      "category": "country"
+    },
+    {
+      "id": "country-026",
+      "word": "デンマーク",
+      "category": "country"
+    },
+    {
+      "id": "country-027",
+      "word": "アイスランド",
+      "category": "country"
+    },
+    {
+      "id": "country-028",
+      "word": "ポーランド",
+      "category": "country"
+    },
+    {
+      "id": "country-029",
+      "word": "チェコ",
+      "category": "country"
+    },
+    {
+      "id": "country-030",
+      "word": "ハンガリー",
+      "category": "country"
+    },
+    {
+      "id": "country-031",
+      "word": "クロアチア",
+      "category": "country"
+    },
+    {
+      "id": "country-032",
+      "word": "ギリシャ",
+      "category": "country"
+    },
+    {
+      "id": "country-033",
+      "word": "トルコ",
+      "category": "country"
+    },
+    {
+      "id": "country-034",
+      "word": "ロシア",
+      "category": "country"
+    },
+    {
+      "id": "country-035",
+      "word": "ウクライナ",
+      "category": "country"
+    },
+    {
+      "id": "country-036",
+      "word": "バチカン",
+      "category": "country"
+    },
+    {
+      "id": "country-037",
+      "word": "モナコ",
+      "category": "country"
+    },
+    {
+      "id": "country-038",
+      "word": "中国",
+      "reading": "ちゅうごく",
+      "category": "country"
+    },
+    {
+      "id": "country-039",
+      "word": "韓国",
+      "reading": "かんこく",
+      "category": "country"
+    },
+    {
+      "id": "country-040",
+      "word": "モンゴル",
+      "category": "country"
+    },
+    {
+      "id": "country-041",
+      "word": "ベトナム",
+      "category": "country"
+    },
+    {
+      "id": "country-042",
+      "word": "タイ",
+      "category": "country"
+    },
+    {
+      "id": "country-043",
+      "word": "フィリピン",
+      "category": "country"
+    },
+    {
+      "id": "country-044",
+      "word": "インドネシア",
+      "category": "country"
+    },
+    {
+      "id": "country-045",
+      "word": "マレーシア",
+      "category": "country"
+    },
+    {
+      "id": "country-046",
+      "word": "シンガポール",
+      "category": "country"
+    },
+    {
+      "id": "country-047",
+      "word": "カンボジア",
+      "category": "country"
+    },
+    {
+      "id": "country-048",
+      "word": "ミャンマー",
+      "category": "country"
+    },
+    {
+      "id": "country-049",
+      "word": "ラオス",
+      "category": "country"
+    },
+    {
+      "id": "country-050",
+      "word": "インド",
+      "category": "country"
+    },
+    {
+      "id": "country-051",
+      "word": "ネパール",
+      "category": "country"
+    },
+    {
+      "id": "country-052",
+      "word": "ブータン",
+      "category": "country"
+    },
+    {
+      "id": "country-053",
+      "word": "スリランカ",
+      "category": "country"
+    },
+    {
+      "id": "country-054",
+      "word": "パキスタン",
+      "category": "country"
+    },
+    {
+      "id": "country-055",
+      "word": "バングラデシュ",
+      "category": "country"
+    },
+    {
+      "id": "country-056",
+      "word": "モルディブ",
+      "category": "country"
+    },
+    {
+      "id": "country-057",
+      "word": "イラン",
+      "category": "country"
+    },
+    {
+      "id": "country-058",
+      "word": "イラク",
+      "category": "country"
+    },
+    {
+      "id": "country-059",
+      "word": "サウジアラビア",
+      "category": "country"
+    },
+    {
+      "id": "country-060",
+      "word": "アラブ首長国連邦",
+      "reading": "アラブしゅちょうこくれんぽう",
+      "category": "country"
+    },
+    {
+      "id": "country-061",
+      "word": "カタール",
+      "category": "country"
+    },
+    {
+      "id": "country-062",
+      "word": "イスラエル",
+      "category": "country"
+    },
+    {
+      "id": "country-063",
+      "word": "ヨルダン",
+      "category": "country"
+    },
+    {
+      "id": "country-064",
+      "word": "エジプト",
+      "category": "country"
+    },
+    {
+      "id": "country-065",
+      "word": "モロッコ",
+      "category": "country"
+    },
+    {
+      "id": "country-066",
+      "word": "ケニア",
+      "category": "country"
+    },
+    {
+      "id": "country-067",
+      "word": "エチオピア",
+      "category": "country"
+    },
+    {
+      "id": "country-068",
+      "word": "ナイジェリア",
+      "category": "country"
+    },
+    {
+      "id": "country-069",
+      "word": "ガーナ",
+      "category": "country"
+    },
+    {
+      "id": "country-070",
+      "word": "南アフリカ",
+      "reading": "みなみアフリカ",
+      "category": "country"
+    },
+    {
+      "id": "country-071",
+      "word": "タンザニア",
+      "category": "country"
+    },
+    {
+      "id": "country-072",
+      "word": "マダガスカル",
+      "category": "country"
+    },
+    {
+      "id": "country-073",
+      "word": "オーストラリア",
+      "category": "country"
+    },
+    {
+      "id": "country-074",
+      "word": "ニュージーランド",
+      "category": "country"
+    },
+    {
+      "id": "country-075",
+      "word": "フィジー",
+      "category": "country"
+    },
+    {
+      "id": "country-076",
+      "word": "パプアニューギニア",
+      "category": "country"
+    },
+    {
+      "id": "world-capital-001",
+      "word": "ワシントンD.C.",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-002",
+      "word": "オタワ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-003",
+      "word": "メキシコシティ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-004",
+      "word": "ハバナ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-005",
+      "word": "ブラジリア",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-006",
+      "word": "ブエノスアイレス",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-007",
+      "word": "サンティアゴ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-008",
+      "word": "リマ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-009",
+      "word": "ボゴタ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-010",
+      "word": "ロンドン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-011",
+      "word": "ダブリン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-012",
+      "word": "パリ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-013",
+      "word": "ベルリン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-014",
+      "word": "ローマ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-015",
+      "word": "マドリード",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-016",
+      "word": "リスボン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-017",
+      "word": "アムステルダム",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-018",
+      "word": "ブリュッセル",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-019",
+      "word": "ベルン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-020",
+      "word": "ウィーン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-021",
+      "word": "ストックホルム",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-022",
+      "word": "オスロ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-023",
+      "word": "ヘルシンキ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-024",
+      "word": "コペンハーゲン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-025",
+      "word": "レイキャビク",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-026",
+      "word": "ワルシャワ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-027",
+      "word": "プラハ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-028",
+      "word": "ブダペスト",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-029",
+      "word": "アテネ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-030",
+      "word": "アンカラ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-031",
+      "word": "モスクワ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-032",
+      "word": "キーウ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-033",
+      "word": "北京",
+      "reading": "ペキン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-034",
+      "word": "ソウル",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-035",
+      "word": "ウランバートル",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-036",
+      "word": "ハノイ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-037",
+      "word": "バンコク",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-038",
+      "word": "マニラ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-039",
+      "word": "クアラルンプール",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-040",
+      "word": "プノンペン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-041",
+      "word": "ネーピードー",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-042",
+      "word": "ニューデリー",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-043",
+      "word": "カトマンズ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-044",
+      "word": "イスラマバード",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-045",
+      "word": "ダッカ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-046",
+      "word": "テヘラン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-047",
+      "word": "バグダッド",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-048",
+      "word": "リヤド",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-049",
+      "word": "アブダビ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-050",
+      "word": "ドーハ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-051",
+      "word": "カイロ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-052",
+      "word": "ラバト",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-053",
+      "word": "ナイロビ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-054",
+      "word": "アディスアベバ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-055",
+      "word": "アブジャ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-056",
+      "word": "アクラ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-057",
+      "word": "キャンベラ",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-capital-058",
+      "word": "ウェリントン",
+      "category": "world-capital"
+    },
+    {
+      "id": "world-landmark-001",
+      "word": "エッフェル塔",
+      "reading": "エッフェルとう",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-002",
+      "word": "凱旋門",
+      "reading": "がいせんもん",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-003",
+      "word": "ルーブル美術館",
+      "reading": "ルーブルびじゅつかん",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-004",
+      "word": "ベルサイユ宮殿",
+      "reading": "ベルサイユきゅうでん",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-005",
+      "word": "モン・サン＝ミシェル",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-006",
+      "word": "ビッグ・ベン",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-007",
+      "word": "ストーンヘンジ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-008",
+      "word": "コロッセオ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-009",
+      "word": "ピサの斜塔",
+      "reading": "ピサのしゃとう",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-010",
+      "word": "サグラダ・ファミリア",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-011",
+      "word": "パルテノン神殿",
+      "reading": "パルテノンしんでん",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-012",
+      "word": "ノイシュヴァンシュタイン城",
+      "reading": "ノイシュヴァンシュタインじょう",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-013",
+      "word": "自由の女神",
+      "reading": "じゆうのめがみ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-014",
+      "word": "ホワイトハウス",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-015",
+      "word": "ゴールデン・ゲート・ブリッジ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-016",
+      "word": "グランドキャニオン",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-017",
+      "word": "ナイアガラの滝",
+      "reading": "ナイアガラのたき",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-018",
+      "word": "マチュピチュ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-019",
+      "word": "ナスカの地上絵",
+      "reading": "ナスカのちじょうえ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-020",
+      "word": "モアイ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-021",
+      "word": "ピラミッド",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-022",
+      "word": "スフィンクス",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-023",
+      "word": "万里の長城",
+      "reading": "ばんりのちょうじょう",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-024",
+      "word": "タージ・マハル",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-025",
+      "word": "アンコール・ワット",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-026",
+      "word": "ブルジュ・ハリファ",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-027",
+      "word": "シドニー・オペラハウス",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-landmark-028",
+      "word": "エアーズロック",
+      "category": "world-landmark"
+    },
+    {
+      "id": "world-mountain-001",
+      "word": "エベレスト",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-002",
+      "word": "K2",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-003",
+      "word": "キリマンジャロ",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-004",
+      "word": "マッターホルン",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-005",
+      "word": "モンブラン",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-006",
+      "word": "ユングフラウ",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-007",
+      "word": "アイガー",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-008",
+      "word": "アコンカグア",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-mountain-009",
+      "word": "マウナケア",
+      "category": "world-mountain"
+    },
+    {
+      "id": "world-river-001",
+      "word": "ナイル川",
+      "reading": "ナイルがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-002",
+      "word": "アマゾン川",
+      "reading": "アマゾンがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-003",
+      "word": "長江",
+      "reading": "ちょうこう",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-004",
+      "word": "黄河",
+      "reading": "こうが",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-005",
+      "word": "ミシシッピ川",
+      "reading": "ミシシッピがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-006",
+      "word": "ライン川",
+      "reading": "ラインがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-007",
+      "word": "ドナウ川",
+      "reading": "ドナウがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-008",
+      "word": "セーヌ川",
+      "reading": "セーヌがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-009",
+      "word": "テムズ川",
+      "reading": "テムズがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-010",
+      "word": "ボルガ川",
+      "reading": "ボルガがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-011",
+      "word": "ガンジス川",
+      "reading": "ガンジスがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-012",
+      "word": "インダス川",
+      "reading": "インダスがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-013",
+      "word": "チグリス川",
+      "reading": "チグリスがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-014",
+      "word": "ユーフラテス川",
+      "reading": "ユーフラテスがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-015",
+      "word": "メコン川",
+      "reading": "メコンがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-016",
+      "word": "コンゴ川",
+      "reading": "コンゴがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-017",
+      "word": "アムール川",
+      "reading": "アムールがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-018",
+      "word": "ラプラタ川",
+      "reading": "ラプラタがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-river-019",
+      "word": "ヨルダン川",
+      "reading": "ヨルダンがわ",
+      "category": "world-river"
+    },
+    {
+      "id": "world-lake-001",
+      "word": "バイカル湖",
+      "reading": "バイカルこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-002",
+      "word": "スペリオル湖",
+      "reading": "スペリオルこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-003",
+      "word": "ミシガン湖",
+      "reading": "ミシガンこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-004",
+      "word": "ビクトリア湖",
+      "reading": "ビクトリアこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-005",
+      "word": "タンガニーカ湖",
+      "reading": "タンガニーカこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-006",
+      "word": "チチカカ湖",
+      "reading": "チチカカこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-007",
+      "word": "ウユニ塩湖",
+      "reading": "ウユニえんこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-008",
+      "word": "ネス湖",
+      "reading": "ネスこ",
+      "category": "world-lake"
+    },
+    {
+      "id": "world-lake-009",
+      "word": "レマン湖",
+      "reading": "レマンこ",
+      "category": "world-lake"
+    }
+  ]
+}

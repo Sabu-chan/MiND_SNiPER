@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "name": "有名人",
+  "categories": [
+    {
+      "id": "entertainer",
+      "label": "芸能人"
+    },
+    {
+      "id": "athlete",
+      "label": "スポーツ選手・棋士"
+    },
+    {
+      "id": "prime-minister",
+      "label": "内閣総理大臣（2000年以降）"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entertainer-001",
+      "word": "タモリ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-002",
+      "word": "明石家さんま",
+      "reading": "あかしやさんま",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-003",
+      "word": "ビートたけし",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-004",
+      "word": "黒柳徹子",
+      "reading": "くろやなぎてつこ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-005",
+      "word": "所ジョージ",
+      "reading": "ところジョージ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-006",
+      "word": "笑福亭鶴瓶",
+      "reading": "しょうふくていつるべ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-007",
+      "word": "和田アキ子",
+      "reading": "わだアキこ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-008",
+      "word": "マツコ・デラックス",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-009",
+      "word": "有吉弘行",
+      "reading": "ありよしひろいき",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-010",
+      "word": "内村光良",
+      "reading": "うちむらてるよし",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-011",
+      "word": "出川哲朗",
+      "reading": "でがわてつろう",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-012",
+      "word": "木村拓哉",
+      "reading": "きむらたくや",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-013",
+      "word": "福山雅治",
+      "reading": "ふくやままさはる",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-014",
+      "word": "阿部寛",
+      "reading": "あべひろし",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-015",
+      "word": "堺雅人",
+      "reading": "さかいまさと",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-016",
+      "word": "大泉洋",
+      "reading": "おおいずみよう",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-017",
+      "word": "菅田将暉",
+      "reading": "すだまさき",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-018",
+      "word": "星野源",
+      "reading": "ほしのげん",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-019",
+      "word": "綾瀬はるか",
+      "reading": "あやせはるか",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-020",
+      "word": "新垣結衣",
+      "reading": "あらがきゆい",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-021",
+      "word": "石原さとみ",
+      "reading": "いしはらさとみ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-022",
+      "word": "長澤まさみ",
+      "reading": "ながさわまさみ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-023",
+      "word": "北川景子",
+      "reading": "きたがわけいこ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-024",
+      "word": "吉永小百合",
+      "reading": "よしながさゆり",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-025",
+      "word": "米津玄師",
+      "reading": "よねづけんし",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-026",
+      "word": "宇多田ヒカル",
+      "reading": "うただヒカル",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-027",
+      "word": "松任谷由実",
+      "reading": "まつとうやゆみ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-028",
+      "word": "桑田佳祐",
+      "reading": "くわたけいすけ",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-029",
+      "word": "美空ひばり",
+      "reading": "みそらひばり",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "entertainer-030",
+      "word": "高倉健",
+      "reading": "たかくらけん",
+      "category": "entertainer",
+      "year": 2026
+    },
+    {
+      "id": "athlete-001",
+      "word": "大谷翔平",
+      "reading": "おおたにしょうへい",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-002",
+      "word": "イチロー",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-003",
+      "word": "松井秀喜",
+      "reading": "まついひでき",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-004",
+      "word": "王貞治",
+      "reading": "おうさだはる",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-005",
+      "word": "長嶋茂雄",
+      "reading": "ながしましげお",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-006",
+      "word": "三浦知良",
+      "reading": "みうらかずよし",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-007",
+      "word": "本田圭佑",
+      "reading": "ほんだけいすけ",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-008",
+      "word": "澤穂希",
+      "reading": "さわほまれ",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-009",
+      "word": "羽生結弦",
+      "reading": "はにゅうゆづる",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-010",
+      "word": "浅田真央",
+      "reading": "あさだまお",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-011",
+      "word": "錦織圭",
+      "reading": "にしこりけい",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-012",
+      "word": "大坂なおみ",
+      "reading": "おおさかなおみ",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-013",
+      "word": "井上尚弥",
+      "reading": "いのうえなおや",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-014",
+      "word": "吉田沙保里",
+      "reading": "よしださおり",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-015",
+      "word": "北島康介",
+      "reading": "きたじまこうすけ",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-016",
+      "word": "内村航平",
+      "reading": "うちむらこうへい",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "athlete-017",
+      "word": "藤井聡太",
+      "reading": "ふじいそうた",
+      "category": "athlete",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-001",
+      "word": "森喜朗",
+      "reading": "もりよしろう",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-002",
+      "word": "小泉純一郎",
+      "reading": "こいずみじゅんいちろう",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-003",
+      "word": "安倍晋三",
+      "reading": "あべしんぞう",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-004",
+      "word": "福田康夫",
+      "reading": "ふくだやすお",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-005",
+      "word": "麻生太郎",
+      "reading": "あそうたろう",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-006",
+      "word": "鳩山由紀夫",
+      "reading": "はとやまゆきお",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-007",
+      "word": "菅直人",
+      "reading": "かんなおと",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-008",
+      "word": "野田佳彦",
+      "reading": "のだよしひこ",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-009",
+      "word": "菅義偉",
+      "reading": "すがよしひで",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-010",
+      "word": "岸田文雄",
+      "reading": "きしだふみお",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-011",
+      "word": "石破茂",
+      "reading": "いしばしげる",
+      "category": "prime-minister",
+      "year": 2026
+    },
+    {
+      "id": "prime-minister-012",
+      "word": "高市早苗",
+      "reading": "たかいちさなえ",
+      "category": "prime-minister",
+      "year": 2026
+    }
+  ]
+}

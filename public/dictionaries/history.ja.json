@@ -1,0 +1,831 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "name": "歴史上の人物",
+  "categories": [
+    {
+      "id": "japan-history",
+      "label": "日本の歴史上の人物"
+    },
+    {
+      "id": "world-history",
+      "label": "世界の歴史上の人物"
+    }
+  ],
+  "entries": [
+    {
+      "id": "japan-history-001",
+      "word": "卑弥呼",
+      "reading": "ひみこ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-002",
+      "word": "聖徳太子",
+      "reading": "しょうとくたいし",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-003",
+      "word": "推古天皇",
+      "reading": "すいこてんのう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-004",
+      "word": "小野妹子",
+      "reading": "おののいもこ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-005",
+      "word": "中大兄皇子",
+      "reading": "なかのおおえのおうじ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-006",
+      "word": "中臣鎌足",
+      "reading": "なかとみのかまたり",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-007",
+      "word": "天武天皇",
+      "reading": "てんむてんのう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-008",
+      "word": "聖武天皇",
+      "reading": "しょうむてんのう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-009",
+      "word": "行基",
+      "reading": "ぎょうき",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-010",
+      "word": "鑑真",
+      "reading": "がんじん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-011",
+      "word": "阿倍仲麻呂",
+      "reading": "あべのなかまろ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-012",
+      "word": "桓武天皇",
+      "reading": "かんむてんのう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-013",
+      "word": "坂上田村麻呂",
+      "reading": "さかのうえのたむらまろ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-014",
+      "word": "最澄",
+      "reading": "さいちょう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-015",
+      "word": "空海",
+      "reading": "くうかい",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-016",
+      "word": "菅原道真",
+      "reading": "すがわらのみちざね",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-017",
+      "word": "平将門",
+      "reading": "たいらのまさかど",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-018",
+      "word": "藤原道長",
+      "reading": "ふじわらのみちなが",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-019",
+      "word": "藤原頼通",
+      "reading": "ふじわらのよりみち",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-020",
+      "word": "紫式部",
+      "reading": "むらさきしきぶ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-021",
+      "word": "清少納言",
+      "reading": "せいしょうなごん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-022",
+      "word": "白河上皇",
+      "reading": "しらかわじょうこう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-023",
+      "word": "平清盛",
+      "reading": "たいらのきよもり",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-024",
+      "word": "源頼朝",
+      "reading": "みなもとのよりとも",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-025",
+      "word": "源義経",
+      "reading": "みなもとのよしつね",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-026",
+      "word": "北条政子",
+      "reading": "ほうじょうまさこ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-027",
+      "word": "北条時宗",
+      "reading": "ほうじょうときむね",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-028",
+      "word": "運慶",
+      "reading": "うんけい",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-029",
+      "word": "親鸞",
+      "reading": "しんらん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-030",
+      "word": "日蓮",
+      "reading": "にちれん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-031",
+      "word": "後醍醐天皇",
+      "reading": "ごだいごてんのう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-032",
+      "word": "足利尊氏",
+      "reading": "あしかがたかうじ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-033",
+      "word": "足利義満",
+      "reading": "あしかがよしみつ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-034",
+      "word": "足利義政",
+      "reading": "あしかがよしまさ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-035",
+      "word": "世阿弥",
+      "reading": "ぜあみ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-036",
+      "word": "雪舟",
+      "reading": "せっしゅう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-037",
+      "word": "フランシスコ・ザビエル",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-038",
+      "word": "織田信長",
+      "reading": "おだのぶなが",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-039",
+      "word": "豊臣秀吉",
+      "reading": "とよとみひでよし",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-040",
+      "word": "徳川家康",
+      "reading": "とくがわいえやす",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-041",
+      "word": "武田信玄",
+      "reading": "たけだしんげん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-042",
+      "word": "上杉謙信",
+      "reading": "うえすぎけんしん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-043",
+      "word": "今川義元",
+      "reading": "いまがわよしもと",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-044",
+      "word": "明智光秀",
+      "reading": "あけちみつひで",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-045",
+      "word": "石田三成",
+      "reading": "いしだみつなり",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-046",
+      "word": "伊達政宗",
+      "reading": "だてまさむね",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-047",
+      "word": "真田幸村",
+      "reading": "さなだゆきむら",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-048",
+      "word": "千利休",
+      "reading": "せんのりきゅう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-049",
+      "word": "徳川家光",
+      "reading": "とくがわいえみつ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-050",
+      "word": "天草四郎",
+      "reading": "あまくさしろう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-051",
+      "word": "徳川綱吉",
+      "reading": "とくがわつなよし",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-052",
+      "word": "徳川吉宗",
+      "reading": "とくがわよしむね",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-053",
+      "word": "松尾芭蕉",
+      "reading": "まつおばしょう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-054",
+      "word": "近松門左衛門",
+      "reading": "ちかまつもんざえもん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-055",
+      "word": "井原西鶴",
+      "reading": "いはらさいかく",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-056",
+      "word": "田沼意次",
+      "reading": "たぬまおきつぐ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-057",
+      "word": "松平定信",
+      "reading": "まつだいらさだのぶ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-058",
+      "word": "水野忠邦",
+      "reading": "みずのただくに",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-059",
+      "word": "杉田玄白",
+      "reading": "すぎたげんぱく",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-060",
+      "word": "本居宣長",
+      "reading": "もとおりのりなが",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-061",
+      "word": "伊能忠敬",
+      "reading": "いのうただたか",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-062",
+      "word": "葛飾北斎",
+      "reading": "かつしかほくさい",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-063",
+      "word": "歌川広重",
+      "reading": "うたがわひろしげ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-064",
+      "word": "大塩平八郎",
+      "reading": "おおしおへいはちろう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-065",
+      "word": "ペリー",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-066",
+      "word": "井伊直弼",
+      "reading": "いいなおすけ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-067",
+      "word": "吉田松陰",
+      "reading": "よしだしょういん",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-068",
+      "word": "高杉晋作",
+      "reading": "たかすぎしんさく",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-069",
+      "word": "坂本龍馬",
+      "reading": "さかもとりょうま",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-070",
+      "word": "近藤勇",
+      "reading": "こんどういさみ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-071",
+      "word": "土方歳三",
+      "reading": "ひじかたとしぞう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-072",
+      "word": "勝海舟",
+      "reading": "かつかいしゅう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-073",
+      "word": "徳川慶喜",
+      "reading": "とくがわよしのぶ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-074",
+      "word": "西郷隆盛",
+      "reading": "さいごうたかもり",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-075",
+      "word": "大久保利通",
+      "reading": "おおくぼとしみち",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-076",
+      "word": "木戸孝允",
+      "reading": "きどたかよし",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-077",
+      "word": "岩倉具視",
+      "reading": "いわくらともみ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-078",
+      "word": "伊藤博文",
+      "reading": "いとうひろぶみ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-079",
+      "word": "板垣退助",
+      "reading": "いたがきたいすけ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-080",
+      "word": "大隈重信",
+      "reading": "おおくましげのぶ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-081",
+      "word": "福沢諭吉",
+      "reading": "ふくざわゆきち",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-082",
+      "word": "津田梅子",
+      "reading": "つだうめこ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-083",
+      "word": "陸奥宗光",
+      "reading": "むつむねみつ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-084",
+      "word": "小村寿太郎",
+      "reading": "こむらじゅたろう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-085",
+      "word": "東郷平八郎",
+      "reading": "とうごうへいはちろう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-086",
+      "word": "北里柴三郎",
+      "reading": "きたさとしばさぶろう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-087",
+      "word": "野口英世",
+      "reading": "のぐちひでよ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-088",
+      "word": "樋口一葉",
+      "reading": "ひぐちいちよう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-089",
+      "word": "夏目漱石",
+      "reading": "なつめそうせき",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-090",
+      "word": "森鷗外",
+      "reading": "もりおうがい",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-091",
+      "word": "与謝野晶子",
+      "reading": "よさのあきこ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-092",
+      "word": "渋沢栄一",
+      "reading": "しぶさわえいいち",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-093",
+      "word": "新渡戸稲造",
+      "reading": "にとべいなぞう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-094",
+      "word": "平塚らいてう",
+      "reading": "ひらつからいちょう",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-095",
+      "word": "原敬",
+      "reading": "はらたかし",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-096",
+      "word": "犬養毅",
+      "reading": "いぬかいつよし",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-097",
+      "word": "宮沢賢治",
+      "reading": "みやざわけんじ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-098",
+      "word": "芥川龍之介",
+      "reading": "あくたがわりゅうのすけ",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-099",
+      "word": "吉田茂",
+      "reading": "よしだしげる",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-100",
+      "word": "湯川秀樹",
+      "reading": "ゆかわひでき",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-101",
+      "word": "川端康成",
+      "reading": "かわばたやすなり",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-102",
+      "word": "田中角栄",
+      "reading": "たなかかくえい",
+      "category": "japan-history"
+    },
+    {
+      "id": "japan-history-103",
+      "word": "手塚治虫",
+      "reading": "てづかおさむ",
+      "category": "japan-history"
+    },
+    {
+      "id": "world-history-001",
+      "word": "クレオパトラ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-002",
+      "word": "アレクサンドロス大王",
+      "reading": "アレクサンドロスだいおう",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-003",
+      "word": "カエサル",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-004",
+      "word": "始皇帝",
+      "reading": "しこうてい",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-005",
+      "word": "孔子",
+      "reading": "こうし",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-006",
+      "word": "チンギス・ハン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-007",
+      "word": "マルコ・ポーロ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-008",
+      "word": "ジャンヌ・ダルク",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-009",
+      "word": "コロンブス",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-010",
+      "word": "バスコ・ダ・ガマ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-011",
+      "word": "マゼラン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-012",
+      "word": "レオナルド・ダ・ヴィンチ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-013",
+      "word": "ミケランジェロ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-014",
+      "word": "ルター",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-015",
+      "word": "ガリレオ・ガリレイ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-016",
+      "word": "シェイクスピア",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-017",
+      "word": "エリザベス1世",
+      "reading": "エリザベスいっせい",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-018",
+      "word": "ルイ14世",
+      "reading": "ルイじゅうよんせい",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-019",
+      "word": "マリー・アントワネット",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-020",
+      "word": "ニュートン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-021",
+      "word": "ワシントン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-022",
+      "word": "ナポレオン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-023",
+      "word": "リンカーン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-024",
+      "word": "バッハ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-025",
+      "word": "モーツァルト",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-026",
+      "word": "ベートーベン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-027",
+      "word": "ダーウィン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-028",
+      "word": "ナイチンゲール",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-029",
+      "word": "エジソン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-030",
+      "word": "ライト兄弟",
+      "reading": "ライトきょうだい",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-031",
+      "word": "キュリー夫人",
+      "reading": "キュリーふじん",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-032",
+      "word": "アインシュタイン",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-033",
+      "word": "ゴッホ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-034",
+      "word": "ピカソ",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-035",
+      "word": "ヘレン・ケラー",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-036",
+      "word": "ガンディー",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-037",
+      "word": "キング牧師",
+      "reading": "キングぼくし",
+      "category": "world-history"
+    },
+    {
+      "id": "world-history-038",
+      "word": "ネルソン・マンデラ",
+      "category": "world-history"
+    }
+  ]
+}
