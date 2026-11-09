@@ -56,8 +56,8 @@ describe('HpChart（SPEC 3.10）', () => {
     expect(rows.map((r) => r.textContent)).toEqual([
       'アオイベンチカ',
       '開始100100100',
-      'R140100100',
-      'R240120100',
+      'G140100100',
+      'G240120100',
     ]);
   });
 
@@ -68,7 +68,7 @@ describe('HpChart（SPEC 3.10）', () => {
     svg.focus();
     await user.keyboard('{ArrowRight}{ArrowRight}');
     const tooltip = screen.getByRole('status');
-    expect(tooltip).toHaveTextContent('第1周（全3周） 第1ラウンド');
+    expect(tooltip).toHaveTextContent('第1ラウンド（全3ラウンド） 第1ゲーム');
     // HPの多い順
     expect(
       within(tooltip)
