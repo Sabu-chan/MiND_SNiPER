@@ -36,7 +36,7 @@ export default defineConfig({
       },
       workbox: {
         // 辞書（public/dictionaries/*.json）も含めて事前キャッシュし、オフラインで遊べるようにする
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,json,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,json,webmanifest}'],
         navigateFallback: '/index.html',
         cleanupOutdatedCaches: true,
       },

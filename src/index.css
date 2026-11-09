@@ -107,6 +107,17 @@ body {
   color: var(--color-accent);
 }
 
+/* ロゴ画像：縦横比を保ったまま画面に合わせて縮小する（横は内容の幅まで、縦は画面の3割まで） */
+.logo__image {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  max-height: 30dvh;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .logo__subtitle {
   margin: 0.25rem 0 0;
   color: var(--color-muted);
