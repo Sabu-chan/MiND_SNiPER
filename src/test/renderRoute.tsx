@@ -59,7 +59,10 @@ export function expectNoSecrets(game: GameState, root: HTMLElement = document.bo
     ...Object.values(game.hp),
   ]);
   for (const record of [...game.records, ...(game.round ? [game.round] : [])]) {
-    for (const e of record.events) if (e.kind !== 'pass') secrets.add(e.damage).add(e.applied);
+    // ジャンル偵察のダメージは CONFIG で公開されている値なので秘密に含めない
+    for (const e of record.events) {
+      if (e.kind === 'hit' || e.kind === 'miss') secrets.add(e.damage).add(e.applied);
+    }
   }
   const numbers = (root.textContent ?? '').match(/\d+/g)?.map(Number) ?? [];
   expect(numbers.filter((n) => n >= 10 && secrets.has(n))).toEqual([]);

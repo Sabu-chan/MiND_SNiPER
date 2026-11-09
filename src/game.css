@@ -559,10 +559,6 @@
   gap: 10px;
 }
 
-.shot-buttons > :last-child {
-  grid-column: 1 / -1;
-}
-
 .shot-buttons .btn {
   min-height: 64px;
   font-size: 1.2rem;
@@ -1040,4 +1036,30 @@
 
 .hp-chart__table th[scope='row'] {
   text-align: left;
+}
+
+/* ---- ジャンル偵察（DECISIONS D-33） ---- */
+.btn--scout {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.scout-result {
+  margin: 0;
+  padding: 10px var(--space);
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.sniper__scout {
+  margin-left: 6px;
+  font-size: 0.85em;
+}
+
+.record__scout {
+  color: var(--color-accent);
 }

@@ -53,6 +53,7 @@ export function ReviewScene({ game, dispatch }: SceneProps) {
         </p>
         <p className="topic">{topic.text}</p>
         {topic.reading ? <p className="topic__reading">{topic.reading}</p> : null}
+        <p className="hint-text">{t('review.genre', { genre: t(`genres.${topic.genre}`) })}</p>
       </div>
 
       <p className="hint-text">{t('review.help')}</p>

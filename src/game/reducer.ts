@@ -25,11 +25,12 @@ import {
   type ShotEvent,
   type Topic,
 } from './state';
+import { isGenreId, type GenreId } from './genre';
 import { isBlank, normalizeText } from './text';
 import { isIndexPermutation, isPermutationOf, must } from './util';
 
 /** 出題方式と正解（SPEC 2.2） */
-export type TopicInput = { source: 'free'; text: string } | { source: 'random' };
+export type TopicInput = { source: 'free'; text: string; genre: GenreId } | { source: 'random' };
 
 export type ShotResult = 'hit' | 'miss' | 'pass';
 
@@ -54,6 +55,8 @@ export type GameAction =
   | { type: 'startShooting'; answerOrder: PlayerId[] }
   /** 現在の狙撃手の結果を入力する */
   | { type: 'recordShot'; result: ShotResult; memo?: string }
+  /** 現在の狙撃手がジャンル偵察を使う（取り消せない。DECISIONS D-33） */
+  | { type: 'scoutGenre' }
   /** 直前の1操作を取り消す */
   | { type: 'undo' }
   /** 射撃画面からターン結果へ（ここで記録を確定し、取り消せなくなる） */
@@ -97,6 +100,7 @@ export function createGame(players: readonly Player[], config: GameConfig): Game
     records: [],
     usedEntryKeys: [],
     usedWords: [],
+    scoutUsedBy: [],
     exits: [],
     result: null,
     scene: { type: 'roundIntro' },
@@ -108,6 +112,8 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
     case 'recordShot':
       return recordShot(state, action.result, action.memo);
+    case 'scoutGenre':
+      return scoutGenre(state);
     case 'undo':
       return state.undo !== null && state.scene.type === 'shooting'
         ? { ...state.undo, undo: null }
@@ -120,7 +126,10 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
   }
 }
 
-type BodyAction = Exclude<GameAction, { type: 'recordShot' } | { type: 'undo' }>;
+type BodyAction = Exclude<
+  GameAction,
+  { type: 'recordShot' } | { type: 'scoutGenre' } | { type: 'undo' }
+>;
 
 function reduceBody(s: GameStateBody, action: BodyAction): GameStateBody | null {
   const r = s.round;
@@ -170,8 +179,16 @@ function reduceBody(s: GameStateBody, action: BodyAction): GameStateBody | null 
       let usedWords = s.usedWords;
       if (action.topic.source === 'free') {
         const text = action.topic.text.trim();
-        if (isBlank(text)) return null;
-        topic = { text, reading: null, source: 'free', entryKey: null, categoryLabel: null };
+        // 任意出題ではジャンルの選択が必須（DECISIONS D-33）
+        if (isBlank(text) || !isGenreId(action.topic.genre)) return null;
+        topic = {
+          text,
+          reading: null,
+          source: 'free',
+          entryKey: null,
+          categoryLabel: null,
+          genre: action.topic.genre,
+        };
         const word = normalizeText(text);
         if (!usedWords.includes(word)) usedWords = [...usedWords, word];
       } else {
@@ -183,6 +200,7 @@ function reduceBody(s: GameStateBody, action: BodyAction): GameStateBody | null 
           source: 'random',
           entryKey: entry.key,
           categoryLabel: entry.categoryLabel,
+          genre: entry.genre,
         };
       }
       const hints = action.hints.map((h) => h.trim());
@@ -290,6 +308,56 @@ function reduceBody(s: GameStateBody, action: BodyAction): GameStateBody | null 
       });
     }
   }
+}
+
+/**
+ * ジャンル偵察（DECISIONS D-33）：現在の狙撃手が回答の前に使い、正解のジャンルを全員に公開する。
+ * 1人1ゲームに1回。同じターンでジャンルが公開済みなら使えない。ダメージに倍率はかけない。
+ * 取り消せない（それより前の操作も「元に戻す」の対象から外れる）。HP0 になったら誤射と同じく脱落。
+ */
+function scoutGenre(state: GameState): GameState {
+  const s = stripUndo(state);
+  const r = s.round;
+  if (
+    s.scene.type !== 'shooting' ||
+    !r ||
+    r.outcome !== null ||
+    !r.answerOrder ||
+    !r.topic ||
+    r.genreRevealed
+  ) {
+    return state;
+  }
+  const sniperId = must(r.answerOrder[r.answererIndex], 'current sniper');
+  if (s.scoutUsedBy.includes(sniperId)) return state;
+
+  const damage = s.config.genreScoutDamage;
+  const before = hpOf(s, sniperId);
+  const after = applyDamage(before, damage);
+  const event: ShotEvent = {
+    kind: 'scout',
+    shot: r.shot,
+    sniperId,
+    damage,
+    applied: before - after,
+  };
+  const next: GameStateBody = {
+    ...s,
+    hp: { ...s.hp, [sniperId]: after },
+    scoutUsedBy: [...s.scoutUsedBy, sniperId],
+    round: { ...r, events: [...r.events, event], genreRevealed: true },
+  };
+  if (after === 0) {
+    const ended: GameStateBody = {
+      ...next,
+      round: {
+        ...must(next.round, 'round'),
+        outcome: { kind: 'sniperEliminated', sniperId, shot: r.shot },
+      },
+    };
+    return { ...eliminate(ended, sniperId), undo: null };
+  }
+  return { ...next, undo: null };
 }
 
 /** 射撃の入力（SPEC 2.4, 2.5, 3.7） */
@@ -525,6 +593,7 @@ function startRound(s: GameStateBody): GameStateBody {
     answererIndex: 0,
     events: [],
     outcome: null,
+    genreRevealed: false,
   };
   return { ...s, overtimeRounds, suddenDeathRounds, round, scene: { type: 'roundIntro' } };
 }

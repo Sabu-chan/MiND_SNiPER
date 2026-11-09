@@ -48,7 +48,11 @@ function shootingState(): GameState {
     newGame(),
     { type: 'beginRound' },
     { type: 'openHandoff' },
-    { type: 'submitHints', topic: { source: 'free', text: '富士山' }, hints: HINTS },
+    {
+      type: 'submitHints',
+      topic: { source: 'free', text: '富士山', genre: 'creature' },
+      hints: HINTS,
+    },
     { type: 'openHandoff' },
     { type: 'approveHints', farToNear: [0, 1, 2, 3, 4], shotOrder: [0, 1, 2, 3, 4] },
   );
@@ -99,6 +103,9 @@ describe('1ターンを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
     await user.click(screen.getByRole('button', { name: '確定して観測手に渡す' }));
     expect(screen.getByText('正解を入力してください')).toBeVisible();
     await user.type(screen.getByPlaceholderText('物の名前（例：富士山）'), '富士山');
+    // 任意出題ではジャンルの選択が必須
+    expect(screen.getByText('ジャンルを選んでください')).toBeVisible();
+    await user.selectOptions(screen.getByRole('combobox', { name: /ジャンル/ }), 'landform');
     for (const [i, hint] of HINTS.entries()) {
       await user.type(screen.getByRole('textbox', { name: `ヒント${i + 1}` }), hint);
     }
@@ -210,7 +217,11 @@ describe('1ターンを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
       newGame(four),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: '富士山' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '富士山', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
     );
     renderGame(game);
@@ -231,7 +242,7 @@ describe('ランダム出題（SPEC 3.5）', () => {
       version: 1,
       lang: 'ja',
       name: 'テスト',
-      categories: [{ id: 'm', label: '山' }],
+      categories: [{ id: 'm', label: '山', genre: 'landform' }],
       entries: [
         { id: 'fuji', word: '富士山', reading: 'ふじさん', category: 'm' },
         { id: 'aso', word: '阿蘇山', reading: 'あそさん', category: 'm' },
@@ -311,7 +322,11 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
         game,
         { type: 'beginRound' },
         { type: 'openHandoff' },
-        { type: 'submitHints', topic: { source: 'free', text: '富士山' }, hints: HINTS },
+        {
+          type: 'submitHints',
+          topic: { source: 'free', text: '富士山', genre: 'creature' },
+          hints: HINTS,
+        },
         { type: 'openHandoff' },
         { type: 'approveHints', farToNear: [0, 1, 2, 3, 4], shotOrder: [0, 1, 2, 3, 4] },
       );
@@ -335,7 +350,11 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
       newGame(four),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: '富士山' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '富士山', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
       { type: 'approveHints', farToNear: [0, 1, 2, 3, 4], shotOrder: [0, 1, 2, 3, 4] },
       { type: 'startShooting', answerOrder: ['c', 'd'] },
@@ -353,6 +372,49 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     await user.click(screen.getByRole('button', { name: 'この順で始める' }));
     expect(screen.getByRole('heading', { name: 'サドンデス 第1ターン' })).toBeVisible();
     expect(current().round).toMatchObject({ targetId: 'b', spotterId: 'c', sniperIds: ['a'] });
+  });
+});
+
+describe('ジャンル偵察（DECISIONS D-33）', () => {
+  it('確認してから使うと15ダメージ。偵察結果を全員に見せ、ボタンと印が消える', async () => {
+    const user = userEvent.setup();
+    const { current } = renderGame(shootingState());
+    expect(screen.getByRole('img', { name: 'ジャンル偵察あり' })).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /ジャンル偵察/ }));
+    const dialog = screen.getByRole('dialog', { name: 'チカさんがジャンル偵察をしますか？' });
+    expect(dialog).toHaveTextContent('15 ダメージを受けます');
+    expect(dialog).toHaveTextContent('この操作は元に戻せません');
+    await user.click(within(dialog).getByRole('button', { name: 'キャンセル' }));
+    expect(screen.queryByText(/偵察結果/)).toBeNull();
+    expect(current().hp.c).toBe(777);
+
+    await user.click(screen.getByRole('button', { name: /ジャンル偵察/ }));
+    await user.click(screen.getByRole('button', { name: '偵察する' }));
+    expect(screen.getByText('偵察結果：生き物')).toBeVisible();
+    expect(current().hp.c).toBe(762);
+    expect(screen.getByRole('button', { name: /ジャンル偵察/ })).toBeDisabled();
+    expect(screen.queryByRole('img', { name: 'ジャンル偵察あり' })).toBeNull();
+    expect(screen.getByRole('button', { name: '元に戻す' })).toBeDisabled();
+    expectNoSecrets(current());
+
+    // 偵察のあとも撃つかパスするかを選べる。偵察結果はターンの終わりまで表示する
+    await user.click(screen.getByRole('button', { name: 'パス' }));
+    expect(screen.getByText('偵察結果：生き物')).toBeVisible();
+    expect(screen.getByText('1射目【パス】')).toBeVisible();
+  });
+
+  it('結果発表の記録に、ジャンル偵察の射番号・偵察結果・ダメージを載せる', () => {
+    let game = play(
+      shootingState(),
+      { type: 'scoutGenre' },
+      { type: 'recordShot', result: 'pass' },
+    );
+    game = { ...game, hp: { ...game.hp, a: 500, c: 13 } };
+    game = play(game, { type: 'recordShot', result: 'miss' }, { type: 'acknowledge' });
+    renderGame(game);
+    expect(
+      screen.getByText('1射目 チカさんがジャンル偵察（偵察結果：生き物）：15ダメージ'),
+    ).toBeVisible();
   });
 });
 

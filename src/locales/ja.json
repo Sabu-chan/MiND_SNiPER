@@ -101,8 +101,13 @@
       "topicEmpty": "正解を入力してください",
       "empty": "入力してください",
       "duplicate": "他のヒントと同じです",
-      "sameAsTopic": "正解と同じです"
-    }
+      "sameAsTopic": "正解と同じです",
+      "genreMissing": "ジャンルを選んでください"
+    },
+    "genre": "ジャンル",
+    "genrePlaceholder": "選んでください",
+    "genreHelp": "ジャンル偵察で全員に公開される分類です。",
+    "drawnGenre": "ジャンル：{{genre}}"
   },
   "review": {
     "title": "ヒントを判定する",
@@ -113,7 +118,8 @@
     "commentPlaceholder": "コメント（任意）",
     "commentLabel": "「{{hint}}」へのコメント",
     "sendBack": "差し戻す",
-    "approve": "この順で承認"
+    "approve": "この順で承認",
+    "genre": "ジャンル：{{genre}}"
   },
   "answerOrder": {
     "title": "回答順を決める",
@@ -149,7 +155,13 @@
     "noAnswer": "まだ回答なし",
     "missLog": "{{shot}}射目【誤射】",
     "missLogWithMemo": "{{shot}}射目【誤射】「{{memo}}」",
-    "passLog": "{{shot}}射目【パス】"
+    "passLog": "{{shot}}射目【パス】",
+    "scout": "ジャンル偵察",
+    "scoutTitle": "{{name}}さんがジャンル偵察をしますか？",
+    "scoutMessage": "{{damage}} ダメージを受けます。HPが足りなければその場で脱落します。この操作は元に戻せません。",
+    "scoutOk": "偵察する",
+    "scoutResult": "偵察結果：{{genre}}",
+    "hasScout": "ジャンル偵察あり"
   },
   "result": {
     "title": "ターン結果"
@@ -186,7 +198,8 @@
     "chartStart": "開始",
     "chartRound": "T{{number}}",
     "chartTable": "HP推移を表で見る",
-    "passLine": "{{shot}}射目 {{name}}さん【パス】"
+    "passLine": "{{shot}}射目 {{name}}さん【パス】",
+    "scoutLine": "{{shot}}射目 {{name}}さんがジャンル偵察（偵察結果：{{genre}}）：{{damage}}ダメージ"
   },
   "rules": {
     "title": "ルール説明",
@@ -220,7 +233,9 @@
     "forbiddenTitle": "禁止事項",
     "forbidden": "狙撃手は、回答するときに調べてはいけません。標的と観測手は、正解を知らなければ調べて構いません。",
     "savingTitle": "保存について",
-    "saving": "ゲームは操作のたびに自動で保存され、閉じてしまっても続きから再開できます。再開できるのは同じ端末・同じブラウザだけです。プライベートモードや閲覧履歴の削除では保存データが消えます。"
+    "saving": "ゲームは操作のたびに自動で保存され、閉じてしまっても続きから再開できます。再開できるのは同じ端末・同じブラウザだけです。プライベートモードや閲覧履歴の削除では保存データが消えます。",
+    "scoutTitle": "ジャンル偵察",
+    "scout": "狙撃手は1ゲームに1回だけ、自分の回答の前に「ジャンル偵察」を使えます。使うと正解のジャンル（生き物、日本の地名など）が全員に公開され、使った人は{{scoutDamage}}のダメージを受けます（延長戦・サドンデスでも{{scoutDamage}}のまま）。HPが足りなければその場で脱落します。使ったあとは撃つこともパスすることもでき、取り消しはできません。ジャンルは全員に見えるので、使った本人が撃ち抜けなければ、ほかの人に有利な情報を渡すことになります。"
   },
   "config": {
     "title": "CONFIG",
@@ -246,7 +261,8 @@
       "tiebreak": "決着方式",
       "rerollLimit": "ランダム出題の引き直し回数",
       "holdDuration": "秘密情報ボタンの長押し時間（秒）",
-      "language": "表示言語"
+      "language": "表示言語",
+      "genreScoutDamage": "ジャンル偵察のダメージ"
     },
     "help": {
       "startHp": "10〜999",
@@ -261,7 +277,8 @@
       "tiebreak_suddenDeath": "1位が同点なら延長戦、脱落時に同点ならサドンデスで決着をつけます。",
       "tiebreak_draw": "1位が同点なら、その全員の引き分けです。",
       "rerollLimit": "0〜5回（ターンあたり）",
-      "holdDuration": "0.5〜5秒"
+      "holdDuration": "0.5〜5秒",
+      "genreScoutDamage": "0〜99（倍率はかけない）"
     },
     "tiebreaks": {
       "suddenDeath": "サドンデス",
@@ -289,5 +306,23 @@
   },
   "notFound": {
     "title": "ページが見つかりません"
+  },
+  "genres": {
+    "japan-place": "日本の地名",
+    "world-place": "世界の国・都市",
+    "landmark": "建物・名所",
+    "landform": "山・川・海",
+    "historical-person": "歴史上の人物",
+    "celebrity": "有名人",
+    "creature": "生き物",
+    "plant": "植物",
+    "food": "食べ物・飲み物",
+    "vehicle": "乗り物",
+    "tool": "道具・日用品",
+    "clothing": "服・身につけるもの",
+    "play-music": "楽器・おもちゃ",
+    "facility": "建物・施設（一般）",
+    "nature": "自然・天体",
+    "tradition": "行事・伝統"
   }
 }

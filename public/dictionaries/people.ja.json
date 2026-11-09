@@ -5,15 +5,18 @@
   "categories": [
     {
       "id": "entertainer",
-      "label": "芸能人"
+      "label": "芸能人",
+      "genre": "celebrity"
     },
     {
       "id": "athlete",
-      "label": "スポーツ選手・棋士"
+      "label": "スポーツ選手・棋士",
+      "genre": "celebrity"
     },
     {
       "id": "prime-minister",
-      "label": "内閣総理大臣（2000年以降）"
+      "label": "内閣総理大臣（2000年以降）",
+      "genre": "celebrity"
     }
   ],
   "entries": [

@@ -24,6 +24,7 @@ type NumberKey =
   | 'maxHp'
   | 'missDamage'
   | 'escapeHeal'
+  | 'genreScoutDamage'
   | 'maxCycles'
   | 'overtimeMultiplier'
   | 'suddenDeathMultiplier'
@@ -49,6 +50,7 @@ function toDraft(config: GameConfig): Draft {
       maxHp: String(config.maxHp),
       missDamage: String(config.missDamage),
       escapeHeal: String(config.escapeHeal),
+      genreScoutDamage: String(config.genreScoutDamage),
       maxCycles: String(config.maxCycles),
       overtimeMultiplier: String(config.overtimeMultiplier),
       suddenDeathMultiplier: String(config.suddenDeathMultiplier),
@@ -77,6 +79,7 @@ function toConfig(draft: Draft): GameConfig {
     distancePoints: draft.distancePoints.map(toNumber),
     missDamage: n('missDamage'),
     escapeHeal: n('escapeHeal'),
+    genreScoutDamage: n('genreScoutDamage'),
     maxCycles: n('maxCycles'),
     overtimeMultiplier: n('overtimeMultiplier'),
     suddenDeathMultiplier: n('suddenDeathMultiplier'),
@@ -203,6 +206,7 @@ export function ConfigPage() {
       <Section title={t('config.sections.damage')}>
         {numberField('missDamage')}
         {numberField('escapeHeal')}
+        {numberField('genreScoutDamage')}
         {numberField('overtimeMultiplier')}
         {numberField('suddenDeathMultiplier')}
       </Section>
@@ -350,6 +354,8 @@ function rangeOf(field: ConfigField, config: GameConfig): { min: number; max: nu
       return L.missDamage;
     case 'escapeHeal':
       return L.escapeHeal;
+    case 'genreScoutDamage':
+      return L.genreScoutDamage;
     case 'maxCycles':
       return L.maxCycles;
     case 'overtimeMultiplier':

@@ -6,7 +6,10 @@ import type { Player, PlayerId } from './players';
 import { createGame, gameReducer, prepareForResume, type GameAction } from './reducer';
 import { createSeededRng, createSequenceRng } from './rng';
 import {
+  canScoutGenre,
   canUndo,
+  hasGenreScout,
+  revealedGenre,
   currentSniperId,
   isHoldRequired,
   lastRecord,
@@ -56,7 +59,11 @@ function toShooting(state: GameState, shotOrder = SHOT_ORDER): GameState {
     state,
     { type: 'beginRound' },
     { type: 'openHandoff' },
-    { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+    {
+      type: 'submitHints',
+      topic: { source: 'free', text: '正解', genre: 'creature' },
+      hints: HINTS,
+    },
     { type: 'openHandoff' },
     { type: 'approveHints', farToNear: FAR_TO_NEAR, shotOrder },
   );
@@ -93,8 +100,8 @@ const pool: DictionaryPool = (() => {
       lang: 'ja',
       name: 'テスト',
       categories: [
-        { id: 'pref', label: '都道府県' },
-        { id: 'animal', label: '動物' },
+        { id: 'pref', label: '都道府県', genre: 'japan-place' },
+        { id: 'animal', label: '動物', genre: 'creature' },
       ],
       entries: [
         { id: 'hokkaido', word: '北海道', reading: 'ほっかいどう', category: 'pref' },
@@ -160,7 +167,11 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
     s = play(
       s,
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: ' 正解 ' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: ' 正解 ', genre: 'creature' },
+        hints: HINTS,
+      },
     );
     expect(s.scene).toEqual({ type: 'handoff', playerId: 'p1', role: 'spotter', next: 'review' });
     expect(s.round?.topic).toEqual({
@@ -169,6 +180,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       source: 'free',
       entryKey: null,
       categoryLabel: null,
+      genre: 'creature',
     });
 
     s = play(s, { type: 'openHandoff' });
@@ -183,7 +195,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
     const s = play(newGame(4), { type: 'beginRound' }, { type: 'openHandoff' });
     const submit = (text: string, hints: string[]): GameAction => ({
       type: 'submitHints',
-      topic: { source: 'free', text },
+      topic: { source: 'free', text, genre: 'creature' },
       hints,
     });
     expectRejected(s, submit('正解', ['a', 'b', 'c', 'd', '']));
@@ -198,7 +210,11 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '正解', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
       {
         type: 'rejectHints',
@@ -220,7 +236,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       { type: 'openHandoff' },
       {
         type: 'submitHints',
-        topic: { source: 'free', text: '別の正解' },
+        topic: { source: 'free', text: '別の正解', genre: 'creature' },
         hints: ['変更X', '新B', '変更Y', '新D', '変更Z'],
       },
     );
@@ -238,12 +254,12 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
     // 書き換え後に既存のヒントと重複すると受け付けない
     expectRejected(s, {
       type: 'submitHints',
-      topic: { source: 'free', text: '正解' },
+      topic: { source: 'free', text: '正解', genre: 'creature' },
       hints: ['新B', '', '', '', ''],
     });
     s = play(s, {
       type: 'submitHints',
-      topic: { source: 'free', text: '正解' },
+      topic: { source: 'free', text: '正解', genre: 'creature' },
       hints: ['新A', '', '', '', ''],
     });
     expect(s.round?.hints).toEqual(['新A', '新B', 'ヒントC', '新D', 'ヒントE']);
@@ -255,7 +271,11 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '正解', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
     );
     expectRejected(s, { type: 'rejectHints', rejections: [] });
@@ -276,7 +296,11 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '正解', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
     );
     const action = createApproveAction(s, FAR_TO_NEAR, createSequenceRng([0]));
@@ -292,7 +316,11 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '正解', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
       { type: 'approveHints', farToNear: FAR_TO_NEAR, shotOrder: SHOT_ORDER },
     );
@@ -324,6 +352,7 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
       source: 'random',
       entryKey: 'test.json#hokkaido',
       categoryLabel: '都道府県',
+      genre: 'japan-place',
     });
   });
 
@@ -344,6 +373,7 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
         reading: null,
         categoryId: 'animal',
         categoryLabel: '動物',
+        genre: 'creature',
       },
     });
   });
@@ -369,7 +399,11 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
 
   it('任意出題の正解と表記が一致する単語は抽選から外す', () => {
     let s = composing();
-    s = play(s, { type: 'submitHints', topic: { source: 'free', text: 'パンダ' }, hints: HINTS });
+    s = play(s, {
+      type: 'submitHints',
+      topic: { source: 'free', text: 'パンダ', genre: 'creature' },
+      hints: HINTS,
+    });
     expect(s.usedWords).toContain('パンダ');
     // 次のターンで、パンダは出ない
     s = toShootingFromReview(s);
@@ -809,7 +843,11 @@ describe('続きから再開（SPEC 3.2）', () => {
 
     const reviewing = play(
       composing,
-      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: '正解', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'openHandoff' },
     );
     expect(prepareForResume(reviewing).scene).toEqual({
@@ -867,7 +905,11 @@ describe('場面違いのアクション', () => {
     const s = newGame(4);
     const invalid: GameAction[] = [
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: 'x' }, hints: HINTS },
+      {
+        type: 'submitHints',
+        topic: { source: 'free', text: 'x', genre: 'creature' },
+        hints: HINTS,
+      },
       { type: 'rejectHints', rejections: [{ hintIndex: 0, comment: null }] },
       { type: 'approveHints', farToNear: FAR_TO_NEAR, shotOrder: SHOT_ORDER },
       { type: 'startShooting', answerOrder: ['p2', 'p3'] },
@@ -879,5 +921,120 @@ describe('場面違いのアクション', () => {
       { type: 'setSuddenDeathOrder', targetOrder: ['p0'] },
     ];
     for (const action of invalid) expectRejected(s, action);
+  });
+});
+
+describe('ジャンル偵察（DECISIONS D-33）', () => {
+  const scout: GameAction = { type: 'scoutGenre' };
+
+  it('今の狙撃手に15ダメージ。ジャンルを公開し、そのまま回答を続ける', () => {
+    let s = toShooting(newGame(4));
+    expect(canScoutGenre(s)).toBe(true);
+    expect(revealedGenre(s)).toBeNull();
+    s = play(s, scout);
+    expect(s.hp.p2).toBe(85);
+    expect(revealedGenre(s)).toBe('creature');
+    expect(hasGenreScout(s, 'p2')).toBe(false);
+    expect(currentSniperId(s)).toBe('p2');
+    expect(s.round?.events).toEqual([
+      { kind: 'scout', shot: 0, sniperId: 'p2', damage: 15, applied: 15 },
+    ]);
+    // 偵察のあとに命中しても、命中ダメージは通常どおり（1射目＋距離点10）
+    s = play(s, shot('hit'));
+    expect(s.hp.p0).toBe(40);
+  });
+
+  it('偵察のあとはパスもできる', () => {
+    const s = play(toShooting(newGame(4)), scout, shot('pass'));
+    expect(currentSniperId(s)).toBe('p3');
+    expect(answerHistory(s).p2).toEqual([{ shot: 0, kind: 'pass', memo: null }]);
+  });
+
+  it('同じターンでジャンルが公開済みなら、ほかの狙撃手は使えない', () => {
+    const s = play(toShooting(newGame(4)), scout, shot('pass'));
+    expect(currentSniperId(s)).toBe('p3');
+    expect(hasGenreScout(s, 'p3')).toBe(true);
+    expect(canScoutGenre(s)).toBe(false);
+    expectRejected(s, scout);
+  });
+
+  it('1人1ゲームに1回。次のターンでも使えない', () => {
+    // 3人：第1ターンの狙撃手 p2 が使う → 第4ターン（第2ラウンド）でも p2 は狙撃手
+    let s = play(toShooting(newGame(3)), scout);
+    s = finishRound(play(s, shot('hit')));
+    for (let i = 0; i < 2; i += 1) s = finishRound(escapeRound(toShooting(s)));
+    s = toShooting(s);
+    expect(s.round?.label).toEqual({ phase: 'main', cycle: 2, roundInCycle: 1 });
+    expect(currentSniperId(s)).toBe('p2');
+    expect(canScoutGenre(s)).toBe(false);
+    expectRejected(s, scout);
+  });
+
+  it('取り消せない。それより前の操作も「元に戻す」の対象から外れる', () => {
+    let s = play(toShooting(newGame(4)), shot('pass'));
+    expect(canUndo(s)).toBe(true);
+    s = play(s, scout);
+    expect(canUndo(s)).toBe(false);
+    expectRejected(s, { type: 'undo' });
+    // 偵察のあとの操作は取り消せる（偵察は残る）
+    s = play(s, shot('miss'));
+    s = play(s, { type: 'undo' });
+    expect(revealedGenre(s)).toBe('creature');
+    expect(s.hp.p3).toBe(85);
+  });
+
+  it('延長戦でもダメージに倍率をかけない（命中・誤射は2倍）', () => {
+    let s = newGame(3, { maxCycles: 1 });
+    for (let i = 0; i < 3; i += 1) s = finishRound(escapeRound(toShooting(s)));
+    s = toShooting(play(s, { type: 'acknowledge' }));
+    expect(s.round?.multiplier).toBe(2);
+    s = play(s, scout);
+    expect(s.hp.p2).toBe(105);
+    s = play(s, shot('miss'));
+    expect(s.hp.p2).toBe(95);
+  });
+
+  it('HPが0になったら誤射と同じく脱落（取り消せない）', () => {
+    const s = play(toShooting(withHp(newGame(4), { p2: 10 })), scout);
+    expect(s.hp.p2).toBe(0);
+    expect(s.scene).toEqual({ type: 'eliminated', playerId: 'p2' });
+    expect(s.records.at(-1)?.outcome).toEqual({
+      kind: 'sniperEliminated',
+      sniperId: 'p2',
+      shot: 0,
+    });
+    expect(s.records.at(-1)?.events.at(-1)).toEqual({
+      kind: 'scout',
+      shot: 0,
+      sniperId: 'p2',
+      damage: 15,
+      applied: 10,
+    });
+    expect(canUndo(s)).toBe(false);
+  });
+
+  it('ダメージは CONFIG で変えられる', () => {
+    const s = play(toShooting(newGame(4, { genreScoutDamage: 30 })), scout);
+    expect(s.hp.p2).toBe(70);
+  });
+
+  it('射撃中以外・ターン終了後は使えない', () => {
+    expectRejected(newGame(4), scout);
+    expectRejected(play(toShooting(newGame(4)), shot('hit')), scout);
+  });
+
+  it('任意出題ではジャンルが必須。ランダム出題は辞書のジャンルを使う', () => {
+    const composing = play(newGame(4), { type: 'beginRound' }, { type: 'openHandoff' });
+    expectRejected(composing, {
+      type: 'submitHints',
+      topic: { source: 'free', text: '富士山', genre: 'mountain' as never },
+      hints: HINTS,
+    });
+    let s = play(
+      composing,
+      createDrawTopicAction(composing, pool, createSequenceRng([0, 0])) as GameAction,
+    );
+    s = play(s, { type: 'submitHints', topic: { source: 'random' }, hints: HINTS });
+    expect(s.round?.topic?.genre).toBe('japan-place');
   });
 });

@@ -20,6 +20,7 @@ describe('CONFIG（SPEC 3.12, 4章）', () => {
     expect(field('1番目')).toHaveValue(10);
     expect(field('誤射ダメージ')).toHaveValue(5);
     expect(field('逃げ切り回復量')).toHaveValue(20);
+    expect(field('ジャンル偵察のダメージ')).toHaveValue(15);
     expect(field('ラウンド数')).toHaveValue(2);
     expect(field('延長戦のダメージ倍率')).toHaveValue(2);
     expect(field('サドンデスのダメージ倍率')).toHaveValue(1);
@@ -116,8 +117,8 @@ describe('CONFIG（SPEC 3.12, 4章）', () => {
         lang: 'ja',
         name: 'テスト',
         categories: [
-          { id: 'm', label: '山' },
-          { id: 'f', label: '食べ物' },
+          { id: 'm', label: '山', genre: 'landform' },
+          { id: 'f', label: '食べ物', genre: 'food' },
         ],
         entries: [{ id: 'fuji', word: '富士山', category: 'm' }],
       },
@@ -172,6 +173,8 @@ describe('ルール説明（SPEC 3.11）', () => {
     expect(main).toHaveTextContent('全員が4回ずつ標的を務めたら（4ラウンド）');
     expect(main).toHaveTextContent('延長戦（ダメージ3倍）');
     expect(main).toHaveTextContent('狙撃手は、回答するときに調べてはいけません');
+    expect(main).toHaveTextContent('1ゲームに1回だけ、自分の回答の前に「ジャンル偵察」を使えます');
+    expect(main).toHaveTextContent('15のダメージを受けます');
     expect(main).toHaveTextContent('同じ端末・同じブラウザだけです');
   });
 

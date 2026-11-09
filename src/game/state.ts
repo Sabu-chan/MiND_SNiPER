@@ -1,6 +1,7 @@
 import type { GameConfig } from './config';
 import type { Phase } from './damage';
 import type { DrawnEntry } from './dictionary';
+import type { GenreId } from './genre';
 import type { ContentionExit, Standing } from './outcome';
 import type { Player, PlayerId } from './players';
 
@@ -8,7 +9,7 @@ import type { Player, PlayerId } from './players';
  * 保存データのスキーマのバージョン（SPEC 5.2）。
  * GameState の形を変えたら上げる。読めない古いデータは破棄する。
  */
-export const GAME_SCHEMA_VERSION = 1;
+export const GAME_SCHEMA_VERSION = 2;
 
 /** ターンの表示用の番号（DECISIONS D-05） */
 export type RoundLabel =
@@ -26,6 +27,8 @@ export interface Topic {
   entryKey: string | null;
   /** ランダム出題のカテゴリ名 */
   categoryLabel: string | null;
+  /** ジャンル（任意出題は標的が選ぶ、ランダム出題は辞書のカテゴリから。ジャンル偵察で公開する） */
+  genre: GenreId;
 }
 
 /** 観測手の差し戻し（SPEC 2.3-4, 3.6） */
@@ -55,7 +58,9 @@ export type ShotEvent =
       damage: number;
       applied: number;
     }
-  | { kind: 'pass'; shot: number; sniperId: PlayerId };
+  | { kind: 'pass'; shot: number; sniperId: PlayerId }
+  /** ジャンル偵察（DECISIONS D-33）。ダメージに倍率はかけない */
+  | { kind: 'scout'; shot: number; sniperId: PlayerId; damage: number; applied: number };
 
 export type RoundOutcome =
   | { kind: 'hit'; sniperId: PlayerId; shot: number }
@@ -99,6 +104,8 @@ export interface RoundState {
   answererIndex: number;
   events: ShotEvent[];
   outcome: RoundOutcome | null;
+  /** このターンでジャンル偵察によりジャンルを公開したか */
+  genreRevealed: boolean;
 }
 
 /** 終わったターンの記録（結果発表で公開する。SPEC 3.10） */
@@ -179,6 +186,8 @@ export interface GameStateBody {
   usedEntryKeys: string[];
   /** 使用済みの正解の表記（正規化済み） */
   usedWords: string[];
+  /** ジャンル偵察を使ったプレイヤー（1ゲームに1回。延長戦・サドンデスでも戻らない） */
+  scoutUsedBy: PlayerId[];
   /** 勝ち残りから外れた人の記録（順位付け用） */
   exits: ContentionExit[];
   result: GameResult | null;

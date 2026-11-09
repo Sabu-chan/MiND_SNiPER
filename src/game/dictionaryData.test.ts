@@ -1,3 +1,4 @@
+import { GENRE_IDS } from './genre';
 import { describe, expect, it } from 'vitest';
 import { buildPool, parseDictionaryIndex, validateDictionary, type Dictionary } from './dictionary';
 import { normalizeText } from './text';
@@ -88,5 +89,14 @@ describe('同梱の辞書（SPEC 5.1）', () => {
   it('時事性のある人名（有名人の辞書）には収録年が入っている', () => {
     const people = dictionaries.find((d) => d.source === 'people.ja.json');
     expect(people?.entries.every((e) => e.year !== null)).toBe(true);
+  });
+});
+
+describe('同梱の辞書のジャンル（DECISIONS D-33）', () => {
+  it('すべてのカテゴリに既知のジャンルがあり、16ジャンルのどれかに必ず単語がある', () => {
+    const categories = dictionaries.flatMap((d) => d.categories);
+    expect(categories.filter((c) => c.genre === null).map((c) => c.id)).toEqual([]);
+    const used = new Set(categories.map((c) => c.genre));
+    expect(GENRE_IDS.filter((g) => !used.has(g))).toEqual([]);
   });
 });

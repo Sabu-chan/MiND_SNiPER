@@ -5,35 +5,43 @@
   "categories": [
     {
       "id": "prefecture",
-      "label": "都道府県"
+      "label": "都道府県",
+      "genre": "japan-place"
     },
     {
       "id": "prefectural-capital",
-      "label": "県庁所在地"
+      "label": "県庁所在地",
+      "genre": "japan-place"
     },
     {
       "id": "japan-place",
-      "label": "日本の有名な地名"
+      "label": "日本の有名な地名",
+      "genre": "japan-place"
     },
     {
       "id": "japan-landmark",
-      "label": "日本の名所・建物"
+      "label": "日本の名所・建物",
+      "genre": "landmark"
     },
     {
       "id": "japan-mountain",
-      "label": "日本の山"
+      "label": "日本の山",
+      "genre": "landform"
     },
     {
       "id": "japan-river",
-      "label": "日本の川"
+      "label": "日本の川",
+      "genre": "landform"
     },
     {
       "id": "japan-lake",
-      "label": "日本の湖"
+      "label": "日本の湖",
+      "genre": "landform"
     },
     {
       "id": "sea",
-      "label": "海・湾・海峡"
+      "label": "海・湾・海峡",
+      "genre": "landform"
     }
   ],
   "entries": [

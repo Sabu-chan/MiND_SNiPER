@@ -139,6 +139,17 @@ function RecordCard({ record, game }: { record: RoundRecord; game: SceneProps['g
                       })}
                 </li>
               );
+            case 'scout':
+              return (
+                <li key={i} className="record__scout">
+                  {t('final.scoutLine', {
+                    shot: e.shot + 1,
+                    name: name(e.sniperId),
+                    genre: topic ? t(`genres.${topic.genre}`) : '',
+                    damage: e.damage,
+                  })}
+                </li>
+              );
             case 'pass':
               return (
                 <li key={i} className="record__pass">

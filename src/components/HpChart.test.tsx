@@ -18,7 +18,11 @@ function twoRounds(): GameState {
   const setup: GameAction[] = [
     { type: 'beginRound' },
     { type: 'openHandoff' },
-    { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
+    {
+      type: 'submitHints',
+      topic: { source: 'free', text: '正解', genre: 'creature' },
+      hints: HINTS,
+    },
     { type: 'openHandoff' },
     { type: 'approveHints', farToNear: [0, 1, 2, 3, 4], shotOrder: [0, 1, 2, 3, 4] },
   ];

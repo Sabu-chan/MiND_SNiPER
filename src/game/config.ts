@@ -20,6 +20,8 @@ export interface GameConfig {
   missDamage: number;
   /** 逃げ切り回復量 */
   escapeHeal: number;
+  /** ジャンル偵察のダメージ（倍率はかけない。DECISIONS D-33） */
+  genreScoutDamage: number;
   /** ラウンド数 */
   maxCycles: number;
   /** 延長戦のダメージ倍率 */
@@ -51,6 +53,7 @@ export const DEFAULT_CONFIG: Readonly<GameConfig> = Object.freeze({
   distancePoints: [10, 8, 6, 4, 2],
   missDamage: 5,
   escapeHeal: 20,
+  genreScoutDamage: 15,
   maxCycles: 2,
   overtimeMultiplier: 2,
   suddenDeathMultiplier: 1,
@@ -82,6 +85,7 @@ export const CONFIG_LIMITS = {
   points: { min: 0, max: 999 },
   missDamage: { min: 0, max: 99 },
   escapeHeal: { min: 0, max: 99 },
+  genreScoutDamage: { min: 0, max: 99 },
   maxCycles: { min: 1, max: 10 },
   multiplier: { min: 1, max: 5 },
   rerollLimit: { min: 0, max: 5 },
@@ -132,6 +136,13 @@ export function validateConfig(
   checkPoints(issues, 'distancePoints', config.distancePoints);
   checkInteger(issues, 'missDamage', config.missDamage, L.missDamage.min, L.missDamage.max);
   checkInteger(issues, 'escapeHeal', config.escapeHeal, L.escapeHeal.min, L.escapeHeal.max);
+  checkInteger(
+    issues,
+    'genreScoutDamage',
+    config.genreScoutDamage,
+    L.genreScoutDamage.min,
+    L.genreScoutDamage.max,
+  );
   checkInteger(issues, 'maxCycles', config.maxCycles, L.maxCycles.min, L.maxCycles.max);
   checkInteger(
     issues,

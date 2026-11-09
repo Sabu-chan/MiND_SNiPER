@@ -17,8 +17,8 @@ const rawJa = {
   lang: 'ja',
   name: '基本辞書',
   categories: [
-    { id: 'prefecture', label: '都道府県' },
-    { id: 'animal', label: '動物' },
+    { id: 'prefecture', label: '都道府県', genre: 'japan-place' },
+    { id: 'animal', label: '動物', genre: 'creature' },
   ],
   entries: [
     {
@@ -59,7 +59,11 @@ describe('validateDictionary（SPEC 5.1）', () => {
     const { value, warnings } = validateDictionary(
       {
         ...rawJa,
-        categories: [...rawJa.categories, { id: 'animal', label: '重複' }, { id: '' }],
+        categories: [
+          ...rawJa.categories,
+          { id: 'animal', label: '重複', genre: 'creature' },
+          { id: '' },
+        ],
         entries: [
           ...rawJa.entries,
           { id: 'pref-hokkaido', word: '重複ID', category: 'prefecture' },
@@ -121,8 +125,8 @@ describe('listCategories / buildPool', () => {
       lang: 'ja',
       name: '追加',
       categories: [
-        { id: 'animal', label: 'どうぶつ' },
-        { id: 'empty', label: '空' },
+        { id: 'animal', label: 'どうぶつ', genre: 'creature' },
+        { id: 'empty', label: '空', genre: 'tool' },
       ],
       entries: [{ id: 'koala', word: 'コアラ', category: 'animal' }],
     },
@@ -139,9 +143,9 @@ describe('listCategories / buildPool', () => {
 
   it('表示言語と一致する辞書だけを使い、同じ id のカテゴリはまとめる', () => {
     expect(listCategories([ja, ja2, en], 'ja')).toEqual([
-      { id: 'prefecture', label: '都道府県' },
-      { id: 'animal', label: '動物' },
-      { id: 'empty', label: '空' },
+      { id: 'prefecture', label: '都道府県', genre: 'japan-place' },
+      { id: 'animal', label: '動物', genre: 'creature' },
+      { id: 'empty', label: '空', genre: 'tool' },
     ]);
     const pool = buildPool([ja, ja2, en], 'ja', []);
     expect(pool.categories.map((c) => [c.id, c.entries.map((e) => e.word)])).toEqual([
@@ -171,6 +175,7 @@ describe('drawEntry（SPEC 2.2：2段階抽選）', () => {
       reading: null,
       categoryId: 'animal',
       categoryLabel: '動物',
+      genre: 'creature',
     });
     expect(drawEntry(pool, NO_EXCLUSIONS, createSequenceRng([0.1, 0.99]))?.word).toBe('岩手県');
   });
@@ -231,5 +236,26 @@ describe('loadDictionaries', () => {
     const { value, warnings } = await loadDictionaries(() => Promise.reject(new Error('offline')));
     expect(value).toEqual([]);
     expect(warnings).toHaveLength(1);
+  });
+});
+
+describe('辞書カテゴリのジャンル（DECISIONS D-33）', () => {
+  it('ジャンルがない・未知のカテゴリは警告を出し、ランダム出題に使わない', () => {
+    const { value, warnings } = validateDictionary(
+      {
+        ...rawJa,
+        categories: [
+          { id: 'prefecture', label: '都道府県', genre: 'japan-place' },
+          { id: 'animal', label: '動物', genre: 'unknown' },
+        ],
+      },
+      'g.json',
+    );
+    expect(warnings).toEqual([
+      'g.json: category "animal" has no valid genre; not used for random topics',
+    ]);
+    expect(value?.categories.map((c) => c.genre)).toEqual(['japan-place', null]);
+    const pool = buildPool(value ? [value] : [], 'ja', []);
+    expect(pool.categories.map((c) => c.id)).toEqual(['prefecture']);
   });
 });

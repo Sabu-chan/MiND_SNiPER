@@ -4,6 +4,7 @@ import { useDictionaries } from '../app/dictionaries';
 import { createDrawTopicAction, exclusionsOf } from '../game/actions';
 import { hintCountOf } from '../game/config';
 import { buildPool, countAvailable } from '../game/dictionary';
+import { GENRE_IDS, type GenreId } from '../game/genre';
 import { hasHintIssues, validateHints, type HintIssue } from '../game/hints';
 import { defaultRng } from '../game/rng';
 import { remainingDraws, remainingRerolls } from '../game/selectors';
@@ -32,6 +33,8 @@ export function ComposeScene({ game, dispatch }: SceneProps) {
 
   const [mode, setMode] = useState<Mode>(round.drawnEntry ? 'random' : 'free');
   const [topicText, setTopicText] = useState('');
+  // 任意出題ではジャンルの選択が必須（DECISIONS D-33）
+  const [genre, setGenre] = useState<GenreId | ''>('');
   // 差し戻し後は前回の内容を初期値にして、差し戻されたヒントだけを編集させる
   const [hints, setHints] = useState<string[]>(() =>
     revision ? [...round.hints] : Array.from({ length: hintCount }, () => ''),
@@ -44,6 +47,7 @@ export function ComposeScene({ game, dispatch }: SceneProps) {
       ? topicText
       : (round.drawnEntry?.word ?? '');
   const topicMissing = !revision && (mode === 'free' ? isBlank(topicText) : !round.drawnEntry);
+  const genreMissing = !revision && mode === 'free' && genre === '';
   const hintIssues = validateHints(hints, topic);
 
   const draw = () => {
@@ -59,12 +63,13 @@ export function ComposeScene({ game, dispatch }: SceneProps) {
 
   const submit = () => {
     setSubmitted(true);
-    if (topicMissing || hasHintIssues(hintIssues)) return;
+    if (topicMissing || genreMissing || hasHintIssues(hintIssues)) return;
     dispatch({
       type: 'submitHints',
-      topic:
-        revision || mode === 'free'
-          ? { source: 'free', text: revision ? topic : topicText }
+      topic: revision
+        ? { source: 'free', text: topic, genre: must(round.topic, 'topic').genre }
+        : mode === 'free'
+          ? { source: 'free', text: topicText, genre: genre as GenreId }
           : { source: 'random' },
       hints,
     });
@@ -115,6 +120,29 @@ export function ComposeScene({ game, dispatch }: SceneProps) {
                 <span className="error-text">{t('compose.errors.topicEmpty')}</span>
               ) : null}
             </label>
+          ) : null}
+
+          {mode === 'free' ? (
+            <label className="field">
+              <span className="field__label">{t('compose.genre')}</span>
+              <select
+                className={`input ${submitted && genreMissing ? 'input--error' : ''}`}
+                value={genre}
+                aria-invalid={submitted && genreMissing ? true : undefined}
+                onChange={(e) => setGenre(e.target.value as GenreId | '')}
+              >
+                <option value="">{t('compose.genrePlaceholder')}</option>
+                {GENRE_IDS.map((id) => (
+                  <option key={id} value={id}>
+                    {t(`genres.${id}`)}
+                  </option>
+                ))}
+              </select>
+              <span className="hint-text">{t('compose.genreHelp')}</span>
+              {submitted && genreMissing ? (
+                <span className="error-text">{t('compose.errors.genreMissing')}</span>
+              ) : null}
+            </label>
           ) : (
             <div className="card">
               {round.drawnEntry ? (
@@ -124,6 +152,9 @@ export function ComposeScene({ game, dispatch }: SceneProps) {
                   {round.drawnEntry.reading ? (
                     <p className="topic__reading">{round.drawnEntry.reading}</p>
                   ) : null}
+                  <p className="hint-text">
+                    {t('compose.drawnGenre', { genre: t(`genres.${round.drawnEntry.genre}`) })}
+                  </p>
                 </>
               ) : (
                 <p className="hint-text">{t('compose.noMoreWords')}</p>

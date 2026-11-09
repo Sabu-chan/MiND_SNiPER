@@ -22,6 +22,7 @@ describe('DEFAULT_CONFIG（SPEC 4章の初期値）', () => {
       distancePoints: [10, 8, 6, 4, 2],
       missDamage: 5,
       escapeHeal: 20,
+      genreScoutDamage: 15,
       maxCycles: 2,
       overtimeMultiplier: 2,
       suddenDeathMultiplier: 1,

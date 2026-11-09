@@ -1,3 +1,4 @@
+import { isGenreId, type GenreId } from './genre';
 import { pickOne, type Rng } from './rng';
 import { normalizeText } from './text';
 
@@ -10,6 +11,8 @@ export const DICTIONARY_INDEX_VERSION = 1;
 export interface DictionaryCategory {
   id: string;
   label: string;
+  /** ジャンル（ジャンル偵察で公開する分類）。ないカテゴリはランダム出題に使わない */
+  genre: GenreId | null;
 }
 
 export interface DictionaryEntry {
@@ -38,6 +41,7 @@ export interface DrawnEntry {
   reading: string | null;
   categoryId: string;
   categoryLabel: string;
+  genre: GenreId;
 }
 
 export interface DictionaryLoadResult<T> {
@@ -108,7 +112,13 @@ export function validateDictionary(
     } else if (categories.some((existing) => existing.id === c['id'])) {
       warnings.push(`${source}: category "${c['id']}" is duplicated; skipped`);
     } else {
-      categories.push({ id: c['id'], label: c['label'].trim() });
+      const genre = isGenreId(c['genre']) ? c['genre'] : null;
+      if (genre === null) {
+        warnings.push(
+          `${source}: category "${c['id']}" has no valid genre; not used for random topics`,
+        );
+      }
+      categories.push({ id: c['id'], label: c['label'].trim(), genre });
     }
   });
   const categoryIds = new Set(categories.map((c) => c.id));
@@ -152,7 +162,7 @@ export function validateDictionary(
 
 /** 抽選の対象になるカテゴリと単語 */
 export interface DictionaryPool {
-  categories: { id: string; label: string; entries: DictionaryEntry[] }[];
+  categories: { id: string; label: string; genre: GenreId; entries: DictionaryEntry[] }[];
 }
 
 /**
@@ -173,7 +183,7 @@ export function listCategories(
   return result;
 }
 
-/** 表示言語が一致し、有効なカテゴリの単語を集める（単語が1件もないカテゴリは含めない） */
+/** 表示言語が一致し、有効でジャンルのあるカテゴリの単語を集める（単語が1件もないカテゴリは含めない） */
 export function buildPool(
   dictionaries: readonly Dictionary[],
   lang: string,
@@ -181,6 +191,7 @@ export function buildPool(
 ): DictionaryPool {
   const categories = listCategories(dictionaries, lang)
     .filter((c) => !disabledCategoryIds.includes(c.id))
+    .flatMap((c) => (c.genre === null ? [] : [{ ...c, genre: c.genre }]))
     .map((c) => ({
       ...c,
       entries: dictionaries
@@ -233,6 +244,7 @@ export function drawEntry(
     reading: entry.reading,
     categoryId: category.id,
     categoryLabel: category.label,
+    genre: category.genre,
   };
 }
 

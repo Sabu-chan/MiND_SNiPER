@@ -1,3 +1,4 @@
+import type { GenreId } from './genre';
 import type { Player, PlayerId } from './players';
 import { SECRET_SCENES, type GameState, type ShotEvent } from './state';
 import { must } from './util';
@@ -99,4 +100,22 @@ export function secretHpHistory(state: GameState): HpPoint[] {
 
 export function isMissEvent(e: ShotEvent): e is Extract<ShotEvent, { kind: 'miss' }> {
   return e.kind === 'miss';
+}
+
+/** ジャンル偵察をまだ持っているか（1ゲームに1回。DECISIONS D-33） */
+export function hasGenreScout(state: GameState, playerId: PlayerId): boolean {
+  return !state.scoutUsedBy.includes(playerId);
+}
+
+/** 今回答する狙撃手がジャンル偵察を使えるか */
+export function canScoutGenre(state: GameState): boolean {
+  const r = state.round;
+  const sniperId = currentSniperId(state);
+  return sniperId !== null && r !== null && !r.genreRevealed && hasGenreScout(state, sniperId);
+}
+
+/** このターンで公開されたジャンル。まだ公開されていなければ null */
+export function revealedGenre(state: GameState): GenreId | null {
+  const r = state.round;
+  return r?.genreRevealed && r.topic ? r.topic.genre : null;
 }

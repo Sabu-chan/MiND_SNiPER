@@ -5,27 +5,33 @@
   "categories": [
     {
       "id": "country",
-      "label": "国名"
+      "label": "国名",
+      "genre": "world-place"
     },
     {
       "id": "world-capital",
-      "label": "世界の首都"
+      "label": "世界の首都",
+      "genre": "world-place"
     },
     {
       "id": "world-landmark",
-      "label": "世界の名所"
+      "label": "世界の名所",
+      "genre": "landmark"
     },
     {
       "id": "world-mountain",
-      "label": "世界の山"
+      "label": "世界の山",
+      "genre": "landform"
     },
     {
       "id": "world-river",
-      "label": "世界の川"
+      "label": "世界の川",
+      "genre": "landform"
     },
     {
       "id": "world-lake",
-      "label": "世界の湖"
+      "label": "世界の湖",
+      "genre": "landform"
     }
   ],
   "entries": [

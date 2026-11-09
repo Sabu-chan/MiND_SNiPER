@@ -5,11 +5,13 @@
   "categories": [
     {
       "id": "japan-history",
-      "label": "日本の歴史上の人物"
+      "label": "日本の歴史上の人物",
+      "genre": "historical-person"
     },
     {
       "id": "world-history",
-      "label": "世界の歴史上の人物"
+      "label": "世界の歴史上の人物",
+      "genre": "historical-person"
     }
   ],
   "entries": [

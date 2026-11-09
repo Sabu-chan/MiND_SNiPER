@@ -5,87 +5,108 @@
   "categories": [
     {
       "id": "animal",
-      "label": "動物"
+      "label": "動物",
+      "genre": "creature"
     },
     {
       "id": "bird",
-      "label": "鳥"
+      "label": "鳥",
+      "genre": "creature"
     },
     {
       "id": "insect",
-      "label": "虫"
+      "label": "虫",
+      "genre": "creature"
     },
     {
       "id": "water-creature",
-      "label": "海や川の生き物"
+      "label": "海や川の生き物",
+      "genre": "creature"
     },
     {
       "id": "plant",
-      "label": "花・植物"
+      "label": "花・植物",
+      "genre": "plant"
     },
     {
       "id": "fruit",
-      "label": "果物"
+      "label": "果物",
+      "genre": "food"
     },
     {
       "id": "vegetable",
-      "label": "野菜"
+      "label": "野菜",
+      "genre": "food"
     },
     {
       "id": "dish",
-      "label": "料理"
+      "label": "料理",
+      "genre": "food"
     },
     {
       "id": "sweets",
-      "label": "お菓子・デザート"
+      "label": "お菓子・デザート",
+      "genre": "food"
     },
     {
       "id": "drink",
-      "label": "飲み物"
+      "label": "飲み物",
+      "genre": "food"
     },
     {
       "id": "vehicle",
-      "label": "乗り物"
+      "label": "乗り物",
+      "genre": "vehicle"
     },
     {
       "id": "stationery",
-      "label": "文房具・学用品"
+      "label": "文房具・学用品",
+      "genre": "tool"
     },
     {
       "id": "household",
-      "label": "日用品・家具"
+      "label": "日用品・家具",
+      "genre": "tool"
     },
     {
       "id": "appliance",
-      "label": "家電"
+      "label": "家電",
+      "genre": "tool"
     },
     {
       "id": "instrument",
-      "label": "楽器"
+      "label": "楽器",
+      "genre": "play-music"
     },
     {
       "id": "clothing",
-      "label": "服・身につけるもの"
+      "label": "服・身につけるもの",
+      "genre": "clothing"
     },
     {
       "id": "building",
-      "label": "建物・施設"
+      "label": "建物・施設",
+      "genre": "facility"
     },
     {
       "id": "toy",
-      "label": "遊具・おもちゃ"
+      "label": "遊具・おもちゃ",
+      "genre": "play-music"
     },
     {
       "id": "sports-gear",
-      "label": "スポーツの道具"
+      "label": "スポーツの道具",
+      "genre": "tool"
     },
     {
       "id": "nature",
-      "label": "天体・自然"
+      "label": "天体・自然",
+      "genre": "nature"
     },
     {
       "id": "tradition",
-      "label": "伝統・行事のもの"
+      "label": "伝統・行事のもの",
+      "genre": "tradition"
     }
   ],
   "entries": [

@@ -23,6 +23,7 @@ export function RulesPage() {
     distancePoints: config.distancePoints.join(sep),
     maxHit: hitDamage(config, 0, Math.max(...config.distancePoints), NORMAL_MULTIPLIER),
     missDamage: config.missDamage,
+    scoutDamage: config.genreScoutDamage,
     escapeHeal: config.escapeHeal,
     maxCycles: config.maxCycles,
     overtimeMultiplier: config.overtimeMultiplier,
@@ -81,6 +82,10 @@ export function RulesPage() {
               : t('rules.victoryDraw')}
           </li>
         </ul>
+      </Section>
+
+      <Section title={t('rules.scoutTitle')}>
+        <p>{t('rules.scout', values)}</p>
       </Section>
 
       <Section title={t('rules.forbiddenTitle')}>

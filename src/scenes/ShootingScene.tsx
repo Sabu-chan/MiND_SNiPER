@@ -3,13 +3,22 @@ import { useTranslation } from 'react-i18next';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { HoldButton } from '../components/HoldButton';
 import { hintCountOf } from '../game/config';
-import { answerHistory, canUndo, currentSniperId, revealedHints } from '../game/selectors';
+import {
+  answerHistory,
+  canScoutGenre,
+  canUndo,
+  currentSniperId,
+  hasGenreScout,
+  revealedGenre,
+  revealedHints,
+} from '../game/selectors';
 import { must } from '../game/util';
 import { nameOf, type SceneProps } from './types';
 
 /**
  * 射撃（SPEC 2.4, 3.7）：観測手が操作し、全員に見せる。
- * ヒントの遠さ点・HP・ダメージ量は表示しない。演出もそれらで変えない（SPEC 7章）。
+ * ヒントの距離点・HP・ダメージ量は表示しない。演出もそれらで変えない（SPEC 7章）。
+ * ジャンル偵察のボタン・偵察結果・持っている印もここに出す（DECISIONS D-33）。
  */
 export function ShootingScene({ game, dispatch }: SceneProps) {
   const { t } = useTranslation();
@@ -20,8 +29,10 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
   const hints = revealedHints(game);
   const answers = answerHistory(game);
   const answerOrder = round.answerOrder ?? round.sniperIds;
+  const genre = revealedGenre(game);
 
   const [confirmingHit, setConfirmingHit] = useState(false);
+  const [confirmingScout, setConfirmingScout] = useState(false);
   const [missMemo, setMissMemo] = useState<string | null>(null);
   const [peeking, setPeeking] = useState(false);
 
@@ -38,6 +49,13 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
           {t('shooting.shotOf', { current: round.shot + 1, total })}
         </span>
       </div>
+
+      {genre ? (
+        <p className="scout-result" role="status">
+          <span aria-hidden="true">🔍</span>{' '}
+          {t('shooting.scoutResult', { genre: t(`genres.${genre}`) })}
+        </p>
+      ) : null}
 
       <ol className="revealed-hints" aria-label={t('shooting.revealed')}>
         {hints.map((hint, index) => (
@@ -82,7 +100,14 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
           const list = answers[id] ?? [];
           return (
             <li key={id} className={`sniper ${id === sniperId ? 'sniper--current' : ''}`}>
-              <span className="sniper__name">{name(id)}</span>
+              <span className="sniper__name">
+                {name(id)}
+                {hasGenreScout(game, id) ? (
+                  <span className="sniper__scout" role="img" aria-label={t('shooting.hasScout')}>
+                    🔍
+                  </span>
+                ) : null}
+              </span>
               {list.length > 0 ? (
                 <span className="sniper__answers">
                   {list.map((a) => (
@@ -152,6 +177,14 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
             >
               {t('shooting.pass')}
             </button>
+            <button
+              type="button"
+              className="btn btn--scout"
+              disabled={!canScoutGenre(game)}
+              onClick={() => setConfirmingScout(true)}
+            >
+              <span aria-hidden="true">🔍</span> {t('shooting.scout')}
+            </button>
           </div>
         )}
 
@@ -175,6 +208,18 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
         </div>
       </div>
 
+      <ConfirmDialog
+        open={confirmingScout}
+        title={t('shooting.scoutTitle', { name: sniperId ? name(sniperId) : '' })}
+        message={t('shooting.scoutMessage', { damage: game.config.genreScoutDamage })}
+        confirmLabel={t('shooting.scoutOk')}
+        danger
+        onCancel={() => setConfirmingScout(false)}
+        onConfirm={() => {
+          setConfirmingScout(false);
+          dispatch({ type: 'scoutGenre' });
+        }}
+      />
       <ConfirmDialog
         open={confirmingHit}
         title={t('shooting.hitConfirmTitle')}
