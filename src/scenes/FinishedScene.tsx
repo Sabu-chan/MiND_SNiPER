@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router';
+import { HpChart } from '../components/HpChart';
 import { RoundLabelText } from '../components/RoundLabelText';
 import type { RoundRecord } from '../game/state';
 import { must } from '../game/util';
@@ -7,8 +8,7 @@ import { ROUTE_PATHS } from '../routePaths';
 import { nameOf, type SceneProps } from './types';
 
 /**
- * 結果発表（SPEC 3.10）。ここで初めて HP・ダメージ量・遠さ点を含む全記録を公開する。
- * HP推移のグラフは段階4で追加する。
+ * 結果発表（SPEC 3.10）。ここで初めて HP・ダメージ量・遠さ点を含む全記録とHP推移を公開する。
  */
 export function FinishedScene({ game }: SceneProps) {
   const { t } = useTranslation();
@@ -25,7 +25,7 @@ export function FinishedScene({ game }: SceneProps) {
           : t('final.winner', { name: name(must(result.winnerIds[0], 'winner')) })}
       </p>
 
-      <table className="standings">
+      <table className="standings" aria-label={t('final.standings')}>
         <thead>
           <tr>
             <th scope="col">{t('final.rank')}</th>
@@ -43,6 +43,8 @@ export function FinishedScene({ game }: SceneProps) {
           ))}
         </tbody>
       </table>
+
+      <HpChart game={game} />
 
       <h2 className="section-title">{t('final.records')}</h2>
       <ol className="records">

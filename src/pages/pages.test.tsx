@@ -86,7 +86,7 @@ describe('トップ（SPEC 3.2）', () => {
 
   it('ゲームがなければ「続きから」を出さない', () => {
     renderRoute('/');
-    expect(screen.queryByRole('link', { name: '続きから' })).toBeNull();
+    expect(screen.queryByRole('button', { name: '続きから' })).toBeNull();
   });
 
   it('進行中のゲームがあれば「続きから」を出し、新規は確認してから捨てる', async () => {
@@ -94,7 +94,7 @@ describe('トップ（SPEC 3.2）', () => {
     const { router } = renderRoute('/', {
       initialGame: createGame(players, createDefaultConfig()),
     });
-    expect(screen.getByRole('link', { name: '続きから' })).toBeVisible();
+    expect(screen.getByRole('button', { name: '続きから' })).toBeVisible();
     await user.click(screen.getByRole('button', { name: '新規ゲーム' }));
     const dialog = screen.getByRole('dialog', { name: '新規ゲームを始めますか？' });
     expect(within(dialog).getByText('保存中のゲームは削除されます。')).toBeVisible();

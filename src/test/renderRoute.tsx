@@ -9,7 +9,9 @@ import { routes } from '../routes';
 /** 辞書を読み込まない（テストの既定） */
 const noDictionaries = () => Promise.resolve({ value: [], warnings: [] });
 
-export interface RenderRouteOptions extends Omit<AppProvidersProps, 'children'> {
+export interface RenderRouteOptions extends Omit<AppProvidersProps, 'children' | 'storage'> {
+  /** 保存先。既定は null（保存しない。テスト間で状態が漏れないように） */
+  storage?: Storage | null;
   /** 現在のゲーム状態を受け取る（秘匿の検査用） */
   onGame?: (game: GameState | null) => void;
 }
@@ -20,12 +22,15 @@ function GameProbe({ onGame }: { onGame: (game: GameState | null) => void }) {
 }
 
 /** 指定したパスでアプリのルーティングを描画する（テスト用） */
-export function renderRoute(path: string, { onGame, ...options }: RenderRouteOptions = {}) {
+export function renderRoute(
+  path: string,
+  { onGame, storage = null, ...options }: RenderRouteOptions = {},
+) {
   const router = createMemoryRouter(routes, { initialEntries: [path] });
   return {
     router,
     ...render(
-      <AppProviders loadDictionaries={noDictionaries} {...options}>
+      <AppProviders storage={storage} loadDictionaries={noDictionaries} {...options}>
         <RouterProvider router={router} />
         {onGame ? <GameProbe onGame={onGame} /> : null}
       </AppProviders>,

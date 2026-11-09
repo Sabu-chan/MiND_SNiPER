@@ -273,8 +273,12 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     await user.click(screen.getByRole('button', { name: '次へ' }));
 
     expect(screen.getByText('優勝：ベンさん')).toBeVisible();
-    const rows = within(screen.getByRole('table')).getAllByRole('row').slice(1);
+    const rows = within(screen.getByRole('table', { name: '順位表' }))
+      .getAllByRole('row')
+      .slice(1);
     expect(rows.map((r) => r.textContent)).toEqual(['1位ベン600', '2位アオイ500', '3位チカ0']);
+    // HP推移のグラフ
+    expect(screen.getByRole('img', { name: 'HP推移' })).toBeInTheDocument();
     // 出題順と遠さ点、誤射のダメージ量を公開する
     expect(screen.getByText('1射目：山（遠さ点91）')).toBeVisible();
     expect(screen.getByText('1射目 チカさんが誤射：13ダメージ')).toBeVisible();
@@ -347,7 +351,7 @@ describe('ゲーム中のメニュー（SPEC 3.1）', () => {
     expect(screen.getByRole('dialog', { name: 'ゲームを中断しますか？' })).toBeVisible();
     await user.click(screen.getByRole('button', { name: '中断する' }));
     expect(router.state.location.pathname).toBe('/');
-    await user.click(screen.getByRole('link', { name: '続きから' }));
+    await user.click(screen.getByRole('button', { name: '続きから' }));
     expect(screen.getByRole('button', { name: '標的に端末を渡す' })).toBeVisible();
   });
 

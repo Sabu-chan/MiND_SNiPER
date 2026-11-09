@@ -30,6 +30,26 @@ npm run build      # 本番ビルド（dist/）
 `meta.languageName` が言語切替え欄の表示名になる。翻訳キーは `ja.json` を基準に型検査される。
 英字タイトル「MiND SNiPER」は全言語共通（`src/constants.ts`）。
 
+## 辞書
+
+`public/dictionaries/` に辞書ファイル（JSON）を置き、`index.json` の `dictionaries` にファイル名を足すと使えるようになる。
+形式は仕様書 5.1 と DECISIONS D-16 を参照。同梱の `sample.ja.json` は動作確認用。
+
+## PWA
+
+ホーム画面に追加すると全画面で開き、オフラインでも遊べる（辞書もキャッシュする）。Service Worker は本番ビルドでのみ有効で、
+`npm run build && npm run preview` で確認できる。アイコンを変えるときは `public/icon.svg` を編集して次を実行する。
+
+```bash
+npx pwa-assets-generator --preset minimal-2023 public/icon.svg
+```
+
+## 保存データ
+
+ブラウザの localStorage に `mind-sniper:` で始まるキーで保存する（ゲーム状態・CONFIG・前回のプレイヤー名）。
+同じ端末・同じブラウザでのみ再開でき、プライベートモードや閲覧履歴の削除で消える。
+ゲーム状態の形を変えたら `src/game/state.ts` の `GAME_SCHEMA_VERSION` を上げる（古いデータは破棄される）。
+
 ## デプロイ
 
 GitHub リポジトリを Vercel に接続する。`main` への push で本番、プルリクエストでプレビューが作られる。

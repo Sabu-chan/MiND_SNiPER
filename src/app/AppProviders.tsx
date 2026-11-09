@@ -8,6 +8,8 @@ import { SettingsProvider } from './SettingsProvider';
 
 export interface AppProvidersProps {
   children: ReactNode;
+  /** 保存先（localStorage）。null なら保存しない */
+  storage: Storage | null;
   /** 以下はテスト用の差し替え */
   initialConfig?: GameConfig;
   initialGame?: GameState | null;
@@ -17,15 +19,17 @@ export interface AppProvidersProps {
 
 export function AppProviders({
   children,
+  storage,
   initialConfig,
   initialGame,
   initialPlayerNames,
   loadDictionaries,
 }: AppProvidersProps) {
   return (
-    <SettingsProvider {...(initialConfig ? { initialConfig } : {})}>
+    <SettingsProvider storage={storage} {...(initialConfig ? { initialConfig } : {})}>
       <DictionaryProvider {...(loadDictionaries ? { load: loadDictionaries } : {})}>
         <GameSessionProvider
+          storage={storage}
           {...(initialGame !== undefined ? { initialGame } : {})}
           {...(initialPlayerNames ? { initialPlayerNames } : {})}
         >
