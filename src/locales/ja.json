@@ -3,7 +3,9 @@
     "languageName": "日本語"
   },
   "app": {
-    "subtitle": "連想スナイピングゲーム"
+    "subtitle": "連想スナイピングゲーム",
+    "logoAlt": "MiND SNiPER 連想スナイピングゲーム",
+    "footerTitle": "連想スナイピングゲーム MiND SNiPER"
   },
   "common": {
     "back": "戻る",

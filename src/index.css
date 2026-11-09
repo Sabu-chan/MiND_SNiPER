@@ -123,6 +123,24 @@ body {
   color: var(--color-muted);
 }
 
+.top-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* メニュー下部の小さな表記 */
+.top-footer {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.top-footer p {
+  margin: 0;
+}
+
 .menu {
   display: flex;
   flex-direction: column;

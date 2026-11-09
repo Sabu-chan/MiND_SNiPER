@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router';
 import { isGameInProgress, useGameSession } from '../app/gameSession';
 import { useSettings } from '../app/settings';
 import { ConfirmDialog } from '../components/ConfirmDialog';
+import { COPYRIGHT } from '../constants';
 import { Logo } from '../components/Logo';
 import { ROUTE_PATHS } from '../routePaths';
 
@@ -63,27 +64,35 @@ export function TopPage() {
         </div>
       ) : null}
 
-      <nav className="menu">
-        <button type="button" className="btn btn--primary" onClick={startNew}>
-          {t('top.newGame')}
-        </button>
-        {inProgress ? (
-          <button type="button" className="btn" onClick={continueGame}>
-            {t('top.continue')}
+      <div className="top-bottom">
+        <nav className="menu">
+          <button type="button" className="btn btn--primary" onClick={startNew}>
+            {t('top.newGame')}
           </button>
-        ) : null}
-        {finished ? (
-          <Link className="btn" to={ROUTE_PATHS.play}>
-            {t('top.viewResult')}
+          {inProgress ? (
+            <button type="button" className="btn" onClick={continueGame}>
+              {t('top.continue')}
+            </button>
+          ) : null}
+          {finished ? (
+            <Link className="btn" to={ROUTE_PATHS.play}>
+              {t('top.viewResult')}
+            </Link>
+          ) : null}
+          <Link className="btn" to={ROUTE_PATHS.rules}>
+            {t('top.rules')}
           </Link>
-        ) : null}
-        <Link className="btn" to={ROUTE_PATHS.rules}>
-          {t('top.rules')}
-        </Link>
-        <Link className="btn" to={ROUTE_PATHS.config}>
-          {t('top.config')}
-        </Link>
-      </nav>
+          <Link className="btn" to={ROUTE_PATHS.config}>
+            {t('top.config')}
+          </Link>
+        </nav>
+
+        {/* ゲームタイトル（言語ごと）とコピーライト（DECISIONS D-37） */}
+        <footer className="top-footer">
+          <p>{t('app.footerTitle')}</p>
+          <p>{COPYRIGHT}</p>
+        </footer>
+      </div>
 
       {/* 起動時：続きから／新規 */}
       <ConfirmDialog
