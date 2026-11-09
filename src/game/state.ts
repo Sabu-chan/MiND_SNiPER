@@ -10,13 +10,13 @@ import type { Player, PlayerId } from './players';
  */
 export const GAME_SCHEMA_VERSION = 1;
 
-/** ラウンドの表示用の番号（DECISIONS D-05） */
+/** ターンの表示用の番号（DECISIONS D-05） */
 export type RoundLabel =
   | { phase: 'main'; cycle: number; roundInCycle: number }
   | { phase: 'overtime'; round: number }
   | { phase: 'suddenDeath'; round: number };
 
-/** 確定したお題 */
+/** 確定した正解 */
 export interface Topic {
   text: string;
   /** 読み（ランダム出題で辞書にあるとき） */
@@ -60,7 +60,7 @@ export type ShotEvent =
 export type RoundOutcome =
   | { kind: 'hit'; sniperId: PlayerId; shot: number }
   | { kind: 'escaped'; healApplied: number }
-  /** 誤射で狙撃手が脱落し、ラウンドが途中で終わった */
+  /** 誤射で狙撃手が脱落し、ターンが途中で終わった */
   | { kind: 'sniperEliminated'; sniperId: PlayerId; shot: number };
 
 export interface RoundState {
@@ -74,10 +74,10 @@ export interface RoundState {
 
   /** 現在表示しているランダム出題の結果 */
   drawnEntry: DrawnEntry | null;
-  /** このラウンドで抽選した回数（2回目以降が引き直し） */
+  /** このターンで抽選した回数（2回目以降が引き直し） */
   drawCount: number;
 
-  /** 確定したお題（観測手に渡したあと） */
+  /** 確定した正解（観測手に渡したあと） */
   topic: Topic | null;
   /** ヒント（標的の入力順） */
   hints: string[];
@@ -101,9 +101,9 @@ export interface RoundState {
   outcome: RoundOutcome | null;
 }
 
-/** 終わったラウンドの記録（結果発表で公開する。SPEC 3.10） */
+/** 終わったターンの記録（結果発表で公開する。SPEC 3.10） */
 export interface RoundRecord extends RoundState {
-  /** ラウンド終了時（脱落したラウンドは脱落した時点）の全員のHP */
+  /** ターン終了時（脱落したターンは脱落した時点）の全員のHP */
   hpAfter: Record<PlayerId, number>;
 }
 
@@ -133,7 +133,7 @@ export const SECRET_SCENES: readonly HandoffNext[] = ['compose', 'review'];
  * 場面。ゲーム内の画面はこれで切り替える（URL に秘密情報を含めない。SPEC 6章）。
  */
 export type Scene =
-  /** ラウンド開始（全員に見せる） */
+  /** ターン開始（全員に見せる） */
   | { type: 'roundIntro' }
   /** 受け渡し画面 */
   | { type: 'handoff'; playerId: PlayerId; role: 'target' | 'spotter'; next: HandoffNext }
@@ -145,7 +145,7 @@ export type Scene =
   | { type: 'answerOrder' }
   /** 射撃（観測手が操作し全員に見せる） */
   | { type: 'shooting' }
-  /** ラウンド結果 */
+  /** ターン結果 */
   | { type: 'roundResult' }
   /** 脱落の告知 */
   | { type: 'eliminated'; playerId: PlayerId }
@@ -166,18 +166,18 @@ export interface GameStateBody {
   players: Player[];
   hp: Record<PlayerId, number>;
   phase: Phase;
-  /** 本戦・延長戦で終わったラウンドの数（輪番の r） */
+  /** 本戦・延長戦で終わったターンの数（輪番の r） */
   rotationIndex: number;
-  /** 延長戦で始めたラウンドの数 */
+  /** 延長戦で始めたターンの数 */
   overtimeRounds: number;
-  /** サドンデスで始めたラウンドの数（繰り返しをまたいで数える） */
+  /** サドンデスで始めたターンの数（繰り返しをまたいで数える） */
   suddenDeathRounds: number;
   suddenDeath: SuddenDeathState | null;
   round: RoundState | null;
   records: RoundRecord[];
   /** 抽選から外す辞書キー（出題済み・引き直しで捨てたもの） */
   usedEntryKeys: string[];
-  /** 使用済みのお題の表記（正規化済み） */
+  /** 使用済みの正解の表記（正規化済み） */
   usedWords: string[];
   /** 勝ち残りから外れた人の記録（順位付け用） */
   exits: ContentionExit[];

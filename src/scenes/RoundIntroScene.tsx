@@ -3,7 +3,7 @@ import { RoundLabelText } from '../components/RoundLabelText';
 import { must } from '../game/util';
 import { nameOf, type SceneProps } from './types';
 
-/** ラウンド開始（SPEC 3.4）：全員に見せる */
+/** ターン開始（SPEC 3.4）：全員に見せる */
 export function RoundIntroScene({ game, dispatch }: SceneProps) {
   const { t } = useTranslation();
   const round = must(game.round, 'round');

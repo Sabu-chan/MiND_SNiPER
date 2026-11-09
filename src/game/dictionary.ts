@@ -194,7 +194,7 @@ export function buildPool(
 export interface DrawExclusions {
   /** 出題済み・引き直しで捨てた単語のキー */
   keys: ReadonlySet<string>;
-  /** 使用済みのお題の表記（正規化済み） */
+  /** 使用済みの正解の表記（正規化済み） */
   words: ReadonlySet<string>;
 }
 

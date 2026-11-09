@@ -28,7 +28,7 @@ import {
 import { isBlank, normalizeText } from './text';
 import { isIndexPermutation, isPermutationOf, must } from './util';
 
-/** 出題方式とお題（SPEC 2.2） */
+/** 出題方式と正解（SPEC 2.2） */
 export type TopicInput = { source: 'free'; text: string } | { source: 'random' };
 
 export type ShotResult = 'hit' | 'miss' | 'pass';
@@ -38,13 +38,13 @@ export type ShotResult = 'hit' | 'miss' | 'pass';
  * 結果をアクションに含めて渡す（actions.ts の作成関数を使う）。これでリデューサーは純粋関数のままになる。
  */
 export type GameAction =
-  /** ラウンド開始画面から標的への受け渡しへ */
+  /** ターン開始画面から標的への受け渡しへ */
   | { type: 'beginRound' }
   /** 受け渡し画面から次の場面を開く（秘密情報の場面は長押しで発動する。UI 側で制御） */
   | { type: 'openHandoff' }
   /** ランダム出題の抽選・引き直し */
   | { type: 'drawTopic'; entry: DrawnEntry }
-  /** 標的がお題とヒントを確定する。差し戻し後は差し戻されたヒントだけを反映する */
+  /** 標的が正解とヒントを確定する。差し戻し後は差し戻されたヒントだけを反映する */
   | { type: 'submitHints'; topic: TopicInput; hints: string[] }
   /** 観測手が差し戻す */
   | { type: 'rejectHints'; rejections: Rejection[] }
@@ -56,9 +56,9 @@ export type GameAction =
   | { type: 'recordShot'; result: ShotResult; memo?: string }
   /** 直前の1操作を取り消す */
   | { type: 'undo' }
-  /** 射撃画面からラウンド結果へ（ここで記録を確定し、取り消せなくなる） */
+  /** 射撃画面からターン結果へ（ここで記録を確定し、取り消せなくなる） */
   | { type: 'proceedToResult' }
-  /** ラウンド結果から次へ（次のラウンド・延長戦・サドンデス・終了） */
+  /** ターン結果から次へ（次のターン・延長戦・サドンデス・終了） */
   | { type: 'nextFromResult' }
   /** 告知画面を閉じる */
   | { type: 'acknowledge' }
@@ -400,13 +400,13 @@ function eliminate(s: GameStateBody, playerId: PlayerId): GameStateBody {
   return { ...finalizeRound(s), scene: { type: 'eliminated', playerId } };
 }
 
-/** 現在のラウンドを記録に確定する */
+/** 現在のターンを記録に確定する */
 function finalizeRound(s: GameStateBody): GameStateBody {
   const r = must(s.round, 'round');
   return { ...s, records: [...s.records, { ...r, hpAfter: { ...s.hp } }] };
 }
 
-/** ラウンド結果のあと：次のラウンド・周回上限の判定・サドンデスの1巡の判定（SPEC 2.7） */
+/** ターン結果のあと：次のターン・ラウンド数の判定・サドンデスの1巡の判定（SPEC 2.7） */
 function afterRound(s: GameStateBody): GameStateBody {
   if (s.phase === 'suddenDeath') {
     const sd = must(s.suddenDeath, 'sudden death');
@@ -415,7 +415,7 @@ function afterRound(s: GameStateBody): GameStateBody {
     return applyJudgement(next, judgeSuddenDeathCycle(sd.participantIds, sd.spotterId, s.hp));
   }
   const next: GameStateBody = { ...s, rotationIndex: s.rotationIndex + 1 };
-  // 延長戦突入の判定は周回上限の最終ラウンドが終わった時点（SPEC 7章）
+  // 延長戦突入の判定はラウンド数の最終ターンが終わった時点（SPEC 7章）
   if (
     s.phase === 'main' &&
     isCycleLimitReached(next.rotationIndex, s.players.length, s.config.maxCycles)
@@ -468,7 +468,7 @@ function finish(s: GameStateBody, winnerIds: PlayerId[], draw: boolean): GameSta
   };
 }
 
-/** 局面に応じた役割でラウンドを始める */
+/** 局面に応じた役割でターンを始める */
 function startRound(s: GameStateBody): GameStateBody {
   const seat = seatOrder(s);
   let roles: Roles;

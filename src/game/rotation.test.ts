@@ -4,7 +4,7 @@ import { orderBySeatAfter, rotationRoles, suddenDeathRoles } from './rotation';
 const seat = (n: number) => Array.from({ length: n }, (_, i) => `p${i}`);
 
 describe('rotationRoles（SPEC 2.1）', () => {
-  it('第rラウンドの標的は席順[r mod n]、観測手は席順[(r+1) mod n]', () => {
+  it('第rターンの標的は席順[r mod n]、観測手は席順[(r+1) mod n]', () => {
     const s = seat(4);
     expect(rotationRoles(s, 0)).toEqual({
       targetId: 'p0',
@@ -16,11 +16,11 @@ describe('rotationRoles（SPEC 2.1）', () => {
       spotterId: 'p0',
       sniperIds: ['p1', 'p2'],
     });
-    // 2周目は1周目と同じ
+    // 2ラウンド目は1ラウンド目と同じ
     expect(rotationRoles(s, 5)).toEqual(rotationRoles(s, 1));
   });
 
-  it('nラウンドで全員が1回ずつ標的・観測手を務める', () => {
+  it('nターンで全員が1回ずつ標的・観測手を務める', () => {
     for (const n of [3, 4, 5, 6]) {
       const s = seat(n);
       const roles = Array.from({ length: n }, (_, r) => rotationRoles(s, r));

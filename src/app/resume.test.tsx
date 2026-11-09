@@ -56,7 +56,7 @@ describe('途中保存と再開（SPEC 3.2, 5.2）', () => {
     expect(router.state.location.pathname).toBe('/play');
     // 出題画面（秘密情報）に直接戻らず、標的への受け渡し画面から
     expect(screen.getByText('アオイさん（標的）に端末を渡してください')).toBeVisible();
-    expect(screen.queryByRole('heading', { name: 'お題とヒントを決める' })).toBeNull();
+    expect(screen.queryByRole('heading', { name: '正解とヒントを決める' })).toBeNull();
   });
 
   it('新規を選ぶと「保存中のゲームは削除されます」と再確認してから削除する', async () => {

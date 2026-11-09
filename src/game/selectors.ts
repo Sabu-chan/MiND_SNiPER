@@ -17,8 +17,8 @@ export function isHoldRequired(state: GameState): boolean {
 }
 
 /**
- * このラウンドであと何回抽選できるか（1回目＋引き直し上限回数。SPEC 2.2）。
- * お題を確定したあとは 0。
+ * このターンであと何回抽選できるか（1回目＋引き直し上限回数。SPEC 2.2）。
+ * 正解を確定したあとは 0。
  */
 export function remainingDraws(state: GameState): number {
   const r = state.round;
@@ -47,7 +47,7 @@ export function revealedHints(state: GameState): string[] {
   return r.shotOrder.slice(0, r.shot + 1).map((i) => must(r.hints[i], `hint ${i}`));
 }
 
-/** 狙撃手の回答の記録（命中はラウンドが終わるので含めない） */
+/** 狙撃手の回答の記録（命中はターンが終わるので含めない） */
 export interface AnswerLogEntry {
   shot: number;
   kind: 'miss' | 'pass';
@@ -56,7 +56,7 @@ export interface AnswerLogEntry {
 }
 
 /**
- * このラウンドの狙撃手ごとの回答履歴（SPEC 2.4, 3.7 の誤射履歴に、パスも加えたもの。DECISIONS D-31）。
+ * このターンの狙撃手ごとの回答履歴（SPEC 2.4, 3.7 の誤射履歴に、パスも加えたもの。DECISIONS D-31）。
  * ダメージ量は含めない。
  */
 export function answerHistory(state: GameState): Record<PlayerId, AnswerLogEntry[]> {
@@ -77,7 +77,7 @@ export function canUndo(state: GameState): boolean {
   return state.undo !== null && state.scene.type === 'shooting';
 }
 
-/** 直前のラウンドの記録（ラウンド結果画面用） */
+/** 直前のターンの記録（ターン結果画面用） */
 export function lastRecord(state: GameState) {
   return state.records.at(-1) ?? null;
 }

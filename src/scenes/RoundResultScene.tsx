@@ -4,7 +4,7 @@ import { must } from '../game/util';
 import { nameOf, type SceneProps } from './types';
 
 /**
- * ラウンド結果（SPEC 2.6, 3.8）：お題、命中（狙撃手名と射番号）または逃げ切りまで。数値は表示しない。
+ * ターン結果（SPEC 2.6, 3.8）：正解、命中（狙撃手名と射番号）または逃げ切りまで。数値は表示しない。
  */
 export function RoundResultScene({ game, dispatch }: SceneProps) {
   const { t } = useTranslation();

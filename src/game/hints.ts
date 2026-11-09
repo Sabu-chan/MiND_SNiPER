@@ -5,7 +5,7 @@ import { isIndexPermutation, must } from './util';
 export type HintIssue = 'empty' | 'sameAsTopic' | 'duplicate';
 
 /**
- * ヒントの入力チェック（SPEC 2.3）：空欄不可、ヒント同士の重複不可、お題と同一の文字列不可。
+ * ヒントの入力チェック（SPEC 2.3）：空欄不可、ヒント同士の重複不可、正解と同一の文字列不可。
  * 同一判定は正規化後の完全一致（DECISIONS D-06）。
  * 各ヒントの問題を返す（問題がなければ null）。重複は該当するすべての欄に付ける。
  */

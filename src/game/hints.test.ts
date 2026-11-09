@@ -40,7 +40,7 @@ describe('validateHints（SPEC 2.3、DECISIONS D-06）', () => {
     ]);
   });
 
-  it('お題と同一の文字列は不可', () => {
+  it('正解と同一の文字列は不可', () => {
     expect(validateHints(['北海道 ', 'a', 'b', 'c', 'd'], '北海道')).toEqual([
       'sameAsTopic',
       null,

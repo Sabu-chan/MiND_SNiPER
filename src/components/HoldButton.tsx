@@ -5,7 +5,7 @@ interface HoldButtonProps {
   durationMs: number;
   /** 長押しが完了したとき */
   onComplete: () => void;
-  /** 長押しが完了したあとに指を離したとき（「お題を確認」で表示を消すのに使う） */
+  /** 長押しが完了したあとに指を離したとき（「正解を確認」で表示を消すのに使う） */
   onRelease?: () => void;
   children: ReactNode;
   className?: string;

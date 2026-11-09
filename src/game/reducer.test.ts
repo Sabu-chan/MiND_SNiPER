@@ -50,13 +50,13 @@ function expectRejected(state: GameState, action: GameAction): void {
   expect(gameReducer(state, action)).toBe(state);
 }
 
-/** ラウンド開始から射撃開始まで進める（回答順は初期値のまま） */
+/** ターン開始から射撃開始まで進める（回答順は初期値のまま） */
 function toShooting(state: GameState, shotOrder = SHOT_ORDER): GameState {
   let s = play(
     state,
     { type: 'beginRound' },
     { type: 'openHandoff' },
-    { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+    { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
     { type: 'openHandoff' },
     { type: 'approveHints', farToNear: FAR_TO_NEAR, shotOrder },
   );
@@ -77,7 +77,7 @@ function escapeRound(state: GameState): GameState {
   return s;
 }
 
-/** ラウンドを終えて次へ（ラウンド結果画面を経由する） */
+/** ターンを終えて次へ（ターン結果画面を経由する） */
 function finishRound(state: GameState): GameState {
   return play(state, { type: 'proceedToResult' }, { type: 'nextFromResult' });
 }
@@ -110,7 +110,7 @@ const pool: DictionaryPool = (() => {
 // ---------------------------------------------------------------------------
 
 describe('createGame', () => {
-  it('全員HP100で、第1周第1ラウンドの開始画面から始まる', () => {
+  it('全員HP100で、第1ラウンド第1ターンの開始画面から始まる', () => {
     const s = newGame(4);
     expect(s.hp).toEqual({ p0: 100, p1: 100, p2: 100, p3: 100 });
     expect(s.scene).toEqual({ type: 'roundIntro' });
@@ -160,11 +160,11 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
     s = play(
       s,
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: ' お題 ' }, hints: HINTS },
+      { type: 'submitHints', topic: { source: 'free', text: ' 正解 ' }, hints: HINTS },
     );
     expect(s.scene).toEqual({ type: 'handoff', playerId: 'p1', role: 'spotter', next: 'review' });
     expect(s.round?.topic).toEqual({
-      text: 'お題',
+      text: '正解',
       reading: null,
       source: 'free',
       entryKey: null,
@@ -179,17 +179,17 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
     expect(isHoldRequired(s)).toBe(false);
   });
 
-  it('入力チェックに通らないヒント・空のお題は受け付けない', () => {
+  it('入力チェックに通らないヒント・空の正解は受け付けない', () => {
     const s = play(newGame(4), { type: 'beginRound' }, { type: 'openHandoff' });
     const submit = (text: string, hints: string[]): GameAction => ({
       type: 'submitHints',
       topic: { source: 'free', text },
       hints,
     });
-    expectRejected(s, submit('お題', ['a', 'b', 'c', 'd', '']));
-    expectRejected(s, submit('お題', ['a', 'b', 'c', 'd', 'ａ']));
-    expectRejected(s, submit('お題', ['a', 'b', 'c', 'd', 'お題']));
-    expectRejected(s, submit('お題', ['a', 'b', 'c', 'd']));
+    expectRejected(s, submit('正解', ['a', 'b', 'c', 'd', '']));
+    expectRejected(s, submit('正解', ['a', 'b', 'c', 'd', 'ａ']));
+    expectRejected(s, submit('正解', ['a', 'b', 'c', 'd', '正解']));
+    expectRejected(s, submit('正解', ['a', 'b', 'c', 'd']));
     expectRejected(s, submit('  ', ['a', 'b', 'c', 'd', 'e']));
   });
 
@@ -198,7 +198,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
       { type: 'openHandoff' },
       {
         type: 'rejectHints',
@@ -214,18 +214,18 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       { hintIndex: 3, comment: '遠すぎる' },
     ]);
 
-    // 差し戻していないヒントは送られてきても変えない。お題も変わらない
+    // 差し戻していないヒントは送られてきても変えない。正解も変わらない
     s = play(
       s,
       { type: 'openHandoff' },
       {
         type: 'submitHints',
-        topic: { source: 'free', text: '別のお題' },
+        topic: { source: 'free', text: '別の正解' },
         hints: ['変更X', '新B', '変更Y', '新D', '変更Z'],
       },
     );
     expect(s.round?.hints).toEqual(['ヒントA', '新B', 'ヒントC', '新D', 'ヒントE']);
-    expect(s.round?.topic?.text).toBe('お題');
+    expect(s.round?.topic?.text).toBe('正解');
     expect(s.round?.rejections).toBeNull();
 
     // 2回目の差し戻し
@@ -238,12 +238,12 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
     // 書き換え後に既存のヒントと重複すると受け付けない
     expectRejected(s, {
       type: 'submitHints',
-      topic: { source: 'free', text: 'お題' },
+      topic: { source: 'free', text: '正解' },
       hints: ['新B', '', '', '', ''],
     });
     s = play(s, {
       type: 'submitHints',
-      topic: { source: 'free', text: 'お題' },
+      topic: { source: 'free', text: '正解' },
       hints: ['新A', '', '', '', ''],
     });
     expect(s.round?.hints).toEqual(['新A', '新B', 'ヒントC', '新D', 'ヒントE']);
@@ -255,7 +255,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
       { type: 'openHandoff' },
     );
     expectRejected(s, { type: 'rejectHints', rejections: [] });
@@ -276,7 +276,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
       { type: 'openHandoff' },
     );
     const action = createApproveAction(s, FAR_TO_NEAR, createSequenceRng([0]));
@@ -292,7 +292,7 @@ describe('出題から承認まで（SPEC 2.3, 3.5, 3.6）', () => {
       newGame(4),
       { type: 'beginRound' },
       { type: 'openHandoff' },
-      { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
       { type: 'openHandoff' },
       { type: 'approveHints', farToNear: FAR_TO_NEAR, shotOrder: SHOT_ORDER },
     );
@@ -311,7 +311,7 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
     return play(newGame(4, patch), { type: 'beginRound' }, { type: 'openHandoff' });
   }
 
-  it('抽選結果を表示し、確定するとお題にカテゴリと読みが付く', () => {
+  it('抽選結果を表示し、確定すると正解にカテゴリと読みが付く', () => {
     let s = composing();
     const action = createDrawTopicAction(s, pool, createSequenceRng([0, 0]));
     expect(action).not.toBeNull();
@@ -367,11 +367,11 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
     expect(createDrawTopicAction(s, pool, createSeededRng(9))).toBeNull();
   });
 
-  it('任意出題のお題と表記が一致する単語は抽選から外す', () => {
+  it('任意出題の正解と表記が一致する単語は抽選から外す', () => {
     let s = composing();
     s = play(s, { type: 'submitHints', topic: { source: 'free', text: 'パンダ' }, hints: HINTS });
     expect(s.usedWords).toContain('パンダ');
-    // 次のラウンドで、パンダは出ない
+    // 次のターンで、パンダは出ない
     s = toShootingFromReview(s);
     s = finishRound(escapeRound(s));
     s = play(s, { type: 'beginRound' }, { type: 'openHandoff' });
@@ -382,7 +382,7 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
     }
   });
 
-  it('お題を確定したあとは抽選できない。抽選していなければランダム出題で確定できない', () => {
+  it('正解を確定したあとは抽選できない。抽選していなければランダム出題で確定できない', () => {
     const s = composing();
     expectRejected(s, { type: 'submitHints', topic: { source: 'random' }, hints: HINTS });
   });
@@ -398,7 +398,7 @@ describe('ランダム出題（SPEC 2.2、DECISIONS D-03）', () => {
 });
 
 describe('射撃とダメージ（SPEC 2.4, 2.5）', () => {
-  it('1射目に最も遠いヒントで命中すると、標的に60ダメージ。ラウンド終了', () => {
+  it('1射目に最も遠いヒントで命中すると、標的に60ダメージ。ターン終了', () => {
     let s = toShooting(newGame(4));
     expect(revealedHints(s)).toEqual(['ヒントA']);
     s = play(s, shot('hit'));
@@ -407,7 +407,7 @@ describe('射撃とダメージ（SPEC 2.4, 2.5）', () => {
     expect(s.round?.events).toEqual([
       { kind: 'hit', shot: 0, sniperId: 'p2', hintIndex: 0, damage: 60, applied: 60 },
     ]);
-    // ラウンドが終わったら入力できない
+    // ターンが終わったら入力できない
     expectRejected(s, shot('pass'));
     expect(currentSniperId(s)).toBeNull();
   });
@@ -461,7 +461,7 @@ describe('射撃とダメージ（SPEC 2.4, 2.5）', () => {
     expect(s.hp).toEqual({ p0: 120, p1: 100, p2: 100, p3: 100 });
   });
 
-  it('ラウンド結果を経て次のラウンドへ。輪番が進む', () => {
+  it('ターン結果を経て次のターンへ。輪番が進む', () => {
     let s = finishRound(play(toShooting(newGame(4)), shot('hit')));
     expect(s.scene).toEqual({ type: 'roundIntro' });
     expect(s.round).toMatchObject({
@@ -473,13 +473,13 @@ describe('射撃とダメージ（SPEC 2.4, 2.5）', () => {
     expect(s.records).toHaveLength(1);
     expect(s.records[0]?.hpAfter).toEqual({ p0: 40, p1: 100, p2: 100, p3: 100 });
 
-    // 2周目
+    // 2ラウンド目
     for (let i = 0; i < 3; i += 1) s = finishRound(escapeRound(toShooting(s)));
     expect(s.round?.label).toEqual({ phase: 'main', cycle: 2, roundInCycle: 1 });
     expect(s.round?.targetId).toBe('p0');
   });
 
-  it('ラウンド結果画面は直前の記録を表示する（命中で終わったラウンド）', () => {
+  it('ターン結果画面は直前の記録を表示する（命中で終わったターン）', () => {
     const s = play(play(toShooting(newGame(4)), shot('hit')), { type: 'proceedToResult' });
     expect(s.scene).toEqual({ type: 'roundResult' });
     expect(s.records.at(-1)?.outcome).toEqual({ kind: 'hit', sniperId: 'p2', shot: 0 });
@@ -507,7 +507,7 @@ describe('元に戻す（SPEC 3.7、DECISIONS D-02）', () => {
     expect(currentSniperId(s)).toBe('p2');
   });
 
-  it('脱落を伴わない命中でラウンドが終わった直後は取り消せる', () => {
+  it('脱落を伴わない命中でターンが終わった直後は取り消せる', () => {
     let s = play(toShooting(newGame(4)), shot('pass'), shot('hit'));
     expect(canUndo(s)).toBe(true);
     s = play(s, { type: 'undo' });
@@ -523,7 +523,7 @@ describe('元に戻す（SPEC 3.7、DECISIONS D-02）', () => {
     expect(s.hp.p0).toBe(90);
   });
 
-  it('ラウンド結果画面に進んだら確定する', () => {
+  it('ターン結果画面に進んだら確定する', () => {
     const s = play(toShooting(newGame(4)), shot('hit'), { type: 'proceedToResult' });
     expect(canUndo(s)).toBe(false);
     expectRejected(s, { type: 'undo' });
@@ -576,7 +576,7 @@ describe('脱落と終了判定（SPEC 2.7, 3.9）', () => {
     expect(s.scene).toEqual({ type: 'suddenDeathAnnouncement' });
   });
 
-  it('周回上限で1位が単独ならその人の勝ち', () => {
+  it('ラウンド数で1位が単独ならその人の勝ち', () => {
     let s = newGame(3, { maxCycles: 1 });
     s = finishRound(play(toShooting(s), shot('hit'))); // p0: 40
     s = finishRound(escapeRound(toShooting(s))); // p1: 120
@@ -604,13 +604,13 @@ describe('脱落と終了判定（SPEC 2.7, 3.9）', () => {
     expect(s.result).toMatchObject({ winnerIds: ['p0', 'p1', 'p3'], draw: true });
   });
 
-  it('周回上限の最終ラウンドの途中で脱落が出たら、そちらが優先', () => {
+  it('ラウンド数の最終ターンの途中で脱落が出たら、そちらが優先', () => {
     let s = newGame(3, { maxCycles: 1 });
     s = finishRound(escapeRound(toShooting(s)));
     s = finishRound(escapeRound(toShooting(s)));
-    s = play(toShooting(withHp(s, { p0: 60 })), shot('hit')); // 最終ラウンド：標的 p2、狙撃手 p1
+    s = play(toShooting(withHp(s, { p0: 60 })), shot('hit')); // 最終ターン：標的 p2、狙撃手 p1
     expect(s.round?.targetId).toBe('p2');
-    // p2 は 120 → 60。脱落者なしで周回上限 → p1（120）の単独1位
+    // p2 は 120 → 60。脱落者なしでラウンド数 → p1（120）の単独1位
     s = finishRound(s);
     expect(s.result?.winnerIds).toEqual(['p1']);
 
@@ -630,7 +630,7 @@ describe('延長戦（SPEC 2.7）', () => {
     return s;
   }
 
-  it('周回上限で脱落者がおらず1位が同点なら延長戦。誰が同点かは告知しない', () => {
+  it('ラウンド数で脱落者がおらず1位が同点なら延長戦。誰が同点かは告知しない', () => {
     const s = toOvertime();
     expect(s.hp).toEqual({ p0: 120, p1: 120, p2: 120 });
     expect(s.scene).toEqual({ type: 'overtimeAnnouncement' });
@@ -656,7 +656,7 @@ describe('延長戦（SPEC 2.7）', () => {
     expect(s.round?.targetId).toBe('p1');
   });
 
-  it('延長戦に周回上限はなく、誰かが脱落するまで続く', () => {
+  it('延長戦にラウンド数はなく、誰かが脱落するまで続く', () => {
     let s = play(toOvertime(), { type: 'acknowledge' });
     for (let i = 0; i < 7; i += 1) s = finishRound(escapeRound(toShooting(s)));
     expect(s.scene).toEqual({ type: 'roundIntro' });
@@ -773,7 +773,7 @@ describe('サドンデス（SPEC 2.7, 3.9）', () => {
   it('3人のサドンデスで1人がHP0になり、残りが同点なら再びサドンデス（観測手は今回HP0の人）', () => {
     // 5人：p4 が誤射で脱落、p0・p1・p2 が 80 で同点
     let s = toShooting(withHp(newGame(5), { p0: 80, p1: 80, p2: 80, p3: 80, p4: 5 }));
-    // 第1ラウンド：標的 p0、観測手 p1、狙撃手 p2, p3, p4
+    // 第1ターン：標的 p0、観測手 p1、狙撃手 p2, p3, p4
     s = play(s, shot('pass'), shot('pass'));
     s = withHp(s, { p3: 10 }); // p3 を同点から外す
     s = play(s, shot('miss'), { type: 'acknowledge' });
@@ -809,7 +809,7 @@ describe('続きから再開（SPEC 3.2）', () => {
 
     const reviewing = play(
       composing,
-      { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+      { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
       { type: 'openHandoff' },
     );
     expect(prepareForResume(reviewing).scene).toEqual({
@@ -838,7 +838,7 @@ describe('続きから再開（SPEC 3.2）', () => {
 });
 
 describe('結果発表用の記録', () => {
-  it('HP推移は開始時点と各ラウンド終了時点（DECISIONS D-08）', () => {
+  it('HP推移は開始時点と各ターン終了時点（DECISIONS D-08）', () => {
     let s = newGame(3, { maxCycles: 1 });
     // 狙撃手は p2 の1人：1射目に誤射、2射目にパス、3射目に命中（(30+6)×1）
     s = finishRound(play(toShooting(s), shot('miss'), shot('pass'), shot('hit')));
@@ -848,9 +848,9 @@ describe('結果発表用の記録', () => {
     ]);
   });
 
-  it('ラウンド結果画面用に直前の記録と名前を引ける', () => {
+  it('ターン結果画面用に直前の記録と名前を引ける', () => {
     const s = play(play(toShooting(newGame(4)), shot('hit')), { type: 'proceedToResult' });
-    expect(lastRecord(s)?.topic?.text).toBe('お題');
+    expect(lastRecord(s)?.topic?.text).toBe('正解');
     expect(playerById(s, 'p2').name).toBe('P2');
     expect(lastRecord(newGame(4))).toBeNull();
     expect(() => playerById(s, 'nobody')).toThrow(/player nobody/);

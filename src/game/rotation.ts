@@ -1,7 +1,7 @@
 import type { PlayerId } from './players';
 import { must } from './util';
 
-/** あるラウンドの役割 */
+/** あるターンの役割 */
 export interface Roles {
   targetId: PlayerId;
   spotterId: PlayerId;
@@ -11,7 +11,7 @@ export interface Roles {
 
 /**
  * 本戦・延長戦の輪番（SPEC 2.1）。
- * 第rラウンド（0始まり）の標的は席順[r mod n]、観測手は席順[(r+1) mod n]。残り全員が狙撃手。
+ * 第rターン（0始まり）の標的は席順[r mod n]、観測手は席順[(r+1) mod n]。残り全員が狙撃手。
  */
 export function rotationRoles(seatOrder: readonly PlayerId[], roundIndex: number): Roles {
   const n = seatOrder.length;

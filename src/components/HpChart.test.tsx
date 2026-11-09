@@ -13,12 +13,12 @@ const players = [
 ];
 const HINTS = ['山', '静岡', '日本一', '世界遺産', '富士宮'];
 
-/** 2ラウンド遊んだ状態：1ラウンド目は1射目に命中（アオイ −60）、2ラウンド目は逃げ切り（ベン +20） */
+/** 2ターン遊んだ状態：1ターン目は1射目に命中（アオイ −60）、2ターン目は逃げ切り（ベン +20） */
 function twoRounds(): GameState {
   const setup: GameAction[] = [
     { type: 'beginRound' },
     { type: 'openHandoff' },
-    { type: 'submitHints', topic: { source: 'free', text: 'お題' }, hints: HINTS },
+    { type: 'submitHints', topic: { source: 'free', text: '正解' }, hints: HINTS },
     { type: 'openHandoff' },
     { type: 'approveHints', farToNear: [0, 1, 2, 3, 4], shotOrder: [0, 1, 2, 3, 4] },
   ];
@@ -44,7 +44,7 @@ describe('HpChart（SPEC 3.10）', () => {
         .getAllByRole('listitem')
         .map((li) => li.textContent),
     ).toEqual(['アオイ', 'ベン', 'チカ']);
-    // 開始＋2ラウンド＝3点
+    // 開始＋2ターン＝3点
     const firstPath = container.querySelector('.hp-chart__line')?.getAttribute('d') ?? '';
     expect(firstPath.split(/[ML]/).filter(Boolean)).toHaveLength(3);
     expect(screen.getByRole('img', { name: 'HP推移' })).toBeInTheDocument();
@@ -56,19 +56,19 @@ describe('HpChart（SPEC 3.10）', () => {
     expect(rows.map((r) => r.textContent)).toEqual([
       'アオイベンチカ',
       '開始100100100',
-      'R140100100',
-      'R240120100',
+      'T140100100',
+      'T240120100',
     ]);
   });
 
-  it('キーボードの矢印でラウンドを選ぶと、そのときの全員のHPを表示する', async () => {
+  it('キーボードの矢印でターンを選ぶと、そのときの全員のHPを表示する', async () => {
     const user = userEvent.setup();
     render(<HpChart game={twoRounds()} />);
     const svg = screen.getByRole('img', { name: 'HP推移' });
     svg.focus();
     await user.keyboard('{ArrowRight}{ArrowRight}');
     const tooltip = screen.getByRole('status');
-    expect(tooltip).toHaveTextContent('第1ターン（全3ターン） 第1ラウンド');
+    expect(tooltip).toHaveTextContent('第1ラウンド（全2ラウンド） 第1ターン');
     // HPの多い順
     expect(
       within(tooltip)

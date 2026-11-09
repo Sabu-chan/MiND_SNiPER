@@ -20,7 +20,7 @@ describe('CONFIG（SPEC 3.12, 4章）', () => {
     expect(field('1番目')).toHaveValue(10);
     expect(field('誤射ダメージ')).toHaveValue(5);
     expect(field('逃げ切り回復量')).toHaveValue(20);
-    expect(field('ターン数')).toHaveValue(3);
+    expect(field('ラウンド数')).toHaveValue(2);
     expect(field('延長戦のダメージ倍率')).toHaveValue(2);
     expect(field('サドンデスのダメージ倍率')).toHaveValue(1);
     expect(field('ランダム出題の引き直し回数')).toHaveValue(1);
@@ -36,8 +36,8 @@ describe('CONFIG（SPEC 3.12, 4章）', () => {
     const user = userEvent.setup();
     const storage = memoryStorage();
     const first = renderRoute('/config', { storage });
-    await user.clear(field('ターン数'));
-    await user.type(field('ターン数'), '5');
+    await user.clear(field('ラウンド数'));
+    await user.type(field('ラウンド数'), '5');
     await user.click(screen.getByRole('radio', { name: '引き分け' }));
     await user.clear(field('秘密情報ボタンの長押し時間（秒）'));
     await user.type(field('秘密情報ボタンの長押し時間（秒）'), '2.5');
@@ -50,23 +50,23 @@ describe('CONFIG（SPEC 3.12, 4章）', () => {
     first.unmount();
 
     renderRoute('/config', { storage });
-    expect(field('ターン数')).toHaveValue(5);
+    expect(field('ラウンド数')).toHaveValue(5);
   });
 
   it('範囲外の値は保存しない', async () => {
     const user = userEvent.setup();
     const storage = memoryStorage();
     renderRoute('/config', { storage });
-    await user.clear(field('ターン数'));
-    await user.type(field('ターン数'), '11');
+    await user.clear(field('ラウンド数'));
+    await user.type(field('ラウンド数'), '11');
     expect(screen.getByText('1〜10の範囲で入力してください')).toBeVisible();
     expect(screen.getByRole('button', { name: '保存' })).toBeDisabled();
 
-    await user.clear(field('ターン数'));
+    await user.clear(field('ラウンド数'));
     expect(screen.getByText('整数で入力してください')).toBeVisible();
 
-    await user.clear(field('ターン数'));
-    await user.type(field('ターン数'), '3');
+    await user.clear(field('ラウンド数'));
+    await user.type(field('ラウンド数'), '3');
     await user.clear(field('上限HP'));
     await user.type(field('上限HP'), '99');
     expect(screen.getByText('100〜999の範囲で入力してください')).toBeVisible();
@@ -99,12 +99,12 @@ describe('CONFIG（SPEC 3.12, 4章）', () => {
       storage,
       initialConfig: { ...createDefaultConfig(), maxCycles: 7 },
     });
-    expect(field('ターン数')).toHaveValue(7);
+    expect(field('ラウンド数')).toHaveValue(7);
     await user.click(screen.getByRole('button', { name: 'デフォルトに戻す' }));
     const dialog = screen.getByRole('dialog', { name: 'デフォルトに戻しますか？' });
     await user.click(within(dialog).getByRole('button', { name: '戻す' }));
-    expect(field('ターン数')).toHaveValue(3);
-    expect(loadConfig(storage, ['ja'])).toMatchObject({ status: 'ok', value: { maxCycles: 3 } });
+    expect(field('ラウンド数')).toHaveValue(2);
+    expect(loadConfig(storage, ['ja'])).toMatchObject({ status: 'ok', value: { maxCycles: 2 } });
   });
 
   it('辞書のカテゴリごとに有効・無効を切り替えられる', async () => {
@@ -169,7 +169,7 @@ describe('ルール説明（SPEC 3.11）', () => {
     expect(main).toHaveTextContent('回数点は1射目から順に 50・40・30・20・10');
     expect(main).toHaveTextContent('通常時の最大は60');
     expect(main).toHaveTextContent('答えた狙撃手に7のダメージ');
-    expect(main).toHaveTextContent('全員が4回ずつ標的を務めたら（4ターン）');
+    expect(main).toHaveTextContent('全員が4回ずつ標的を務めたら（4ラウンド）');
     expect(main).toHaveTextContent('延長戦（ダメージ3倍）');
     expect(main).toHaveTextContent('狙撃手は、回答するときに調べてはいけません');
     expect(main).toHaveTextContent('同じ端末・同じブラウザだけです');

@@ -19,14 +19,14 @@ describe('leadersOf', () => {
   });
 });
 
-describe('isCycleLimitReached（SPEC 2.1：判定は周の終わり）', () => {
-  it('人数×周回上限のラウンドが終わった時点で達する', () => {
+describe('isCycleLimitReached（SPEC 2.1：判定はラウンドの終わり）', () => {
+  it('人数×ラウンド数のターンが終わった時点で達する', () => {
     expect(isCycleLimitReached(11, 4, 3)).toBe(false);
     expect(isCycleLimitReached(12, 4, 3)).toBe(true);
   });
 });
 
-describe('judgeCycleLimit（周回上限・脱落者なし）', () => {
+describe('judgeCycleLimit（ラウンド数・脱落者なし）', () => {
   it('1位が単独ならその人の勝ち', () => {
     expect(judgeCycleLimit(ids, { a: 50, b: 90, c: 80, d: 10 }, 'suddenDeath')).toEqual({
       resolution: { kind: 'winner', winnerId: 'b' },

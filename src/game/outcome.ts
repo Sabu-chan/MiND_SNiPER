@@ -30,7 +30,7 @@ export function leadersOf(ids: readonly PlayerId[], hp: HpMap): PlayerId[] {
   return ids.filter((id) => hpOf(hp, id) === max);
 }
 
-/** 本戦の周回上限に達したか（判定は周の終わりに行う。SPEC 2.1） */
+/** 本戦のラウンド数に達したか（判定はラウンドの終わりに行う。SPEC 2.1） */
 export function isCycleLimitReached(
   roundsCompleted: number,
   playerCount: number,
@@ -40,7 +40,7 @@ export function isCycleLimitReached(
 }
 
 /**
- * 周回上限に達したときの判定（SPEC 2.7）。脱落者はいない前提。
+ * ラウンド数に達したときの判定（SPEC 2.7）。脱落者はいない前提。
  * 1位が単独ならその人の勝ち。同点ならサドンデス方式は延長戦、引き分け方式は引き分け。
  */
 export function judgeCycleLimit(

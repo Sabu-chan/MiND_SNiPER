@@ -20,7 +20,7 @@ export interface GameConfig {
   missDamage: number;
   /** 逃げ切り回復量 */
   escapeHeal: number;
-  /** 周回上限 */
+  /** ラウンド数 */
   maxCycles: number;
   /** 延長戦のダメージ倍率 */
   overtimeMultiplier: number;
@@ -28,7 +28,7 @@ export interface GameConfig {
   suddenDeathMultiplier: number;
   /** 決着方式 */
   tiebreak: Tiebreak;
-  /** ランダム出題の引き直し回数（ラウンドあたり） */
+  /** ランダム出題の引き直し回数（ターンあたり） */
   rerollLimit: number;
   /** 秘密情報ボタンの長押し時間（ミリ秒） */
   holdDurationMs: number;
@@ -51,7 +51,7 @@ export const DEFAULT_CONFIG: Readonly<GameConfig> = Object.freeze({
   distancePoints: [10, 8, 6, 4, 2],
   missDamage: 5,
   escapeHeal: 20,
-  maxCycles: 3,
+  maxCycles: 2,
   overtimeMultiplier: 2,
   suddenDeathMultiplier: 1,
   tiebreak: 'suddenDeath',

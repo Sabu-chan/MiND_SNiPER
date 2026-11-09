@@ -8,7 +8,7 @@ import { RoundLabelText } from './RoundLabelText';
  * 結果発表のHP推移（SPEC 3.10、DECISIONS D-08）。自前の SVG 折れ線グラフ。
  * - 系列の色は席順で固定の順に割り当てる（並び替えや順位で塗り替えない）
  * - 凡例は常に表示し、色だけに頼らないよう表（数値）でも見られるようにする
- * - なぞる／タップするとそのラウンドの全員のHPを表示する
+ * - なぞる／タップするとそのターンの全員のHPを表示する
  */
 
 const VIEW = { width: 340, height: 210 };
@@ -148,7 +148,7 @@ export function HpChart({ game }: { game: GameState }) {
             />
           ))}
 
-          {/* 末尾（最終HP）と、選んでいるラウンドに印を付ける */}
+          {/* 末尾（最終HP）と、選んでいるターンに印を付ける */}
           {players.map((p, i) => {
             const at = active ?? count - 1;
             return (
