@@ -1,7 +1,8 @@
 import type { Resource } from 'i18next';
+import { DEFAULT_LANGUAGE } from '../constants';
 import ja from '../locales/ja.json';
 
-export const DEFAULT_LANGUAGE = 'ja';
+export { DEFAULT_LANGUAGE };
 
 /**
  * src/locales/ 配下の <lang>.json を自動で登録する。

@@ -15,6 +15,10 @@
     "import/no-cycle": "error",
     "import/no-unassigned-import": "off",
     "import/no-named-as-default-member": "off",
+    "vitest/expect-expect": [
+      "error",
+      { "assertFunctionNames": ["expect", "expectRejected", "play"] }
+    ],
     "eqeqeq": "error",
     "no-console": ["warn", { "allow": ["warn", "error"] }]
   },

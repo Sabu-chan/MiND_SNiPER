@@ -16,12 +16,13 @@ npm run check      # 型検査・lint・整形チェック・テストをまと�
 npm run build      # 本番ビルド（dist/）
 ```
 
-| コマンド          | 内容                                    |
-| ----------------- | --------------------------------------- |
-| `npm run lint`    | oxlint（警告もエラー扱い）              |
-| `npm run format`  | Prettier で整形                         |
-| `npm test`        | Vitest を1回実行（`test:watch` で監視） |
-| `npm run preview` | ビルド結果をローカルで配信              |
+| コマンド                | 内容                                                 |
+| ----------------------- | ---------------------------------------------------- |
+| `npm run lint`          | oxlint（警告もエラー扱い）                           |
+| `npm run format`        | Prettier で整形                                      |
+| `npm test`              | Vitest を1回実行（`test:watch` で監視）              |
+| `npm run test:coverage` | 網羅率を測る（`src/game` は90%以上を必須にしている） |
+| `npm run preview`       | ビルド結果をローカルで配信                           |
 
 ## 多言語化
 
