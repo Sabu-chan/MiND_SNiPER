@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { createDefaultConfig } from '../game/config';
 import { createGame } from '../game/reducer';
 import type { GameState } from '../game/state';
-import { renderRoute } from '../test/renderRoute';
+import { dragByKeyboard, renderRoute } from '../test/renderRoute';
 
 const nameBox = (seat: number) =>
   screen.getByRole('textbox', { name: `${seat}番目のプレイヤーの名前` });
@@ -23,7 +23,7 @@ describe('プレイヤー登録（SPEC 3.3）', () => {
     await user.type(nameBox(1), 'アオイ');
     await user.type(nameBox(2), 'ベン');
     await user.type(nameBox(3), 'チカ');
-    await user.click(screen.getByRole('button', { name: 'チカを上へ' }));
+    await dragByKeyboard(user, 'チカ', -1);
     expect(nameBox(2)).toHaveValue('チカ');
     await user.click(screen.getByRole('button', { name: 'この順番で始める' }));
 

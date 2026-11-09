@@ -5,7 +5,7 @@ import { createDefaultConfig, type GameConfig } from '../game/config';
 import { validateDictionary } from '../game/dictionary';
 import { createGame, gameReducer, type GameAction } from '../game/reducer';
 import type { GameState } from '../game/state';
-import { expectNoSecrets, holdButton, renderRoute } from '../test/renderRoute';
+import { dragByKeyboard, expectNoSecrets, holdButton, renderRoute } from '../test/renderRoute';
 
 /**
  * 秘匿の検査のため、画面の数字（射番号・ラウンドなど）と重ならない特徴的な値にする。
@@ -143,8 +143,7 @@ describe('1ターンを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
     await holdButton(screen.getByRole('button', { name: '長押しで開く' }), CONFIG.holdDurationMs);
 
     // 「日本一」を一番遠くに並べ替えて承認
-    await user.click(screen.getByRole('button', { name: '日本一を上へ' }));
-    await user.click(screen.getByRole('button', { name: '日本一を上へ' }));
+    await dragByKeyboard(user, '日本一', -2);
     await user.click(screen.getByRole('button', { name: 'この順で承認' }));
     expect(current().round?.distanceByHint?.[2]).toBe(91);
 
@@ -230,7 +229,7 @@ describe('1ターンを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
     // 初期の並びは観測手（ベン）の次の人から：チカ、ダン
     const rows = screen.getAllByRole('listitem').map((li) => li.textContent);
     expect(rows[0]).toContain('チカ');
-    await user.click(screen.getByRole('button', { name: 'ダンを上へ' }));
+    await dragByKeyboard(user, 'ダン', -1);
     await user.click(screen.getByRole('button', { name: '射撃開始' }));
     expect(screen.getByText('ダンさん')).toBeVisible();
   });
@@ -368,7 +367,7 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     expect(screen.getByText('チカ')).toBeVisible();
     expectNoSecrets(current());
     await user.click(screen.getByRole('button', { name: '標的の順を決める' }));
-    await user.click(screen.getByRole('button', { name: 'ベンを上へ' }));
+    await dragByKeyboard(user, 'ベン', -1);
     await user.click(screen.getByRole('button', { name: 'この順で始める' }));
     expect(screen.getByRole('heading', { name: 'サドンデス 第1ターン' })).toBeVisible();
     expect(current().round).toMatchObject({ targetId: 'b', spotterId: 'c', sniperIds: ['a'] });

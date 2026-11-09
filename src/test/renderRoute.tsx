@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { expect } from 'vitest';
 import { createMemoryRouter, RouterProvider } from 'react-router';
 import { AppProviders, type AppProvidersProps } from '../app/AppProviders';
@@ -66,4 +66,18 @@ export function expectNoSecrets(game: GameState, root: HTMLElement = document.bo
   }
   const numbers = (root.textContent ?? '').match(/\d+/g)?.map(Number) ?? [];
   expect(numbers.filter((n) => n >= 10 && secrets.has(n))).toEqual([]);
+}
+
+/** 並べ替えリストの行を、つかみ手のキーボード操作で動かす（Space で持ち上げ → 矢印 → Space で置く） */
+export async function dragByKeyboard(
+  user: { keyboard: (text: string) => Promise<void> },
+  name: string,
+  steps: number,
+): Promise<void> {
+  const handle = screen.getByRole('button', { name: `${name}を並べ替える` });
+  act(() => handle.focus());
+  await user.keyboard(' ');
+  const key = steps < 0 ? '{ArrowUp}' : '{ArrowDown}';
+  for (let i = 0; i < Math.abs(steps); i += 1) await user.keyboard(key);
+  await user.keyboard(' ');
 }

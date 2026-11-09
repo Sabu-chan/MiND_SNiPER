@@ -12,9 +12,7 @@
     "next": "次へ",
     "cancel": "キャンセル",
     "close": "閉じる",
-    "nameSuffix": "{{name}}さん",
-    "moveUp": "{{name}}を上へ",
-    "moveDown": "{{name}}を下へ"
+    "nameSuffix": "{{name}}さん"
   },
   "roles": {
     "target": "標的",
@@ -324,5 +322,13 @@
     "facility": "建物・施設（一般）",
     "nature": "自然・天体",
     "tradition": "行事・伝統"
+  },
+  "reorder": {
+    "handle": "{{name}}を並べ替える",
+    "instructions": "並べ替えるには、Space キーで持ち上げ、上下の矢印キーで動かし、もう一度 Space キーで置きます。Esc キーでやめます。",
+    "picked": "{{name}}を持ち上げました（{{position}}番目）",
+    "moved": "{{name}}を{{position}}番目へ",
+    "dropped": "{{name}}を{{position}}番目に置きました",
+    "cancelled": "並べ替えをやめました。{{name}}は元の位置です"
   }
 }
