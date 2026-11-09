@@ -68,4 +68,5 @@
 
 ### D-12 GitHub リポジトリの作成と Vercel への接続はプロジェクトの持ち主が行う（6章）
 
-- 判断：リポジトリには `vercel.json`（全パスを index.html に書き換え）までを用意する。GitHub への push と Vercel の接続は手作業で行う。
+- 判断：リポジトリ（https://github.com/Sabu-chan/MiND_SNiPER ）の作成と Vercel への接続は持ち主が行う。実装側は `vercel.json`（全パスを index.html に書き換え）を用意し、段階ごとのコミットを `main` に push する。
+- 理由：アカウントの権限設定や外部サービスとの連携は持ち主が管理するため。
