@@ -54,6 +54,31 @@ describe('プレイヤー登録（SPEC 3.3）', () => {
     expect(nameBox(5)).toHaveValue('E');
   });
 
+  it('「名前をクリア」で全員の名前を消せる。人数はそのまま（DECISIONS D-35）', async () => {
+    const user = userEvent.setup();
+    const { router } = renderRoute('/new', { initialPlayerNames: ['A', 'B', 'C', 'D'] });
+    await user.click(screen.getByRole('button', { name: '名前をクリア' }));
+    expect(screen.getByRole('radio', { name: '4人' })).toHaveAttribute('aria-checked', 'true');
+    expect([1, 2, 3, 4].map((i) => (nameBox(i) as HTMLInputElement).value)).toEqual([
+      '',
+      '',
+      '',
+      '',
+    ]);
+    // 空のままでは始められない
+    await user.click(screen.getByRole('button', { name: 'この順番で始める' }));
+    expect(screen.getAllByText('名前を入力してください')).toHaveLength(4);
+    expect(router.state.location.pathname).toBe('/new');
+    // もう一度クリアするとエラー表示も消える
+    await user.click(screen.getByRole('button', { name: '名前をクリア' }));
+    expect(screen.queryByText('名前を入力してください')).toBeNull();
+    // 人数を増やしても、隠れていた欄も空になっている
+    await user.click(screen.getByRole('radio', { name: '6人' }));
+    expect(nameBox(6)).toHaveValue('');
+    await user.type(nameBox(1), 'ニコ');
+    expect(nameBox(1)).toHaveValue('ニコ');
+  });
+
   it('ランダムに並べても名前の組は変わらない', async () => {
     const user = userEvent.setup();
     renderRoute('/new', { initialPlayerNames: ['A', 'B', 'C', 'D'] });

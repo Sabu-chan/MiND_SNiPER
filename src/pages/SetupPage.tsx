@@ -118,13 +118,26 @@ export function SetupPage() {
         }}
       />
 
-      <button
-        type="button"
-        className="btn"
-        onClick={() => updateActive(shuffle(active, defaultRng))}
-      >
-        {t('setup.shuffle')}
-      </button>
+      <div className="button-row">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => updateActive(shuffle(active, defaultRng))}
+        >
+          {t('setup.shuffle')}
+        </button>
+        {/* 前回の名前を消して入力し直す（DECISIONS D-35）。人数と保存済みの前回の名前は変えない */}
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            setRows(rows.map((r) => ({ ...r, name: '' })));
+            setSubmitted(false);
+          }}
+        >
+          {t('setup.clear')}
+        </button>
+      </div>
 
       <div className="actions">
         <button type="button" className="btn btn--primary" onClick={submit}>
