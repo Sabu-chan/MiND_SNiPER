@@ -1,0 +1,144 @@
+/* スマホ縦持ち優先・ライト／ダーク対応の基本スタイル（SPEC 6章） */
+:root {
+  color-scheme: light dark;
+  --color-bg: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-text: #1b1b1f;
+  --color-muted: #5f6068;
+  --color-border: #d7d7dc;
+  --color-accent: #c62f2f;
+  --color-accent-text: #ffffff;
+  --radius: 14px;
+  /* 片手で押せる大きさ：最小タップ領域 */
+  --tap-size: 56px;
+  --space: 16px;
+  --content-width: 480px;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    'Hiragino Sans',
+    'Noto Sans JP',
+    'Yu Gothic UI',
+    sans-serif;
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121216;
+    --color-surface: #1d1d23;
+    --color-text: #ececf1;
+    --color-muted: #a2a3ad;
+    --color-border: #34343d;
+    --color-accent: #ef5a5a;
+    --color-accent-text: #120808;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.layout {
+  max-width: var(--content-width);
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: calc(var(--space) + env(safe-area-inset-top)) var(--space)
+    calc(var(--space) + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+/* トップは操作ボタンを親指の届く下側に寄せる */
+.page--top {
+  justify-content: space-between;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 15dvh;
+}
+
+.logo__title {
+  margin: 0;
+  font-size: clamp(2.2rem, 11vw, 3.2rem);
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+
+.logo__subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--color-muted);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap-size);
+  padding: 0 var(--space);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  border-color: transparent;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}

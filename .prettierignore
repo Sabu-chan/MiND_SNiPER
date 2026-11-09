@@ -1,0 +1,6 @@
+dist
+dev-dist
+node_modules
+package-lock.json
+# 仕様書は持ち主の原稿なので整形しない
+docs/SPEC.md
