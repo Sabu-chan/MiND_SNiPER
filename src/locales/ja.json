@@ -8,13 +8,170 @@
   "common": {
     "back": "戻る",
     "backToTop": "トップへ",
-    "comingSoon": "準備中です"
+    "comingSoon": "準備中です",
+    "next": "次へ",
+    "cancel": "キャンセル",
+    "nameSuffix": "{{name}}さん",
+    "moveUp": "{{name}}を上へ",
+    "moveDown": "{{name}}を下へ"
+  },
+  "roles": {
+    "target": "標的",
+    "spotter": "観測手",
+    "sniper": "狙撃手"
   },
   "top": {
     "newGame": "新規ゲーム",
     "continue": "続きから",
+    "viewResult": "前回の結果を見る",
     "rules": "ルール説明",
-    "config": "CONFIG"
+    "config": "CONFIG",
+    "discardTitle": "新規ゲームを始めますか？",
+    "discardMessage": "保存中のゲームは削除されます。",
+    "discardOk": "削除して始める"
+  },
+  "setup": {
+    "title": "プレイヤー登録",
+    "count": "人数",
+    "countOption": "{{count}}人",
+    "seatHelp": "上から順に席順になります。▲▼で並べ替えてください。",
+    "nameLabel": "{{seat}}番目のプレイヤーの名前",
+    "namePlaceholder": "名前",
+    "unnamed": "名前なし",
+    "shuffle": "ランダムに並べる",
+    "start": "この順番で始める",
+    "errors": {
+      "empty": "名前を入力してください",
+      "duplicate": "同じ名前があります"
+    }
+  },
+  "game": {
+    "menu": "メニュー",
+    "rules": "ルール説明",
+    "config": "CONFIG",
+    "quit": "中断してトップへ",
+    "quitTitle": "ゲームを中断しますか？",
+    "quitMessage": "進行状況は保存されています。トップの「続きから」で再開できます。",
+    "quitOk": "中断する"
+  },
+  "round": {
+    "main": "第{{cycle}}周（全{{maxCycles}}周） 第{{round}}ラウンド",
+    "overtime": "延長戦 第{{round}}ラウンド",
+    "suddenDeath": "サドンデス 第{{round}}ラウンド"
+  },
+  "intro": {
+    "title": "ラウンド開始",
+    "multiplier": "ダメージ{{multiplier}}倍",
+    "handToTarget": "標的に端末を渡す"
+  },
+  "handoff": {
+    "message": "{{name}}さん（{{role}}）に端末を渡してください",
+    "holdHelp": "{{name}}さん以外は画面を見ないでください。",
+    "holdToOpen": "長押しで開く",
+    "tapToOpen": "{{name}}さんが受け取ったら開く"
+  },
+  "compose": {
+    "title": "お題とヒントを決める",
+    "revisionTitle": "差し戻されたヒントを書き直す",
+    "mode": "出題方式",
+    "modes": {
+      "free": "任意出題",
+      "random": "ランダム出題"
+    },
+    "noDictionary": "辞書がないため、任意出題のみです。",
+    "noMoreWords": "出せる単語がありません。任意出題にしてください。",
+    "topic": "お題",
+    "topicPlaceholder": "物の名前（例：富士山）",
+    "topicHelp": "物の名前（具体名詞・固有名詞）に限ります。",
+    "reroll": "引き直す（残り{{count}}回）",
+    "hints": "ヒント（{{count}}つ）",
+    "hintsHelp": "お題から連想できる言葉を入力します。遠さの順に並べる必要はありません。",
+    "hintLabel": "ヒント{{number}}",
+    "rejected": "観測手が差し戻しました",
+    "rejectedWithComment": "観測手のコメント：{{comment}}",
+    "submit": "確定して観測手に渡す",
+    "errors": {
+      "topicEmpty": "お題を入力してください",
+      "empty": "入力してください",
+      "duplicate": "他のヒントと同じです",
+      "sameAsTopic": "お題と同じです"
+    }
+  },
+  "review": {
+    "title": "ヒントを判定する",
+    "help": "普通の人の知識でお題を連想できないヒントは差し戻します。すべて成立していれば、遠い順（上が最も遠い）に並べて承認します。",
+    "points": "{{points}}点",
+    "pointsLabel": "遠さ点 {{points}}点",
+    "reject": "差し戻し",
+    "commentPlaceholder": "コメント（任意）",
+    "commentLabel": "「{{hint}}」へのコメント",
+    "sendBack": "差し戻す",
+    "approve": "この順で承認"
+  },
+  "answerOrder": {
+    "title": "回答順を決める",
+    "help": "狙撃手でジャンケンをして、その結果の順に並べてください。",
+    "start": "射撃開始"
+  },
+  "sdOrder": {
+    "title": "標的の順を決める",
+    "help": "参加者でジャンケンをして、標的を務める順に並べてください。",
+    "start": "この順で始める"
+  },
+  "shooting": {
+    "shot": "射",
+    "shotOf": "{{current}}/{{total}}",
+    "revealed": "公開済みのヒント",
+    "answering": "回答",
+    "missHistory": "誤射履歴",
+    "noMiss": "誤射なし",
+    "miss": "{{shot}}射目",
+    "missWithMemo": "{{shot}}射目「{{memo}}」",
+    "hit": "命中",
+    "missButton": "誤射",
+    "pass": "パス",
+    "undo": "元に戻す",
+    "peek": "お題を確認（長押し）",
+    "memoLabel": "{{name}}さんの回答（任意）",
+    "memoPlaceholder": "回答した言葉",
+    "recordMiss": "誤射を記録",
+    "hitConfirmTitle": "命中で確定しますか？",
+    "hitConfirmMessage": "{{name}}さんの命中としてラウンドを終えます。",
+    "hitTitle": "命中",
+    "hitMessage": "{{name}}さんが{{shot}}射目で撃ち抜きました。",
+    "escapedTitle": "逃げ切り",
+    "escapedMessage": "{{name}}さんが最後まで逃げ切りました。",
+    "toResult": "ラウンド結果へ"
+  },
+  "result": {
+    "title": "ラウンド結果"
+  },
+  "announce": {
+    "eliminatedTitle": "脱落者が出ました。ゲーム終了",
+    "eliminatedMessage": "{{name}}さんが脱落しました。",
+    "overtimeTitle": "延長戦：ダメージ{{multiplier}}倍",
+    "overtimeMessage": "誰かが脱落するまで、全員参加のまま続けます。",
+    "suddenDeathTitle": "サドンデス",
+    "suddenDeathMessage": "1位が同点のため、同点者だけで決定戦を行います。",
+    "participants": "参加者",
+    "toOrder": "標的の順を決める"
+  },
+  "final": {
+    "title": "結果発表",
+    "winner": "優勝：{{name}}さん",
+    "draw": "引き分け：{{names}}",
+    "rank": "順位",
+    "player": "プレイヤー",
+    "hp": "最終HP",
+    "rankValue": "{{rank}}位",
+    "records": "全ラウンドの記録",
+    "hintLine": "{{shot}}射目：{{hint}}（遠さ点{{points}}）",
+    "hitLine": "{{shot}}射目 {{name}}さんが命中：標的に{{damage}}ダメージ",
+    "missLine": "{{shot}}射目 {{name}}さんが誤射：{{damage}}ダメージ",
+    "missLineWithMemo": "{{shot}}射目 {{name}}さんが誤射「{{memo}}」：{{damage}}ダメージ",
+    "escapedLine": "逃げ切り：標的が{{heal}}回復",
+    "interruptedLine": "脱落によりラウンド途中で終了",
+    "playAgain": "同じメンバーでもう一度"
   },
   "rules": {
     "title": "ルール説明"

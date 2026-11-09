@@ -1,0 +1,720 @@
+/* ゲーム画面と共通部品のスタイル。変数は index.css で定義する */
+
+.btn--small {
+  min-height: 44px;
+  font-size: 0.95rem;
+}
+
+.btn--danger {
+  border-color: transparent;
+  background: var(--color-error);
+  color: #fff;
+}
+
+/* 命中・誤射：色は操作の種類で変え、ダメージ量では変えない（SPEC 7章） */
+.btn--hit {
+  border-color: transparent;
+  background: var(--color-hit);
+  color: #fff;
+}
+
+.btn--miss {
+  border-color: transparent;
+  background: var(--color-miss);
+  color: #fff;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.icon-btn:disabled {
+  opacity: 0.3;
+}
+
+/* ---- 長押しボタン（SPEC 3.1） ---- */
+.hold-button {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+.hold-button__gauge {
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0.22;
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.hold-button__label {
+  position: relative;
+}
+
+.hold-button--holding {
+  transform: scale(0.98);
+}
+
+/* ---- 入力 ---- */
+.input {
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  /* iOS で入力時に拡大されないよう16px以上 */
+  font-size: 16px;
+}
+
+.input--small {
+  min-height: 40px;
+}
+
+.input--error {
+  border-color: var(--color-error);
+  outline: 1px solid var(--color-error);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--color-accent);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field__label {
+  padding: 0;
+  font-weight: 700;
+}
+
+.hint-text {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.error-text {
+  color: var(--color-error);
+  font-size: 0.9rem;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.checkbox input {
+  width: 22px;
+  height: 22px;
+}
+
+.segmented {
+  display: flex;
+  gap: 6px;
+}
+
+.segmented__item {
+  flex: 1;
+  min-height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.segmented__item--active {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.segmented__item:disabled {
+  opacity: 0.4;
+}
+
+/* ---- 並べ替え ---- */
+.reorder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reorder__row {
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.reorder__main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reorder__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.reorder__buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.name-input {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.name-input .error-text {
+  grid-column: 2;
+}
+
+.name-input__seat,
+.order-row__number {
+  color: var(--color-muted);
+  font-weight: 700;
+  text-align: center;
+}
+
+.order-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.review-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-row__hint {
+  font-size: 1.1rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.review-row__check {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.points {
+  flex: none;
+  min-width: 3.2em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--color-surface-2);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---- ゲーム画面 ---- */
+.page__title,
+.scene__title {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.35;
+}
+
+.page--game {
+  gap: 12px;
+}
+
+.game-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.game-header__label {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.game-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(260px, 80vw);
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.2);
+}
+
+.scene {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+.scene__eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* 主要な操作は画面下部（親指の届く位置）に置く */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: var(--space);
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+}
+
+.button-row > * {
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.card__label {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.topic {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.topic__reading {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.badge {
+  align-self: flex-start;
+  margin: 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.badge--accent {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+
+.roles__row {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  gap: 8px;
+  padding: 12px var(--space);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  text-align: left;
+}
+
+.roles__row dt {
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.roles__row dd {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* ---- 受け渡し画面 ---- */
+.handoff {
+  margin-top: 12dvh;
+  text-align: center;
+}
+
+.handoff__role {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.handoff__name {
+  margin: 0.2em 0;
+  font-size: clamp(2rem, 10vw, 2.8rem);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.handoff__message {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ---- 出題 ---- */
+.hint-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.6em;
+}
+
+.hint-input--locked .hint-input__text {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--color-surface-2);
+  color: var(--color-muted);
+}
+
+.rejection-note {
+  margin: 4px 0 0;
+  color: var(--color-miss);
+  font-size: 0.9rem;
+}
+
+/* ---- 射撃 ---- */
+.shot-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.shot-counter__label {
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.shot-counter__value {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.revealed-hints {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.revealed-hint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px var(--space);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+.revealed-hint--latest {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.revealed-hint__number {
+  min-width: 1.4em;
+  font-weight: 700;
+}
+
+.revealed-hint__text {
+  overflow-wrap: anywhere;
+}
+
+.current-sniper {
+  text-align: center;
+}
+
+.current-sniper__label {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.current-sniper__name {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.snipers {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.sniper {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.sniper--current {
+  background: var(--color-surface-2);
+  font-weight: 700;
+}
+
+.sniper__misses {
+  color: var(--color-miss);
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.sniper__misses--none {
+  color: var(--color-muted);
+}
+
+.shot-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.shot-buttons > :last-child {
+  grid-column: 1 / -1;
+}
+
+.shot-buttons .btn {
+  min-height: 64px;
+  font-size: 1.2rem;
+}
+
+.miss-memo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.outcome {
+  padding: var(--space);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.outcome p {
+  margin: 0;
+}
+
+.outcome__title {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* ---- 告知 ---- */
+.scene--announce {
+  text-align: center;
+}
+
+.announce__title {
+  margin: 12dvh 0 0;
+  color: var(--color-accent);
+  font-size: clamp(1.6rem, 8vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.announce__message {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* ---- 結果発表 ---- */
+.final-winner {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.standings {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.standings th,
+.standings td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.standings td:last-child,
+.standings th:last-child {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.standings__top {
+  font-weight: 800;
+}
+
+.section-title {
+  margin: 8px 0 0;
+  font-size: 1.15rem;
+}
+
+.records {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.record p {
+  margin: 0;
+}
+
+.record__label {
+  font-weight: 800;
+}
+
+.record__roles,
+.record__events {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.record__hints,
+.record__events {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.record__hint--hit {
+  color: var(--color-hit);
+  font-weight: 800;
+}
+
+/* ---- ダイアログ ---- */
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space);
+  padding-bottom: calc(var(--space) + env(safe-area-inset-bottom));
+  background: var(--color-overlay);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: var(--content-width);
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--color-surface);
+}
+
+.dialog__title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.dialog__message {
+  color: var(--color-muted);
+}
+
+.dialog__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.dialog__actions > * {
+  flex: 1;
+}
+
+/* ---- 開発時のデバッグ表示 ---- */
+.debug-panel {
+  margin-top: var(--space);
+  padding: 8px;
+  border: 1px dashed var(--color-muted);
+  border-radius: 8px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.8rem;
+}

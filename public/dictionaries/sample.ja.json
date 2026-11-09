@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "name": "動作確認用サンプル辞書（本番辞書で置き換える）",
+  "categories": [
+    { "id": "prefecture", "label": "都道府県" },
+    { "id": "country", "label": "国名" },
+    { "id": "mountain", "label": "山" },
+    { "id": "animal", "label": "動物" },
+    { "id": "food", "label": "食べ物" }
+  ],
+  "entries": [
+    {
+      "id": "pref-hokkaido",
+      "word": "北海道",
+      "reading": "ほっかいどう",
+      "category": "prefecture"
+    },
+    { "id": "pref-kyoto", "word": "京都府", "reading": "きょうとふ", "category": "prefecture" },
+    { "id": "pref-okinawa", "word": "沖縄県", "reading": "おきなわけん", "category": "prefecture" },
+    { "id": "pref-kagawa", "word": "香川県", "reading": "かがわけん", "category": "prefecture" },
+    { "id": "country-france", "word": "フランス", "category": "country" },
+    { "id": "country-egypt", "word": "エジプト", "category": "country" },
+    { "id": "country-brazil", "word": "ブラジル", "category": "country" },
+    { "id": "country-australia", "word": "オーストラリア", "category": "country" },
+    { "id": "mountain-fuji", "word": "富士山", "reading": "ふじさん", "category": "mountain" },
+    {
+      "id": "mountain-everest",
+      "word": "エベレスト",
+      "category": "mountain"
+    },
+    { "id": "mountain-aso", "word": "阿蘇山", "reading": "あそさん", "category": "mountain" },
+    { "id": "animal-giraffe", "word": "キリン", "category": "animal" },
+    { "id": "animal-penguin", "word": "ペンギン", "category": "animal" },
+    { "id": "animal-panda", "word": "パンダ", "category": "animal" },
+    { "id": "animal-octopus", "word": "タコ", "category": "animal" },
+    { "id": "food-ramen", "word": "ラーメン", "category": "food" },
+    { "id": "food-curry", "word": "カレーライス", "category": "food" },
+    { "id": "food-natto", "word": "納豆", "reading": "なっとう", "category": "food" },
+    { "id": "food-onigiri", "word": "おにぎり", "category": "food" }
+  ]
+}

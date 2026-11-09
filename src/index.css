@@ -8,6 +8,11 @@
   --color-border: #d7d7dc;
   --color-accent: #c62f2f;
   --color-accent-text: #ffffff;
+  --color-surface-2: #eeeeec;
+  --color-hit: #1f7a4d;
+  --color-miss: #b4580f;
+  --color-error: #c0262d;
+  --color-overlay: rgb(0 0 0 / 0.5);
   --radius: 14px;
   /* 片手で押せる大きさ：最小タップ領域 */
   --tap-size: 56px;
@@ -37,6 +42,11 @@
     --color-border: #34343d;
     --color-accent: #ef5a5a;
     --color-accent-text: #120808;
+    --color-surface-2: #26262e;
+    --color-hit: #4cc08a;
+    --color-miss: #f0a050;
+    --color-error: #ff7a7f;
+    --color-overlay: rgb(0 0 0 / 0.65);
   }
 }
 

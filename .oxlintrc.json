@@ -22,5 +22,11 @@
     "eqeqeq": "error",
     "no-console": ["warn", { "allow": ["warn", "error"] }]
   },
+  "overrides": [
+    {
+      "files": ["src/test/**", "**/*.test.ts", "**/*.test.tsx"],
+      "rules": { "react/only-export-components": "off" }
+    }
+  ],
   "ignorePatterns": ["dist", "dev-dist", "node_modules"]
 }
