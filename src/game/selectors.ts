@@ -47,16 +47,27 @@ export function revealedHints(state: GameState): string[] {
   return r.shotOrder.slice(0, r.shot + 1).map((i) => must(r.hints[i], `hint ${i}`));
 }
 
-/** このラウンドの狙撃手ごとの誤射履歴（SPEC 2.4, 3.7） */
-export function missHistory(
-  state: GameState,
-): Record<PlayerId, { shot: number; memo: string | null }[]> {
+/** 狙撃手の回答の記録（命中はラウンドが終わるので含めない） */
+export interface AnswerLogEntry {
+  shot: number;
+  kind: 'miss' | 'pass';
+  /** 誤射の回答メモ（パスは null） */
+  memo: string | null;
+}
+
+/**
+ * このラウンドの狙撃手ごとの回答履歴（SPEC 2.4, 3.7 の誤射履歴に、パスも加えたもの。DECISIONS D-31）。
+ * ダメージ量は含めない。
+ */
+export function answerHistory(state: GameState): Record<PlayerId, AnswerLogEntry[]> {
   const r = state.round;
-  const history: Record<PlayerId, { shot: number; memo: string | null }[]> = {};
+  const history: Record<PlayerId, AnswerLogEntry[]> = {};
   if (!r) return history;
   for (const id of r.sniperIds) history[id] = [];
   for (const e of r.events) {
-    if (e.kind === 'miss') history[e.sniperId]?.push({ shot: e.shot, memo: e.memo });
+    if (e.kind === 'miss') history[e.sniperId]?.push({ shot: e.shot, kind: 'miss', memo: e.memo });
+    else if (e.kind === 'pass')
+      history[e.sniperId]?.push({ shot: e.shot, kind: 'pass', memo: null });
   }
   return history;
 }

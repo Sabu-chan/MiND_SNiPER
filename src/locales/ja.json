@@ -62,7 +62,7 @@
     "quitOk": "中断する"
   },
   "round": {
-    "main": "第{{cycle}}セット（全{{maxCycles}}セット） 第{{round}}ラウンド",
+    "main": "第{{cycle}}ターン（全{{maxCycles}}ターン） 第{{round}}ラウンド",
     "overtime": "延長戦 第{{round}}ラウンド",
     "suddenDeath": "サドンデス 第{{round}}ラウンド"
   },
@@ -130,10 +130,6 @@
     "shotOf": "{{current}}/{{total}}",
     "revealed": "公開済みのヒント",
     "answering": "回答",
-    "missHistory": "誤射履歴",
-    "noMiss": "誤射なし",
-    "miss": "{{shot}}射目",
-    "missWithMemo": "{{shot}}射目「{{memo}}」",
     "hit": "命中",
     "missButton": "誤射",
     "pass": "パス",
@@ -148,7 +144,12 @@
     "hitMessage": "{{name}}さんが{{shot}}射目で撃ち抜きました。",
     "escapedTitle": "逃げ切り",
     "escapedMessage": "{{name}}さんが最後まで逃げ切りました。",
-    "toResult": "ラウンド結果へ"
+    "toResult": "ラウンド結果へ",
+    "answerHistory": "回答履歴",
+    "noAnswer": "まだ回答なし",
+    "missLog": "{{shot}}射目【誤射】",
+    "missLogWithMemo": "{{shot}}射目【誤射】「{{memo}}」",
+    "passLog": "{{shot}}射目【パス】"
   },
   "result": {
     "title": "ラウンド結果"
@@ -184,7 +185,8 @@
     "chartDescription": "各ラウンド終了時点のHP。横軸はラウンド、縦軸はHP。",
     "chartStart": "開始",
     "chartRound": "R{{number}}",
-    "chartTable": "HP推移を表で見る"
+    "chartTable": "HP推移を表で見る",
+    "passLine": "{{shot}}射目 {{name}}さん【パス】"
   },
   "rules": {
     "title": "ルール説明",
@@ -195,7 +197,7 @@
     "roleTarget": "そのラウンドの出題者。お題とヒント{{hintCount}}つを作ります。",
     "roleSpotter": "そのラウンドの監督者。ヒントの承認と並べ替え、命中の判定、端末の操作をします。常に1人です。",
     "roleSniper": "標的と観測手以外の全員。ヒントからお題を当てます。",
-    "rolesRotation": "標的と観測手は席順に1人ずつずれながら、全員が交代で務めます。全員が1回ずつ標的を務めると1セットです。",
+    "rolesRotation": "標的と観測手は席順に1人ずつずれながら、全員が交代で務めます。全員が1回ずつ標的を務めると1ターンです。",
     "flowTitle": "進行",
     "flow1": "標的がお題（物の名前）を決めます。自分で決めるか、辞書からランダムに選びます（引き直しは1ラウンドに{{rerollLimit}}回まで）。",
     "flow2": "標的はお題から連想できるヒントを{{hintCount}}つ作ります。すべて遠いヒントでも構いません。",
@@ -212,7 +214,7 @@
     "damageSecret": "HP・ダメージ量・回復量・ヒントの距離点は、ゲーム中は本人を含め誰にも表示されません。ゲーム終了後に全記録を公開します。",
     "victoryTitle": "勝敗",
     "victoryElimination": "誰かのHPが0になった瞬間（誤射による脱落も含む）にゲーム終了。脱落者以外でHPが最も多い人の勝ちです。",
-    "victoryCycles": "全員が{{maxCycles}}回ずつ標的を務めたら（{{maxCycles}}セット）ゲーム終了。HPが最も多い人の勝ちです。",
+    "victoryCycles": "全員が{{maxCycles}}回ずつ標的を務めたら（{{maxCycles}}ターン）ゲーム終了。HPが最も多い人の勝ちです。",
     "victorySuddenDeath": "1位が同点のときは、延長戦（ダメージ{{overtimeMultiplier}}倍）を誰かが脱落するまで続けます。脱落者が出た時点で1位が同点なら、同点者だけでサドンデス（ダメージ{{suddenDeathMultiplier}}倍、観測手は脱落者）を行います。サドンデスは参加者全員が1回ずつ標的を務めるか、誰かのHPが0になるまで行い、それでも同点なら繰り返します。",
     "victoryDraw": "1位が同点のときは、その全員の引き分けです（延長戦・サドンデスはありません）。",
     "forbiddenTitle": "禁止事項",
@@ -238,7 +240,7 @@
       "distancePoints": "距離点（遠い順）",
       "missDamage": "誤射ダメージ",
       "escapeHeal": "逃げ切り回復量",
-      "maxCycles": "セット数",
+      "maxCycles": "ターン数",
       "overtimeMultiplier": "延長戦のダメージ倍率",
       "suddenDeathMultiplier": "サドンデスのダメージ倍率",
       "tiebreak": "決着方式",
@@ -253,7 +255,7 @@
       "distancePoints": "観測手が並べた順に割り振る点。0〜999 の整数を大きい順に。",
       "missDamage": "0〜99",
       "escapeHeal": "0〜99（倍率はかけない）",
-      "maxCycles": "1〜10セット",
+      "maxCycles": "1〜10ターン",
       "overtimeMultiplier": "1〜5（命中・誤射に適用）",
       "suddenDeathMultiplier": "1〜5（命中・誤射に適用）",
       "tiebreak_suddenDeath": "1位が同点なら延長戦、脱落時に同点ならサドンデスで決着をつけます。",

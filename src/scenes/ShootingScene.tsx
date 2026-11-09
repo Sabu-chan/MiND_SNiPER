@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { HoldButton } from '../components/HoldButton';
 import { hintCountOf } from '../game/config';
-import { canUndo, currentSniperId, missHistory, revealedHints } from '../game/selectors';
+import { answerHistory, canUndo, currentSniperId, revealedHints } from '../game/selectors';
 import { must } from '../game/util';
 import { nameOf, type SceneProps } from './types';
 
@@ -18,7 +18,7 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
   const total = hintCountOf(game.config);
   const sniperId = currentSniperId(game);
   const hints = revealedHints(game);
-  const misses = missHistory(game);
+  const answers = answerHistory(game);
   const answerOrder = round.answerOrder ?? round.sniperIds;
 
   const [confirmingHit, setConfirmingHit] = useState(false);
@@ -77,24 +77,28 @@ export function ShootingScene({ game, dispatch }: SceneProps) {
         </div>
       ) : null}
 
-      <ul className="snipers" aria-label={t('shooting.missHistory')}>
+      <ul className="snipers" aria-label={t('shooting.answerHistory')}>
         {answerOrder.map((id) => {
-          const list = misses[id] ?? [];
+          const list = answers[id] ?? [];
           return (
             <li key={id} className={`sniper ${id === sniperId ? 'sniper--current' : ''}`}>
               <span className="sniper__name">{name(id)}</span>
               {list.length > 0 ? (
-                <span className="sniper__misses">
-                  {list
-                    .map((m) =>
-                      m.memo
-                        ? t('shooting.missWithMemo', { shot: m.shot + 1, memo: m.memo })
-                        : t('shooting.miss', { shot: m.shot + 1 }),
-                    )
-                    .join(' / ')}
+                <span className="sniper__answers">
+                  {list.map((a) => (
+                    <span key={a.shot} className={`sniper__answer sniper__answer--${a.kind}`}>
+                      {a.kind === 'pass'
+                        ? t('shooting.passLog', { shot: a.shot + 1 })
+                        : a.memo
+                          ? t('shooting.missLogWithMemo', { shot: a.shot + 1, memo: a.memo })
+                          : t('shooting.missLog', { shot: a.shot + 1 })}
+                    </span>
+                  ))}
                 </span>
               ) : (
-                <span className="sniper__misses sniper__misses--none">{t('shooting.noMiss')}</span>
+                <span className="sniper__answers sniper__answers--none">
+                  {t('shooting.noAnswer')}
+                </span>
               )}
             </li>
           );

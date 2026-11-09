@@ -530,13 +530,26 @@
   font-weight: 700;
 }
 
-.sniper__misses {
-  color: var(--color-miss);
+.sniper__answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2px 8px;
   text-align: right;
   overflow-wrap: anywhere;
 }
 
-.sniper__misses--none {
+/* 色は誤射とパスの種類で変える（ダメージ量では変えない） */
+.sniper__answer--miss {
+  color: var(--color-miss);
+}
+
+.sniper__answer--pass,
+.sniper__answers--none {
+  color: var(--color-muted);
+}
+
+.record__pass {
   color: var(--color-muted);
 }
 

@@ -80,7 +80,7 @@ describe('1ラウンドを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
 
     // ラウンド開始：役割を全員に表示
     expect(
-      screen.getByRole('heading', { name: /第1セット（全3セット） 第1ラウンド/ }),
+      screen.getByRole('heading', { name: /第1ターン（全3ターン） 第1ラウンド/ }),
     ).toBeVisible();
     const roles = screen.getByRole('main');
     expect(within(roles).getByText('アオイ')).toBeVisible();
@@ -150,19 +150,21 @@ describe('1ラウンドを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
     await user.click(screen.getByRole('button', { name: '誤射' }));
     await user.type(screen.getByPlaceholderText('回答した言葉'), '富士');
     await user.click(screen.getByRole('button', { name: '誤射を記録' }));
-    expect(screen.getByText('1射目「富士」')).toBeVisible();
+    expect(screen.getByText('1射目【誤射】「富士」')).toBeVisible();
     expect(screen.getByText('2/5')).toBeVisible();
     expectNoSecrets(current());
     await user.click(screen.getByRole('button', { name: '元に戻す' }));
     expect(screen.getByText('1/5')).toBeVisible();
-    expect(screen.queryByText('1射目「富士」')).toBeNull();
+    expect(screen.queryByText('1射目【誤射】「富士」')).toBeNull();
     expect(screen.getByRole('button', { name: '元に戻す' })).toBeDisabled();
 
     await user.click(screen.getByRole('button', { name: '誤射' }));
     await user.click(screen.getByRole('button', { name: '誤射を記録' }));
-    expect(screen.getByText('1射目')).toBeVisible();
+    expect(screen.getByText('1射目【誤射】')).toBeVisible();
     await user.click(screen.getByRole('button', { name: 'パス' }));
     expect(screen.getByText('3/5')).toBeVisible();
+    // パスも射番号つきで回答履歴に残る
+    expect(screen.getByText('2射目【パス】')).toBeVisible();
     expect(
       screen.getAllByRole('listitem').filter((li) => li.className.includes('revealed-hint')),
     ).toHaveLength(3);
@@ -289,6 +291,16 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     expect(router.state.location.pathname).toBe('/new');
     expect(screen.getByRole('textbox', { name: '1番目のプレイヤーの名前' })).toHaveValue('アオイ');
     expect(screen.getByRole('textbox', { name: '3番目のプレイヤーの名前' })).toHaveValue('チカ');
+  });
+
+  it('結果発表の記録にはパスも射番号つきで載る（DECISIONS D-31）', () => {
+    let game = play(shootingState(), { type: 'recordShot', result: 'pass' });
+    // 1位が単独になるように差をつけて、脱落したら結果発表へ進むようにする
+    game = { ...game, hp: { ...game.hp, a: 500, c: 13 } };
+    game = play(game, { type: 'recordShot', result: 'miss' }, { type: 'acknowledge' });
+    renderGame(game);
+    expect(screen.getByText('1射目 チカさん【パス】')).toBeVisible();
+    expect(screen.getByText('2射目 チカさんが誤射：13ダメージ')).toBeVisible();
   });
 
   it('延長戦の告知は倍率だけで、誰が同点かは示さない', async () => {

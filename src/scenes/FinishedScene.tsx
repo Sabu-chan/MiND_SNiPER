@@ -140,7 +140,11 @@ function RecordCard({ record, game }: { record: RoundRecord; game: SceneProps['g
                 </li>
               );
             case 'pass':
-              return null;
+              return (
+                <li key={i} className="record__pass">
+                  {t('final.passLine', { shot: e.shot + 1, name: name(e.sniperId) })}
+                </li>
+              );
           }
         })}
         {record.outcome?.kind === 'escaped' ? (

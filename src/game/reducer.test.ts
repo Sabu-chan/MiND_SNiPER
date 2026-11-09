@@ -10,7 +10,7 @@ import {
   currentSniperId,
   isHoldRequired,
   lastRecord,
-  missHistory,
+  answerHistory,
   playerById,
   remainingDraws,
   remainingRerolls,
@@ -423,19 +423,34 @@ describe('射撃とダメージ（SPEC 2.4, 2.5）', () => {
     expect(s.round?.outcome).toEqual({ kind: 'hit', sniperId: 'p3', shot: 1 });
   });
 
-  it('誤射はその狙撃手に5ダメージ。メモを誤射履歴に残し、次の狙撃手へ', () => {
+  it('誤射はその狙撃手に5ダメージ。メモを回答履歴に残し、次の狙撃手へ', () => {
     let s = toShooting(newGame(4));
     s = play(s, shot('miss', ' パンダ '));
     expect(s.hp.p2).toBe(95);
     expect(currentSniperId(s)).toBe('p3');
     s = play(s, shot('miss'));
-    expect(missHistory(s)).toEqual({
-      p2: [{ shot: 0, memo: 'パンダ' }],
-      p3: [{ shot: 0, memo: null }],
+    expect(answerHistory(s)).toEqual({
+      p2: [{ shot: 0, kind: 'miss', memo: 'パンダ' }],
+      p3: [{ shot: 0, kind: 'miss', memo: null }],
     });
     // 全員の入力が終わったら次の射
     expect(s.round?.shot).toBe(1);
     expect(currentSniperId(s)).toBe('p2');
+  });
+
+  it('パスも射番号つきで回答履歴に残す（DECISIONS D-31）', () => {
+    let s = toShooting(newGame(4));
+    s = play(s, shot('pass'), shot('miss', 'ゾウ'), shot('pass'), shot('pass'));
+    expect(answerHistory(s)).toEqual({
+      p2: [
+        { shot: 0, kind: 'pass', memo: null },
+        { shot: 1, kind: 'pass', memo: null },
+      ],
+      p3: [
+        { shot: 0, kind: 'miss', memo: 'ゾウ' },
+        { shot: 1, kind: 'pass', memo: null },
+      ],
+    });
   });
 
   it('パスにダメージはない。5射終了まで命中がなければ逃げ切りで20回復（上限120）', () => {

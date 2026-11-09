@@ -68,7 +68,7 @@ describe('HpChart（SPEC 3.10）', () => {
     svg.focus();
     await user.keyboard('{ArrowRight}{ArrowRight}');
     const tooltip = screen.getByRole('status');
-    expect(tooltip).toHaveTextContent('第1セット（全3セット） 第1ラウンド');
+    expect(tooltip).toHaveTextContent('第1ターン（全3ターン） 第1ラウンド');
     // HPの多い順
     expect(
       within(tooltip)
