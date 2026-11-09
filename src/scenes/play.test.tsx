@@ -80,7 +80,7 @@ describe('1ラウンドを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
 
     // ラウンド開始：役割を全員に表示
     expect(
-      screen.getByRole('heading', { name: /第1ラウンド（全3ラウンド） 第1ゲーム/ }),
+      screen.getByRole('heading', { name: /第1セット（全3セット） 第1ラウンド/ }),
     ).toBeVisible();
     const roles = screen.getByRole('main');
     expect(within(roles).getByText('アオイ')).toBeVisible();
@@ -179,14 +179,14 @@ describe('1ラウンドを画面で通して遊ぶ（SPEC 3.4〜3.8）', () => {
     expectNoSecrets(current());
 
     // ラウンド結果：お題と命中（狙撃手名と射番号）まで。数値は出さない
-    await user.click(screen.getByRole('button', { name: 'ゲーム結果へ' }));
+    await user.click(screen.getByRole('button', { name: 'ラウンド結果へ' }));
     expect(screen.getByText('富士山')).toBeVisible();
     expect(screen.getByText('チカさんが3射目で撃ち抜きました。')).toBeVisible();
     expectNoSecrets(current());
     await user.click(screen.getByRole('button', { name: '次へ' }));
 
     // 次のラウンド：標的 ベン
-    expect(screen.getByRole('heading', { name: /第2ゲーム/ })).toBeVisible();
+    expect(screen.getByRole('heading', { name: /第2ラウンド/ })).toBeVisible();
     expect(current().round?.targetId).toBe('b');
   }, 20_000);
 
@@ -269,7 +269,7 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     await user.click(screen.getByRole('button', { name: '誤射' }));
     await user.click(screen.getByRole('button', { name: '誤射を記録' }));
 
-    expect(screen.getByRole('heading', { name: '脱落者が出ました。試合終了' })).toBeVisible();
+    expect(screen.getByRole('heading', { name: '脱落者が出ました。ゲーム終了' })).toBeVisible();
     expect(screen.getByText('チカさんが脱落しました。')).toBeVisible();
     expectNoSecrets(current());
     await user.click(screen.getByRole('button', { name: '次へ' }));
@@ -282,7 +282,7 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     // HP推移のグラフ
     expect(screen.getByRole('img', { name: 'HP推移' })).toBeInTheDocument();
     // 出題順と遠さ点、誤射のダメージ量を公開する
-    expect(screen.getByText('1射目：山（遠さ点91）')).toBeVisible();
+    expect(screen.getByText('1射目：山（距離点91）')).toBeVisible();
     expect(screen.getByText('1射目 チカさんが誤射：13ダメージ')).toBeVisible();
 
     await user.click(screen.getByRole('button', { name: '同じメンバーでもう一度' }));
@@ -312,7 +312,7 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     expect(screen.queryByText(/アオイ|ベン|チカ/)).toBeNull();
     expectNoSecrets(current());
     await user.click(screen.getByRole('button', { name: '次へ' }));
-    expect(screen.getByRole('heading', { name: '延長戦 第1ゲーム' })).toBeVisible();
+    expect(screen.getByRole('heading', { name: '延長戦 第1ラウンド' })).toBeVisible();
     expect(screen.getByText('ダメージ2倍')).toBeVisible();
   });
 
@@ -339,7 +339,7 @@ describe('終了の告知と結果発表（SPEC 3.9, 3.10）', () => {
     await user.click(screen.getByRole('button', { name: '標的の順を決める' }));
     await user.click(screen.getByRole('button', { name: 'ベンを上へ' }));
     await user.click(screen.getByRole('button', { name: 'この順で始める' }));
-    expect(screen.getByRole('heading', { name: 'サドンデス 第1ゲーム' })).toBeVisible();
+    expect(screen.getByRole('heading', { name: 'サドンデス 第1ラウンド' })).toBeVisible();
     expect(current().round).toMatchObject({ targetId: 'b', spotterId: 'c', sniperIds: ['a'] });
   });
 });
@@ -350,7 +350,7 @@ describe('ゲーム中のメニュー（SPEC 3.1）', () => {
     const { router } = renderGame(newGame());
     await user.click(screen.getByRole('button', { name: 'メニュー' }));
     await user.click(screen.getByRole('button', { name: '中断してトップへ' }));
-    expect(screen.getByRole('dialog', { name: '試合を中断しますか？' })).toBeVisible();
+    expect(screen.getByRole('dialog', { name: 'ゲームを中断しますか？' })).toBeVisible();
     await user.click(screen.getByRole('button', { name: '中断する' }));
     expect(router.state.location.pathname).toBe('/');
     await user.click(screen.getByRole('button', { name: '続きから' }));
